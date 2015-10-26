@@ -1,0 +1,64 @@
+[class^="icon-"], [class*=" icon-"] {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0 none;
+    color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    font: 0px/0 a;    
+    text-shadow: none;
+    vertical-align: middle;
+}
+
+.icon--search{
+  width: 71px;
+  height: 58px;
+}
+
+.b-contacts__item__figure{  
+  [class^="icon--"]{
+    width: 27px;
+    height: 27px;
+  }
+}
+
+.icon--look{
+  width: 70px;
+  height: 70px;
+}
+
+.icon--date{
+  width: 16px;
+  height: 16px;
+  margin-right:6px;
+  margin-bottom: 3px;
+}
+
+.b-subscribe-news__soc{
+  [class^="icon--"]{
+    width: 43px;
+    height: 43px;
+  }
+}
+
+.icon--arm{
+  width: 15px;
+  height: 16px;
+}
+
+.icon-angle{
+  font-size: 9px;
+  color:$green;
+  @include inline;  
+  margin-left:7px !important; 
+}
+
+.icon--ball{
+  width: 17px;
+  height: 17px;
+  margin-right:13px;
+}
+
+.icon--star-actve, .icon--star{
+  width: 9px;
+  height: 9px;
+  margin-right:2px;
+}

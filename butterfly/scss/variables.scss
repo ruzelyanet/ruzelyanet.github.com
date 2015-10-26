@@ -1,0 +1,55 @@
+/*-border-*/
+$border-orange:1px solid #ff791c;
+$border-orangelite:1px solid #ff9b33;
+$border-yellow:1px solid #ffc414;
+$border-green:1px solid #507f22;
+$border-greenlite:1px solid #aede7f;
+
+
+/*-forns-*/
+$general:"Tahoma", Arial, sans-serif;
+$bigfont:"boomboom", Arial, sans-serif;
+
+/*-colors-*/
+$green:#507f22;
+/* $greenlite:#6aad29; */
+$greenlite:#6cc318;
+$blue:#14afe7;
+$red:#ed181f;
+$yellow:#fed100;
+$orange:#ff791c;
+$orangelite:#ff9b33;
+
+
+/*-@mixin-*/
+ @mixin list(){
+  margin:0;
+  padding:0;
+  li{
+    list-style-type: none;
+  }
+}
+
+@mixin box(){
+  box-sizing:border-box;
+}
+
+@mixin inline{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@mixin inlineTop{
+  display: inline-block;
+  vertical-align: top;
+}
+
+@mixin trans($arg) {
+  -webkit-transition: all $arg ease;
+  -moz-transition: all $arg ease;
+  -o-transition: all $arg ease;
+  -ms-transition: all $arg ease;
+  transition: all $arg ease;
+}
+
+
