@@ -1,0 +1,83 @@
+body{
+    font:16px $basicfont, Arial, sans-serif;
+    font-weight: $light;
+}
+
+h1{
+    font:normal 24px $basicfont;
+    font-weight: $bold;    
+    text-transform: uppercase;
+}
+ 
+h2{
+    font:normal 23px $basicfont;
+    font-weight: $bold;  
+    text-transform: uppercase;  
+}
+
+h3{
+    font:normal 20px $basicfont;
+    font-weight: $bold;      
+}
+
+h4{
+    font:normal 18px $basicfont;
+    font-weight: $bold;    
+}
+ 
+h5{
+    font:normal 16px $basicfont;
+    font-weight: $med;
+}
+
+a{
+    color: $violet;
+    text-decoration: underline;
+    @include transiton(0.3s);
+    &:hover{
+        text-decoration:none;
+    }
+}
+
+b{
+    font-weight: $bold;
+}
+
+.rubl{
+    font-family: $rubl;
+}
+
+.clearfix{
+    @include clearfix;
+}
+
+.press--left{
+    float:left;
+}
+
+.press--right{
+    float:right;
+}
+
+.l-container{    
+    width:1200px;
+    margin:0 auto;    
+}
+
+.l-container--small{    
+    width:1120px;
+    margin:0 auto;    
+}
+
+.l-container--little{    
+    width:1120px;
+    margin:0 auto;    
+}
+
+.st--right{
+    text-align: right;
+}
+
+.st--center{
+    text-align: center;
+}
