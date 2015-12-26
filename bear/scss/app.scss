@@ -795,12 +795,87 @@ $images-sprite-map: sprite-map("assets/default/*.png");
 	@include box;
 	padding-bottom: 48px;
 	background: url(../images/cart-bg.png) no-repeat 0 0;
+	@include transition(0.3s);
+	-webkit-transform: translateX(-500px);
+	transform: translateX(-500px);
+	&--active{
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
 }
 
 .popap-cart__title{
 	text-align: center;
 	font:48px $titlefont;
 	color:#02aded;
+	margin-bottom:17px;
+}
+
+.spin-box{
+	width: 157px;
+	margin:0 auto;
+	background: url(../images/snin-bear.png) no-repeat 0 0;
+	height: 213px;
+	padding-top: 1px;
+	margin-bottom:38px;
+}
+
+.spin{
+	margin-top:182px;
+}
+
+.form--cart{
+	padding:0 39px; 
+}
+
+.form--cart__footer{
+	height: 97px;
+	background: #f5f2e5;
+	text-align: center;
+	@include box;
+	padding-top: 20px;
+}
+
+.form--cart__price{
+	@include inline(middle);
+	margin-right:45px;
+	font:700 24px $btnfont;
+	color:#02aded;
+}
+
+.jq-number{
+	position: relative;
+	padding: 0 44px;
+	width: 57px;
+	position: relative;
+}
+
+.jq-number__spin.minus{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 44px;
+	text-align: center;
+	height: 100%;
+	line-height: 31px;
+	color:#667081;
+	&:before{
+		content:"-";
+	}
+}
+
+.jq-number__spin.plus{
+	position: absolute;
+	right:0;
+	top:0;
+	width: 44px;
+	text-align: center;
+	height: 100%;
+	line-height: 31px;
+	color:#667081;
+	&:before{
+		content:"+";
+	}
 }
 
 

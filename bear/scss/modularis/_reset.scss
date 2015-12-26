@@ -60,8 +60,9 @@ b{
 }
 
 .l-container{    
-    width:1156px;
-    margin:0 auto;    
+    max-width:1156px;
+    margin:0 auto;
+    min-width: 500px;
 }
 
 .st--right{

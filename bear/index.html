@@ -2,8 +2,8 @@
 <html class="no-js" lang="en-US">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=1200">		
-		<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+		<meta name="viewport" content="width=500">		
+		<meta name="viewport" content="width=device-width,initial-scale=1">
 		
 		<title>Title</title>
 
@@ -37,7 +37,6 @@
 			
 	</head>
 	<body>
-		
 		
 		<div class="header">
 			<div class="header__shift">
@@ -80,7 +79,7 @@
 						</div>
 					</div><!--.tel-->
 					<div class="header__order">
-						<a href="#" class="btn"><span class="icon--cart"></span>Заказать</a>
+						<a href="#" class="btn call-cart"><span class="icon--cart"></span>Заказать</a>
 					</div><!--.header__order-->
 				</div>
 			</div><!--.header__shift-->
@@ -120,7 +119,7 @@
 								<div class="big-slider__list__item__info__text">
 									Вы можете отправлять голосовые сообщения Медвежонку Bochi прямо c мобильного приложения MooreTalk      vvv    tt, настроенного на Вашу игрушку. Аудиосообщения также можно записывать и отправлять прямо с игрушки в общий чат в приложения. 
 								</div>
-								<a class="btn" href="#"><span class="icon--cart"></span>Заказать</a>
+								<a class="btn call-cart" href="#"><span class="icon--cart"></span>Заказать</a>
 							</div>
 						</li>
 						<li class="big-slider__list__item">
@@ -196,7 +195,7 @@
 								<div class="big-slider__list__item__info__text">
 									Вы можете отправлять голосовые сообщения Медвежонку Bochi прямо c мобильного приложения MooreTalk      vvv    tt, настроенного на Вашу игрушку. Аудиосообщения также можно записывать и отправлять прямо с игрушки в общий чат в приложения. 
 								</div>
-								<a class="btn" href="#"><span class="icon--cart"></span>Заказать</a>
+								<a class="btn call-cart" href="#"><span class="icon--cart"></span>Заказать</a>
 							</div>
 						</li>
 						<li class="big-slider__list__item">
@@ -215,7 +214,7 @@
 								<div class="big-slider__list__item__info__text">
 									Вы можете отправлять голосовые сообщения Медвежонку Bochi прямо c мобильного приложения MooreTalk      vvv    tt, настроенного на Вашу игрушку. Аудиосообщения также можно записывать и отправлять прямо с игрушки в общий чат в приложения. 
 								</div>
-								<a class="btn" href="#"><span class="icon--cart"></span>Заказать</a>
+								<a class="btn call-cart" href="#"><span class="icon--cart"></span>Заказать</a>
 							</div>
 						</li>
 					</ul>
@@ -430,7 +429,7 @@
 						</div>
 					</div>
 					<div class="contacts__box__footer">
-						<a href="#" class="btn"><span class="icon--cart"></span>Заказать</a>
+						<a href="#" class="btn call-cart"><span class="icon--cart"></span>Заказать</a>
 						<div class="contacts__box__footer__text">
 							Вы так же можете приобрести медвежонка на нашем сайте
 						</div>
@@ -676,10 +675,50 @@
 			</div>
 		</div><!--.popap-->
 
-		<div class="popap-cart" style="display:none;">
+		<div class="popap-cart">
 			<div class="popap-cart__title">Корзина</div>
 			<div class="popap-cart__form">
 				
+				<form>
+					<div class="spin-box">
+						<div class="spin">
+							<input type="number" value="1" step="1" max="100" min="0">
+						</div>
+					</div>
+					<div class="form form--cart">
+						<div class="form__row">
+							<div class="form__row__title">
+								Имя
+							</div>
+							<div class="form__row__input">
+								<input type="text" name="имя">
+							</div>
+						</div>
+						<div class="form__row">
+							<div class="form__row__title">
+								Эл. почта
+							</div>
+							<div class="form__row__input">
+								<input type="email" name="почта">
+							</div>
+						</div>
+						<div class="form__row">
+							<div class="form__row__title">
+								Телефон
+							</div>
+							<div class="form__row__input">
+								<input type="tel" placeholder="Например +7 960 090 05 90" name="Телефон">
+							</div>
+						</div>
+					</div>
+					<div class="form--cart__footer">
+						<div class="form--cart__price">
+							700 <span class="rubl">Р</span>
+						</div>
+						<button class="btn"><span class="icon--cart"></span>Купить</button>
+					</div>
+				</form>
+
 			</div>
 		</div><!--.popap-cart-->
 

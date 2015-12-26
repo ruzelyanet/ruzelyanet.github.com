@@ -17,14 +17,11 @@
             autoclear: false
         });
 
-  //       $(".fancybox").fancybox();
-														
-		// $(".b-splash-product__caroudel").jCarouselLite({
-		//     btnNext: ".product__caroudel__next",
-		//     btnPrev: ".product__caroudel__prev",
-		//     speed: 500,
-		//     visible: 4
-		// });
+        $(".call-cart").click(function(){
+			console.log("click");
+			$(".popap-cart").addClass("popap-cart--active");
+			return false;
+		});
 			
 
 		// Photo slider > Minimal
@@ -49,7 +46,7 @@
 			padding:0
 		});
 
-		$("input[type=file]").styler();
+		$("input[type=file], input[type=number]").styler();
 
 		$(window).bind('scroll', function () {
             if ($(window).scrollTop() > 928) {

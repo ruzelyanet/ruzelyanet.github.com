@@ -126,11 +126,7 @@
 	vertical-align: middle;
 }
 .jq-number__field {
-	width: 100px;
-	border: 1px solid #CCC;
-	border-bottom-color: #B3B3B3;
-	border-radius: 4px;
-	box-shadow: inset 1px 1px #F1F1F1, 0 1px 2px rgba(0,0,0,.1);
+	width: 100%;
 }
 .jq-number__field:hover {
 	border-color: #B3B3B3;
@@ -143,8 +139,8 @@
 	outline: none;
 	background: none;
 	font: 14px Arial, sans-serif;
+	text-align: center;
 	color: #333;
-	text-align: left; /* для Opera Presto */
 	-moz-appearance: textfield;
 }
 .jq-number__field input::-webkit-inner-spin-button,
@@ -171,9 +167,6 @@
 }
 
 
-.jq-number.focused .jq-number__field {
-	border: 1px solid #5794BF;
-}
 .jq-number.disabled .jq-number__field,
 .jq-number.disabled .jq-number__spin {
 	border-color: #CCC;
