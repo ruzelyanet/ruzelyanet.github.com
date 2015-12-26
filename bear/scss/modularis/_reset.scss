@@ -1,0 +1,105 @@
+body{
+    font:16px $basicfont, Arial, sans-serif;
+}
+
+h1{
+    font:normal 24px $basicfont;
+    font-weight: $bold;    
+    text-transform: uppercase;
+}
+ 
+h2{
+    font:normal 23px $basicfont;
+    font-weight: $bold;  
+    text-transform: uppercase;  
+}
+
+h3{
+    font:normal 36px "bang_whack_powregular", sans-serif;
+    font-weight: normal;      
+    color:#f14209;
+}
+
+h4{
+    font:normal 20px $btnfont;
+    font-weight: $bold;    
+}
+ 
+h5{
+    font:normal 16px $basicfont;
+    font-weight: $med;
+}
+
+a{
+    color: #f27a79;
+    text-decoration: underline;
+    @include transiton(0.3s);
+    &:hover{
+        text-decoration:none;
+    }
+}
+
+b{
+    font-weight: $bold;
+}
+
+.rubl{
+    font-family: $rubl;
+}
+
+.clearfix{
+    @include clearfix;
+}
+
+.press--left{
+    float:left;
+}
+
+.press--right{
+    float:right;
+}
+
+.l-container{    
+    width:1156px;
+    margin:0 auto;    
+}
+
+.st--right{
+    text-align: right;
+}
+
+.st--center{
+    text-align: center;
+}
+
+.st--white{
+    color:#fff;
+}
+
+.st--purple{
+    color:#912790;
+}
+
+.st--red{
+    color:#f14209;
+}
+
+.st--white{
+    color:#fff;
+}
+
+.icon--email{
+    margin-right:10px;
+    margin-bottom:3px;
+}
+
+.st--orange{
+    color:#f14209;
+}
+
+
+
+
+
+
+
