@@ -1,0 +1,53 @@
+/**
+ * ThemePile Buttons
+ */
+.btn {
+  display: inline-block;
+  padding: 11px 25px;  
+  font-size: 18px;
+  font-family: "Roboto Condensed", sans-serif;
+  height: 41px;
+  text-align: center;
+  text-decoration: none;  
+  text-shadow: none;
+  vertical-align: middle;  
+  color: white;
+  cursor: pointer;
+  background: #02aded;
+  border-radius: 2px;
+  text-transform: uppercase;
+  @include box;
+  line-height: normal;
+  border:none;
+  white-space: nowrap; 
+}
+.btn:HOVER { 
+  opacity: 0.7;
+}
+.btn:FOCUS {
+  outline: thin dotted #333333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn:ACTIVE {
+  outline: 0;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.btn[disabled] {
+  cursor: default;
+  background-image: none;
+  background-color: white;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
+  opacity: 0.2;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn--orange{
+  background:#f14c15;
+  
+}
+
