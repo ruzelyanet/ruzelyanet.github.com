@@ -24,6 +24,7 @@
 	.big-slider__list{
 		background: none !important;
 		height: auto !important;
+		margin-bottom:15px;
 	}
 	.big-slider__list__item{
 		padding-left:0 !important;
@@ -41,6 +42,11 @@
 		background: #FF6A8C !important;
 		padding-bottom: 15px;
 		padding-top: 25px !important;
+	}
+
+	.stores{
+		position: relative !important;
+		bottom:0 !important;
 	}
 
 
