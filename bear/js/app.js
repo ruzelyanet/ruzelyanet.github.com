@@ -299,6 +299,11 @@
 		 	});
 
 
+	$(".call--menu").click(function(){
+		$(".menu").slideToggle();
+	});
+
+
 
     });
 })(jQuery);

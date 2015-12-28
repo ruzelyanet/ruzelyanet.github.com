@@ -1,16 +1,20 @@
 
 @media screen and (max-width: 1156px) {
 	.header{
-		height: auto !important;
-
-	}
-
-	.header__shift--fix{
-		position: relative !important;
+		height:75px !important;
 	}
 	
+	.big-slider__list{
+		display: none;
+	}
+
 	.header__shift{
 		padding: 10px 0 !important;
+		height: auto !important;
+		position: fixed;
+		top:0;
+		left:0;
+		width: 100%;
 	}
 	.logo{
 		margin-right:15px !important;		
@@ -58,6 +62,44 @@
 }
 
 @media screen and (max-width: 1097px){
+	
+	.logo--big{
+		display: none !important;
+	}
+
+	.logo--small{
+		display: block !important;
+	}
+
+	html body div.menu{
+		position: absolute;
+		background: #fff;
+		width: 100% !important;
+		top:0;
+		left:0;
+		padding: 10px 0;
+		display: none;
+	}
+
+	.menu ul li{
+		float:none !important;
+		text-align: center;
+		margin-bottom:10px;
+	}
+
+	.call--menu{
+		display: block !important;
+	}
+
+
+	.header__order{
+		display: none !important;
+	}
+
+	.tel{
+		display: none !important;
+	}
+
 	.reviews{
 		height: auto !important;
 		padding-bottom:25px !important;
@@ -139,11 +181,7 @@
 }
 
 @media screen and (max-width: 888px) {
-  .header__right{
-  	margin-top:15px;
-  	display: block !important;
-  }
-
+ 
 	.photos__gallery__footer{
 		text-align: center;
 	}
@@ -184,11 +222,6 @@
 	.photo__item--group--small{
 		width: 268px !important;
 	}
-
-	/* .big-slider__list__item *{
-		-webkit-animation-delay:0s !important;
-		animation-delay:0s !important;
-	} */
 
 }
 
@@ -275,42 +308,7 @@
 }
 
 @media screen and (max-width: 410px){
-	.logo{
-		display: block !important;
-		margin-right:0 !important;
-		text-align: center;
-	}
 
-	.menu{
-		text-align: center;
-		display: block !important;
-	}
-	.menu__main li{
-		float:none !important;
-		display: inline-block;
-	}
-
-	.menu__sub li{
-		float:none !important;
-		display: inline-block;
-	}
-	.header__order{
-		width: auto !important;
-	}
-	.tel{
-		margin-bottom:10px;
-		display: block !important;
-	}
-	.tel .icon--phone{
-		display: none;
-	}
-	.header__right{
-		text-align: center;
-	}
-	.tel__content__phone{
-		display: inline-block !important;
-		margin:0 10px !important;
-	}
 }
 
 @media screen and (max-width: 600px) {
