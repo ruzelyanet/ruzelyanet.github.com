@@ -185,11 +185,19 @@
 		width: 268px !important;
 	}
 
+	/* .big-slider__list__item *{
+		-webkit-animation-delay:0s !important;
+		animation-delay:0s !important;
+	} */
+
 }
 
 @media screen and (max-width: 480px) {
 
-
+	.big-slider__list__item *{
+		-webkit-animation-delay:0s !important;
+		animation-delay:0s !important;
+	}
 
 	.section-title{
 		font-size: 36px !important;

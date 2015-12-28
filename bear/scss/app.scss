@@ -83,6 +83,9 @@ $images-sprite-map: sprite-map("assets/default/*.png");
 	width: 506px;
 	a{
 		text-decoration: none;
+		&:hover{
+			text-decoration:underline;
+		}
 	}
 	&__main{
 		@include list;
@@ -146,7 +149,9 @@ $images-sprite-map: sprite-map("assets/default/*.png");
 	z-index: 15;
 	position: relative;
 	@include box;
-	padding-top: 90px;
+	padding-top: 35px;
+	overflow: hidden;
+	width: 100%;
 }
 
 .big-slider__view{
@@ -158,10 +163,19 @@ $images-sprite-map: sprite-map("assets/default/*.png");
 .big-slider__list{
 	background: url(../images/main-bear.png) no-repeat 0 0;	
 	height: 428px;
-	width: 100%;
-	overflow: hidden;
+	width: 100%;	
 	ul{
 		@include list;
+		li{
+			position: absolute;
+			left:0;
+			top:0;
+			opacity: 0;
+			@include transition(0.3s);
+			&.anim-slide-this{
+				opacity: 1;
+			}
+		}
 	}
 }
 
@@ -477,6 +491,7 @@ $images-sprite-map: sprite-map("assets/default/*.png");
 .reviews{
 	height: 702px;
 	background: url(../images/revies-bg.png) no-repeat center top;
+	background-size: cover;
 	@include box;
 	padding-top: 52px;
 }
@@ -547,6 +562,7 @@ $images-sprite-map: sprite-map("assets/default/*.png");
 	padding-top: 107px;
 	height: 813px;
 	background: url(../images/photos-bg.png) no-repeat center top;
+	background-size: cover;
 	margin-top:-16px;
 	@include box;
 }
@@ -986,16 +1002,6 @@ $images-sprite-map: sprite-map("assets/default/*.png");
 }
 
 
-.big-slider__list__item__fly, 
-.big-slider__list__item__figure img, 
-.big-slider__list__item__info__title,
-.big-slider__list__item__info__text, 
-.big-slider__list__item__info .btn{
-	opacity: 0;
-	-webkit-animation-fill-mode: both;
-	animation-fill-mode: both;
-}
-
 .sliderkit-panels{
 	position: relative;
 	&:after{
@@ -1008,6 +1014,28 @@ $images-sprite-map: sprite-map("assets/default/*.png");
 		background: url(../images/video-after.png) no-repeat;
 	}
 }
+
+.close-popap-cart{
+	position: fixed;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	z-index: 200;
+	&--active{
+		display: block;
+	}
+}
+
+.anim-dots{
+	position: absolute;
+	top:-162px;
+	left:0;
+	width: 100%;
+	text-align: center;
+}
+
 
 
 

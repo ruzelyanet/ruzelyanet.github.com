@@ -32,6 +32,9 @@
 		<script type="text/javascript" src="js/jquery/plugins/jquery.fancybox.pack.js"></script>
 		<script type="text/javascript" src="js/jquery/plugins/jquery.formstyler.min.js"></script>
 		<script type="text/javascript" src="js/jquery/plugins/scrollit.js"></script>
+
+		<script type="text/javascript" src="js/jquery/plugins/jquery.animateSlider.js"></script>
+		<script type="text/javascript" src="js/jquery/plugins/modernizr.js"></script>
 	
 		
 		<script src="js/app.js"></script>
@@ -101,127 +104,132 @@
 				</div>			
 				
 				<div class="big-slider__list">
-					<ul class="cycle-slideshow" id="big-slider"
-						data-cycle-timeout="5000" 
-						data-cycle-pager=".big-slider__view__nan" 
-						data-cycle-pager-template='
-						<span class="big-slider__view__nan__item big-slider__view__nan__iten--{{slideNum}} icon--slide-{{slideNum}}"></span>'
-						data-cycle-slides="li">
-						<li class="big-slider__list__item">
-							<div class="big-slider__list__item__fly fade--right animated">
+
+					<ul id="big-slider" class="anim-slider">
+						
+							<li class="big-slider__list__item anim-slide">
+							<div class="big-slider__list__item__fly">
 								Я умею разговаривать <br>
 								с тобой
 							</div>
 							<div class="big-slider__list__item__figure">
-								<img src="images/iphone.png" alt="" class="fade--button animated anim-delay-1">
+								<img src="images/iphone.png" alt="">
 							</div>
 							<div class="big-slider__list__item__info">
-								<div class="big-slider__list__item__info__title fade--top animated anim-delay-2">
+								<div class="big-slider__list__item__info__title">
 									Передача голосовых<br>
 									собщений
 								</div>
-								<div class="big-slider__list__item__info__text fade--right animated anim-delay-2-5">
+								<div class="big-slider__list__item__info__text">
 									Вы можете отправлять голосовые сообщения Медвежонку Bochi прямо c мобильного приложения MooreTalk      vvv    tt, настроенного на Вашу игрушку. Аудиосообщения также можно записывать и отправлять прямо с игрушки в общий чат в приложения. 
 								</div>
-								<a class="btn call-cart fade--button animated anim-delay-3" href="#"><span class="icon--cart"></span>Заказать</a>
+								<a class="btn call-cart" href="#"><span class="icon--cart"></span>Заказать</a>
 							</div>
 						</li>
-						<li class="big-slider__list__item">
-							<div class="big-slider__list__item__fly fade--right animated">
+
+						<li class="big-slider__list__item anim-slide">
+							<div class="big-slider__list__item__fly">
 								Я умею разговаривать <br>
 								с тобой
 							</div>
 							<div class="big-slider__list__item__figure">
-								<img src="images/iphone.png" alt="" class="fade--button animated anim-delay-1">
+								<img src="images/iphone.png" alt="">
 							</div>
 							<div class="big-slider__list__item__info">
-								<div class="big-slider__list__item__info__title fade--top animated anim-delay-2">
+								<div class="big-slider__list__item__info__title">
 									Передача голосовых<br>
 									собщений
 								</div>
-								<div class="big-slider__list__item__info__text fade--right animated anim-delay-2-5">
+								<div class="big-slider__list__item__info__text">
 									Вы можете отправлять голосовые сообщения Медвежонку Bochi прямо c мобильного приложения MooreTalk      vvv    tt, настроенного на Вашу игрушку. Аудиосообщения также можно записывать и отправлять прямо с игрушки в общий чат в приложения. 
 								</div>
-								<a class="btn call-cart fade--button animated anim-delay-3" href="#"><span class="icon--cart"></span>Заказать</a>
+								<a class="btn call-cart" href="#"><span class="icon--cart"></span>Заказать</a>
 							</div>
-						</li>
-						<li class="big-slider__list__item">
-							<div class="big-slider__list__item__fly fade--right animated">
+						</li>	
+
+						<li class="big-slider__list__item anim-slide">
+							<div class="big-slider__list__item__fly">
 								Я умею разговаривать <br>
 								с тобой
 							</div>
 							<div class="big-slider__list__item__figure">
-								<img src="images/iphone.png" alt="" class="fade--button animated anim-delay-1">
+								<img src="images/iphone.png" alt="">
 							</div>
 							<div class="big-slider__list__item__info">
-								<div class="big-slider__list__item__info__title fade--top animated anim-delay-2">
+								<div class="big-slider__list__item__info__title">
 									Передача голосовых<br>
 									собщений
 								</div>
-								<div class="big-slider__list__item__info__text fade--right animated anim-delay-2-5">
+								<div class="big-slider__list__item__info__text">
 									Вы можете отправлять голосовые сообщения Медвежонку Bochi прямо c мобильного приложения MooreTalk      vvv    tt, настроенного на Вашу игрушку. Аудиосообщения также можно записывать и отправлять прямо с игрушки в общий чат в приложения. 
 								</div>
-								<a class="btn call-cart fade--button animated anim-delay-3" href="#"><span class="icon--cart"></span>Заказать</a>
+								<a class="btn call-cart" href="#"><span class="icon--cart"></span>Заказать</a>
 							</div>
-						</li>
-						<li class="big-slider__list__item">
-							<div class="big-slider__list__item__fly fade--right animated">
+						</li>			
+
+						<li class="big-slider__list__item anim-slide">
+							<div class="big-slider__list__item__fly">
 								Я умею разговаривать <br>
 								с тобой
 							</div>
 							<div class="big-slider__list__item__figure">
-								<img src="images/iphone.png" alt="" class="fade--button animated anim-delay-1">
+								<img src="images/iphone.png" alt="">
 							</div>
 							<div class="big-slider__list__item__info">
-								<div class="big-slider__list__item__info__title fade--top animated anim-delay-2">
+								<div class="big-slider__list__item__info__title">
 									Передача голосовых<br>
 									собщений
 								</div>
-								<div class="big-slider__list__item__info__text fade--right animated anim-delay-2-5">
+								<div class="big-slider__list__item__info__text">
 									Вы можете отправлять голосовые сообщения Медвежонку Bochi прямо c мобильного приложения MooreTalk      vvv    tt, настроенного на Вашу игрушку. Аудиосообщения также можно записывать и отправлять прямо с игрушки в общий чат в приложения. 
 								</div>
-								<a class="btn call-cart fade--button animated anim-delay-3" href="#"><span class="icon--cart"></span>Заказать</a>
+								<a class="btn call-cart" href="#"><span class="icon--cart"></span>Заказать</a>
 							</div>
 						</li>
-						<li class="big-slider__list__item">
-							<div class="big-slider__list__item__fly fade--right animated">
+
+						<li class="big-slider__list__item anim-slide">
+							<div class="big-slider__list__item__fly">
 								Я умею разговаривать <br>
 								с тобой
 							</div>
 							<div class="big-slider__list__item__figure">
-								<img src="images/iphone.png" alt="" class="fade--button animated anim-delay-1">
+								<img src="images/iphone.png" alt="">
 							</div>
 							<div class="big-slider__list__item__info">
-								<div class="big-slider__list__item__info__title fade--top animated anim-delay-2">
+								<div class="big-slider__list__item__info__title">
 									Передача голосовых<br>
 									собщений
 								</div>
-								<div class="big-slider__list__item__info__text fade--right animated anim-delay-2-5">
+								<div class="big-slider__list__item__info__text">
 									Вы можете отправлять голосовые сообщения Медвежонку Bochi прямо c мобильного приложения MooreTalk      vvv    tt, настроенного на Вашу игрушку. Аудиосообщения также можно записывать и отправлять прямо с игрушки в общий чат в приложения. 
 								</div>
-								<a class="btn call-cart fade--button animated anim-delay-3" href="#"><span class="icon--cart"></span>Заказать</a>
+								<a class="btn call-cart" href="#"><span class="icon--cart"></span>Заказать</a>
 							</div>
-						</li>
-						<li class="big-slider__list__item">
-							<div class="big-slider__list__item__fly fade--right animated">
+						</li>	
+
+						<li class="big-slider__list__item anim-slide">
+							<div class="big-slider__list__item__fly">
 								Я умею разговаривать <br>
 								с тобой
 							</div>
 							<div class="big-slider__list__item__figure">
-								<img src="images/iphone.png" alt="" class="fade--button animated anim-delay-1">
+								<img src="images/iphone.png" alt="">
 							</div>
 							<div class="big-slider__list__item__info">
-								<div class="big-slider__list__item__info__title fade--top animated anim-delay-2">
+								<div class="big-slider__list__item__info__title">
 									Передача голосовых<br>
 									собщений
 								</div>
-								<div class="big-slider__list__item__info__text fade--right animated anim-delay-2-5">
+								<div class="big-slider__list__item__info__text">
 									Вы можете отправлять голосовые сообщения Медвежонку Bochi прямо c мобильного приложения MooreTalk      vvv    tt, настроенного на Вашу игрушку. Аудиосообщения также можно записывать и отправлять прямо с игрушки в общий чат в приложения. 
 								</div>
-								<a class="btn call-cart fade--button animated anim-delay-3" href="#"><span class="icon--cart"></span>Заказать</a>
+								<a class="btn call-cart" href="#"><span class="icon--cart"></span>Заказать</a>
 							</div>
-						</li>
+						</li>	
+
+
 					</ul>
+
 				</div>
 
 				<div class="stores">
@@ -675,7 +683,7 @@
 						</div>
 					</div>
 					<div class="popap__footer">
-						<button class="btn">Заказать звонок</button>
+						<button class="btn">Загрузить</button>
 					</div>
 				</form>
 			</div>
@@ -760,6 +768,8 @@
 
 			</div>
 		</div><!--.popap-cart-->
+
+		<div class="close-popap-cart"></div>
 
 	</body>
 </html>

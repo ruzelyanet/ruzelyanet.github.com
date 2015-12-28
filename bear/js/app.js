@@ -16,32 +16,37 @@
 			padding:0
 		});
 
-        $.scrollIt();
+        $.scrollIt({
+        	upKey: 0, 
+  			downKey: 0           
+        });
  
     	//input mask
         $('input[type=tel]').mask('+7 (999) 999-99-99', {
             autoclear: false
         });
-
-        var onFocus = function(){
-        	$(".popap-cart").focus();	
-        	console.log("focus");	
-        }
+        
 
         $(".call-cart").click(function(){			
-			$(".popap-cart").addClass("popap-cart--active");				
+			$(".popap-cart").addClass("popap-cart--active");
+			$(".close-popap-cart").toggleClass("close-popap-cart--active");			
 			return false;
+		});
+
+		$(".popap-cart").blur(function(){
+			$(this).removeClass("popap-cart--active");				
+		});
+
+		$(".close-popap-cart").click(function(){
+			$(".popap-cart").removeClass("popap-cart--active");	
+			$(this).toggleClass("close-popap-cart--active");
 		});
 
         $(".submit-val").click(function(){			
 		 	$(".popap-cart").removeClass("popap-cart--active");				
 		 	return false;
 		 });
-
-		$(".popap-cart").click(function(){			
-			$(this).addClass("popap-cart--active");				
-			return false;
-		});
+		
 		
 
 		// Photo slider > Minimal
@@ -71,32 +76,7 @@
                 $(".header__shift").removeClass("header__shift--fix");
             }
         });
-
-
-		$(".cycle-slide-active").each(function(){
-			$(this).find(".fade--left").addClass("fadeInLeft");					
-			$(this).find(".fade--right").addClass("fadeInRight");	
-			$(this).find(".fade--top").addClass("fadeInDown");
-			$(this).find(".fade--in").addClass("fadeIn");
-			$(this).find(".fade--button").addClass("fadeInUp");
-		});
-
-        $( '#big-slider' ).on( 'cycle-before', function( event, opts ) {
-		    $(".cycle-slide-active").find(".fade--left").removeClass("fadeInLeft");					
-			$(".cycle-slide-active").find(".fade--right").removeClass("fadeInRight");	
-			$(".cycle-slide-active").find(".fade--top").removeClass("fadeInDown");
-			$(".cycle-slide-active").find(".fade--in").removeClass("fadeIn");
-			$(".cycle-slide-active").find(".fade--button").removeClass("fadeInUp");
-		});
-
-		$( '#big-slider' ).on( 'cycle-after', function( event, opts ) {
-		    
-			$(".cycle-slide-active").find(".fade--left").addClass("fadeInLeft");					
-			$(".cycle-slide-active").find(".fade--right").addClass("fadeInRight");	
-			$(".cycle-slide-active").find(".fade--top").addClass("fadeInDown");
-			$(".cycle-slide-active").find(".fade--button").addClass("fadeInUp");
-			$(".cycle-slide-active").find(".fade--in").addClass("fadeIn");
-		});
+	
 
 		$(".minus").click(function(){
 			$(this).parent().find("input").change();
@@ -109,6 +89,214 @@
 	        var totalPrice = val*700;
 	        $(".form--cart__price__numb").text(totalPrice);
 	    }); 
+
+
+	    $(".anim-slider").animateSlider(
+		 	{
+		 		autoplay	:true,
+		 		interval	:5000,
+		 		animations 	: 
+				{
+					0	: 	//Slide No1
+					{
+						".big-slider__list__item__fly"	: 
+						{
+							show   	  : "fadeInRight",
+							hide 	  : "fadeOutLeft",
+							delayShow : "delay1s"
+	 					},
+	 					".big-slider__list__item__figure img":
+	 					{
+	 						show 	  : "fadeInUp",
+							hide 	  : "fadeOutUp",
+							delayShow : "delay1-5s"
+	 					},
+	 					".big-slider__list__item__info__title" 	:
+	 					{
+							show   	  : "fadeInRight",
+							hide 	  : "fadeOuttop",
+							delayShow : "delay1-5s"
+	 					},
+	 					".big-slider__list__item__info__text" 	:
+	 					{
+							show   	  : "fadeInRight",
+							hide 	  : "fadeOutRight",
+							delayShow : "delay1-5s"
+	 					},
+	 					".call-cart" 	:
+	 					{
+							show   	  : "fadeInRight",
+							hide 	  : "fadeOutRight",
+							delayShow : "delay1-5s"
+	 					}
+					},
+					1	: 	//Slide No1
+					{
+						".big-slider__list__item__fly"	: 
+						{
+							show   	  : "fadeInRight",
+							hide 	  : "fadeOutLeft",
+							delayShow : "delay1s"
+	 					},
+	 					".big-slider__list__item__figure img":
+	 					{
+	 						show 	  : "fadeInUp",
+							hide 	  : "fadeOutUp",
+							delayShow : "delay0-5s"
+	 					},
+	 					".big-slider__list__item__info__title" 	:
+	 					{
+							show   	  : "fadeInRight",
+							hide 	  : "fadeOutRight",
+							delayShow : "delay1-5s"
+	 					},
+	 					".big-slider__list__item__info__text" 	:
+	 					{
+							show   	  : "fadeInRight",
+							hide 	  : "fadeOutRight",
+							delayShow : "delay1-5s"
+	 					},
+	 					".call-cart" 	:
+	 					{
+							show   	  : "fadeInRight",
+							hide 	  : "fadeOutRight",
+							delayShow : "delay1-5s"
+	 					}
+					},
+					2	: 	//Slide No1
+					{
+						".big-slider__list__item__fly"	: 
+						{
+							show   	  : "fadeInRight",
+							hide 	  : "fadeOutLeft",
+							delayShow : "delay1s"
+	 					},
+	 					".big-slider__list__item__figure img":
+	 					{
+	 						show 	  : "fadeInUp",
+							hide 	  : "fadeOutUp",
+							delayShow : "delay0-5s"
+	 					},
+	 					".big-slider__list__item__info__title" 	:
+	 					{
+							show   	  : "fadeInRight",
+							hide 	  : "fadeOutRight",
+							delayShow : "delay1-5s"
+	 					},
+	 					".big-slider__list__item__info__text" 	:
+	 					{
+							show   	  : "fadeInRight",
+							hide 	  : "fadeOutRight",
+							delayShow : "delay1-5s"
+	 					},
+	 					".call-cart" 	:
+	 					{
+							show   	  : "fadeInRight",
+							hide 	  : "fadeOutRight",
+							delayShow : "delay1-5s"
+	 					}
+					},
+					3	: 	//Slide No1
+					{
+						".big-slider__list__item__fly"	: 
+						{
+							show   	  : "fadeInRight",
+							hide 	  : "fadeOutLeft",
+							delayShow : "delay1s"
+	 					},
+	 					".big-slider__list__item__figure img":
+	 					{
+	 						show 	  : "fadeInUp",
+							hide 	  : "fadeOutUp",
+							delayShow : "delay0-5s"
+	 					},
+	 					".big-slider__list__item__info__title" 	:
+	 					{
+							show   	  : "fadeInRight",
+							hide 	  : "fadeOutRight",
+							delayShow : "delay1-5s"
+	 					},
+	 					".big-slider__list__item__info__text" 	:
+	 					{
+							show   	  : "fadeInRight",
+							hide 	  : "fadeOutRight",
+							delayShow : "delay1-5s"
+	 					},
+	 					".call-cart" 	:
+	 					{
+							show   	  : "fadeInRight",
+							hide 	  : "fadeOutRight",
+							delayShow : "delay1-5s"
+	 					}
+					},
+					4	: 	//Slide No1
+					{
+						".big-slider__list__item__fly"	: 
+						{
+							show   	  : "fadeInRight",
+							hide 	  : "fadeOutLeft",
+							delayShow : "delay1s"
+	 					},
+	 					".big-slider__list__item__figure img":
+	 					{
+	 						show 	  : "fadeInUp",
+							hide 	  : "fadeOutUp",
+							delayShow : "delay0-5s"
+	 					},
+	 					".big-slider__list__item__info__title" 	:
+	 					{
+							show   	  : "fadeInRight",
+							hide 	  : "fadeOutRight",
+							delayShow : "delay1-5s"
+	 					},
+	 					".big-slider__list__item__info__text" 	:
+	 					{
+							show   	  : "fadeInRight",
+							hide 	  : "fadeOutRight",
+							delayShow : "delay1-5s"
+	 					},
+	 					".call-cart" 	:
+	 					{
+							show   	  : "fadeInRight",
+							hide 	  : "fadeOutRight",
+							delayShow : "delay1-5s"
+	 					}
+					},
+					5	: 	//Slide No1
+					{
+						".big-slider__list__item__fly"	: 
+						{
+							show   	  : "fadeInRight",
+							hide 	  : "fadeOutLeft",
+							delayShow : "delay1s"
+	 					},
+	 					".big-slider__list__item__figure img":
+	 					{
+	 						show 	  : "fadeInUp",
+							hide 	  : "fadeOutUp",
+							delayShow : "delay0-5s"
+	 					},
+	 					".big-slider__list__item__info__title" 	:
+	 					{
+							show   	  : "fadeInRight",
+							hide 	  : "fadeOutRight",
+							delayShow : "delay1-5s"
+	 					},
+	 					".big-slider__list__item__info__text" 	:
+	 					{
+							show   	  : "fadeInRight",
+							hide 	  : "fadeOutRight",
+							delayShow : "delay1-5s"
+	 					},
+	 					".call-cart" 	:
+	 					{
+							show   	  : "fadeInRight",
+							hide 	  : "fadeOutRight",
+							delayShow : "delay1-5s"
+	 					}
+					}
+				}
+		 	});
 
 
 
