@@ -39,6 +39,8 @@
 		
 		<script src="js/app.js"></script>
 			
+
+
 	</head>
 	<body>
 		
@@ -238,7 +240,30 @@
 					<div class="hidden-slider__list">
 					<span class="hidden-slider__list__btn hidden-slider__list__btn--prev"></span>
 					<span class="hidden-slider__list__btn hidden-slider__list__btn--next"></span>
-						<ul>
+						<ul class="cycle-slideshow"
+							data-cycle-timeout="0" 
+							data-cycle-slides="li"
+							data-cycle-prev=".hidden-slider__list__btn--prev"
+	    					data-cycle-next=".hidden-slider__list__btn--next"
+						>
+							<li>
+								<div class="big-slider__list__item__info__title">
+									Передача голосовых<br>
+									собщений
+								</div>
+								<div class="big-slider__list__item__info__text">
+									Вы можете отправлять голосовые сообщения Медвежонку Bochi прямо c мобильного приложения MooreTalk      vvv    tt, настроенного на Вашу игрушку. Аудиосообщения также можно записывать и отправлять прямо с игрушки в общий чат в приложения. 
+								</div>
+							</li>
+							<li>
+								<div class="big-slider__list__item__info__title">
+									Передача голосовых<br>
+									собщений
+								</div>
+								<div class="big-slider__list__item__info__text">
+									Вы можете отправлять голосовые сообщения Медвежонку Bochi прямо c мобильного приложения MooreTalk      vvv    tt, настроенного на Вашу игрушку. Аудиосообщения также можно записывать и отправлять прямо с игрушки в общий чат в приложения. 
+								</div>
+							</li>
 							<li>
 								<div class="big-slider__list__item__info__title">
 									Передача голосовых<br>
@@ -249,6 +274,9 @@
 								</div>
 							</li>
 						</ul>
+						<div class="hidden-slider__footer">
+							<a class="btn call-cart" href="#"><span class="icon--cart"></span>Заказать</a>
+						</div>
 					</div>
 				</div>
 
@@ -507,8 +535,7 @@
 								</div>
 								<div class="reviews__slider__list__item__content">
 									<div class="reviews-user-name">Варвара Мелехова</div>
-									<p>Я одна из первых, кто увидел игрушку. На переговорах ребята пр   одемонстрировали игрушку, и у нас вся команда была в восторге. Это действительно инновационная игрушка, аналогов мы не встречали.</p>
-									<a href="#reviews" class="btn call-popap"><span class="icon--email"></span>Добавить отзыв</a>
+									<p>Я одна из первых, кто увидел игрушку. На переговорах ребята пр   одемонстрировали игрушку, и у нас вся команда была в восторге. Это действительно инновационная игрушка, аналогов мы не встречали.</p>							
 								</div>
 							</li>
 							<li class="reviews__slider__list__item">
@@ -517,11 +544,13 @@
 								</div>
 								<div class="reviews__slider__list__item__content">
 									<div class="reviews-user-name">Мелехова Варвара</div>
-									<p>Я одна из первых, кто увидел игрушку. На переговорах ребята пр   одемонстрировали игрушку, и у нас вся команда была в восторге. Это действительно инновационная игрушка, аналогов мы не встречали.</p>
-									<a href="#reviews" class="btn call-popap"><span class="icon--email"></span>Добавить отзыв</a>
+									<p>Я одна из первых, кто увидел игрушку. На переговорах ребята пр   одемонстрировали игрушку, и у нас вся команда была в восторге. Это действительно инновационная игрушка, аналогов мы не встречали.</p>									
 								</div>
 							</li>
 						</ul>
+						<div class="reviews__slider__list__footer">
+							<a href="#reviews" class="btn call-popap"><span class="icon--email"></span>Добавить отзыв</a>
+						</div>
 					</div>
 
 				</div><!--.reviews__slider-->
@@ -542,7 +571,32 @@
 					<div class="photos__gallery__list">						
 						<span class="photos__gallery__btn photos__gallery__btn--prev"></span>
 						<span class="photos__gallery__btn photos__gallery__btn--next"></span>
-						<ul 
+
+
+						<div class="cycle-slideshow" 
+						    data-cycle-fx="carousel"
+						    data-cycle-timeout="5000"
+						    data-cycle-carousel-fluid="true"
+						    data-cycle-prev=".photos__gallery__btn--prev"
+    						data-cycle-next=".photos__gallery__btn--next"
+						    >
+						    						    
+							<img src="images/src/photo-1.png" height="261" width="261" alt="" title="">
+						
+							<img src="images/src/photo-2.png" height="128" width="129" alt="" title="">
+							<img src="images/src/photo-3.png" height="128" width="129" alt="" title="">
+							<img src="images/src/photo-4.png" height="128" width="129" alt="" title="">
+							<img src="images/src/photo-8.png" height="128" width="129" alt="" title="">
+						
+							<img src="images/src/photo-5.png" alt="">
+						
+							<img src="images/src/photo-6.png" alt="">
+							<img src="images/src/photo-7.png" alt="">
+
+
+						</div>
+
+						<!-- <ul 
 						class="cycle-slideshow" 
 						data-cycle-fx="scrollHorz"
 						data-cycle-timeout="0" 						
@@ -592,7 +646,7 @@
 								</div>
 							</li>
 
-						</ul>
+						</ul> -->
 					</div>
 					<div class="photos__gallery__footer clearfix">
 						<a href="#upload" class="call-popap btn btn--orange press--left"><span class="icon--photo--small"></span>Загрузить фото</a>

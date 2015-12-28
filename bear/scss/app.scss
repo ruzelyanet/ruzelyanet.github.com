@@ -144,7 +144,7 @@ $images-sprite-map: sprite-map("assets/default/*.png");
 
 .big-slider{
 	height: 772px;
-	background: url(../images/slider-bg.png) no-repeat center top;
+	background: url(../images/slider-bg.png) no-repeat center top #FF7B7A;
 	background-size: cover;
 	z-index: 15;
 	position: relative;
@@ -155,8 +155,6 @@ $images-sprite-map: sprite-map("assets/default/*.png");
 }
 
 .big-slider__view{
-	position: relative;
-	height: 576px;
 	position: relative;
 }
 
@@ -196,7 +194,7 @@ $images-sprite-map: sprite-map("assets/default/*.png");
 	background: url(../images/video-before-bg.png) no-repeat center top , url(../images/video-after-bg.png) no-repeat center bottom #f4f4f4;
 	margin-top:-18px;
 	position: relative;
-	z-index: 10;
+	z-index: 20;
 	@include box;
 	padding: 88px 0;
 
@@ -756,6 +754,7 @@ $images-sprite-map: sprite-map("assets/default/*.png");
 .big-slider__list{
 	position: relative;
 	z-index: 10;
+	margin-top:177px;
 }
 
 .big-slider__list__item__info{
@@ -924,6 +923,8 @@ $images-sprite-map: sprite-map("assets/default/*.png");
 
 .fancybox-close{
 	display: none;
+	right:15px;
+	top:15px;
 }
 
 .stores{
@@ -1082,8 +1083,9 @@ $images-sprite-map: sprite-map("assets/default/*.png");
 
 .hidden-slider{
 	color:#fff;
-	padding: 0 37px;
+	padding: 0 57px;
 	position: relative;
+	display: none;
 	ul{
 		@include list;
 	}
@@ -1093,20 +1095,27 @@ $images-sprite-map: sprite-map("assets/default/*.png");
 	position: absolute;
 	top:50%;
 	cursor:pointer;
+	    height: 24px;
+    width: 45px;
+    background: url("../images/icons.svg") no-repeat;
 }
 
 .hidden-slider__list__btn--prev{
 	left:0;
-	background: url("../images/icons.svg") no-repeat scroll 0 -1100px;
-    height: 24px;
-    width: 22px;
+	background-position: 0 -1148px;
 }
 
 .hidden-slider__list__btn--next{
 	right:0;
-	background:  url("../images/icons.svg") no-repeat scroll 0 -1124px;
-    height: 24px;
-    width: 22px;
+	background-position: 0 -1173px;
+}
+
+.reviews__slider__btn--prev{
+	left:0;
+}
+
+.hidden-slider__footer{
+	margin:15px 0;
 }
 
 
