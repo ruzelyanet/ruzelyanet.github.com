@@ -12,6 +12,52 @@
         'use strict';
         $('html').removeClass('no-js');
 
+
+        $(".call-cart").click(function(){			
+			$(".popap-cart").addClass("popap-cart--active");
+			$(".close-popap-cart").toggleClass("close-popap-cart--active");			
+			return false;
+		});
+
+		$(".close-popap-cart").click(function(){
+			$(".popap-cart").removeClass("popap-cart--active");	
+			$(this).toggleClass("close-popap-cart--active");
+		});
+
+        $(".submit-val").click(function(){			
+		 	$(".popap-cart").removeClass("popap-cart--active");	
+		 	$(".close-popap-cart").toggleClass("close-popap-cart--active");			
+		 	return false;
+		 });
+
+	    $("input[type=file], input[type=number]").styler();
+
+        $(".minus").click(function(){
+			$(this).parents(".spin").find("input").change();
+		});
+		$(".plus").click(function(){
+			$(this).parents(".spin").find("input").change();
+
+		});
+
+		$('.spin input').on('change', function() {
+			var val = $(this).attr("value");
+	        var totalPrice = val * 700;
+	        $(".form--cart__price__numb").text(totalPrice);
+
+	    }); 
+
+	    $(window).bind('scroll', function () {
+            if ($(window).scrollTop() > 928) {
+                $(".header__shift").addClass("header__shift--fix");
+
+            } else {
+                $(".header__shift").removeClass("header__shift--fix");
+            }
+        });
+
+
+
         $(".call-popap").fancybox({
 			padding:0
 		});
@@ -27,25 +73,7 @@
         });
         
 
-        $(".call-cart").click(function(){			
-			$(".popap-cart").addClass("popap-cart--active");
-			$(".close-popap-cart").toggleClass("close-popap-cart--active");			
-			return false;
-		});
-
-		$(".popap-cart").blur(function(){
-			$(this).removeClass("popap-cart--active");				
-		});
-
-		$(".close-popap-cart").click(function(){
-			$(".popap-cart").removeClass("popap-cart--active");	
-			$(this).toggleClass("close-popap-cart--active");
-		});
-
-        $(".submit-val").click(function(){			
-		 	$(".popap-cart").removeClass("popap-cart--active");				
-		 	return false;
-		 });
+        
 		
 		
 
@@ -66,29 +94,6 @@
 			}
 		});		
 
-		$("input[type=file], input[type=number]").styler();
-
-		$(window).bind('scroll', function () {
-            if ($(window).scrollTop() > 928) {
-                $(".header__shift").addClass("header__shift--fix");
-
-            } else {
-                $(".header__shift").removeClass("header__shift--fix");
-            }
-        });
-	
-
-		$(".minus").click(function(){
-			$(this).parent().find("input").change();
-		});
-		$(".plus").click(function(){
-			$(this).parent().find("input").change();
-		})
-		$('.spin input').on('change', function() {
-			var val = $(this).attr("value");
-	        var totalPrice = val*700;
-	        $(".form--cart__price__numb").text(totalPrice);
-	    }); 
 
 
 	    $(".anim-slider").animateSlider(
