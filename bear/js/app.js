@@ -12,6 +12,29 @@
         'use strict';
         $('html').removeClass('no-js');
 
+		var body = $("body");
+		
+		$("input[type=file], input[type=number]").styler();
+	
+	    body.on("click", ".minus", function(){
+			$(this).parents(".spin").find("input").change();
+		});
+		
+		body.on("click", ".plus", function(){
+			$(this).parents(".spin").find("input").change();
+	
+		});
+				
+	
+		$('.spin input').change(function() {
+			var val = $(this).attr("value");
+			console.log(val);
+	        var totalPrice = val * 700;
+	        console.log(totalPrice);
+	        $(".form--cart__price__numb").text(totalPrice);
+	
+	    });
+
 
         $(".call-cart").click(function(){			
 			$(".popap-cart").addClass("popap-cart--active");
@@ -30,22 +53,9 @@
 		 	return false;
 		 });
 
-	    $("input[type=file], input[type=number]").styler();
 
-        $(".minus").click(function(){
-			$(this).parents(".spin").find("input").change();
-		});
-		$(".plus").click(function(){
-			$(this).parents(".spin").find("input").change();
 
-		});
-
-		$('.spin input').on('change', function() {
-			var val = $(this).attr("value");
-	        var totalPrice = val * 700;
-	        $(".form--cart__price__numb").text(totalPrice);
-
-	    }); 
+     
 
 	    $(window).bind('scroll', function () {
             if ($(window).scrollTop() > 928) {
@@ -73,9 +83,6 @@
         });
         
 
-        
-		
-		
 
 		// Photo slider > Minimal
 		$(".contentslider-std").sliderkit({
@@ -307,7 +314,6 @@
 	$(".call--menu").click(function(){
 		$(".menu").slideToggle();
 	});
-
 
 
     });
