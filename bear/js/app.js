@@ -72,10 +72,10 @@
 			padding:0
 		});
 
-     //    $.scrollIt({
+         $.scrollIt({
      //    	upKey: 0, 
   			// downKey: 0        
-     //    });
+        });
  
     	//input mask
         $('input[type=tel]').mask('+7 (999) 999-99-99', {
