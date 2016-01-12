@@ -7,10 +7,10 @@ function initialize() {
   var settings = {
     zoom: 15,
     scrollwheel: false,
-        disableDefaultUI: true,
+    disableDefaultUI: true,
     center: new google.maps.LatLng(lat,lng),          
-    mapTypeControl: true,   
-    navigationControl: true,
+    mapTypeControl: false,   
+    navigationControl: false,
     navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     styles: [{"stylers":[{"hue":"#2c3e50"},{"saturation":250}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":50},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]}]
