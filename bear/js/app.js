@@ -88,7 +88,7 @@
 		$(".contentslider-std").sliderkit({
 			circular:true,
 			mousewheel:false,
-			keyboard:true,
+			keyboard:false,
 			shownavitems:4,
 			auto:false,			
 			panelfxspeed:500,
