@@ -1,0 +1,60 @@
+
+/*-fonts----------------------*/
+$rubl: "alsrubl-verdana-regular", sans-serif;
+
+$reg:"pf_square_sans_proregular", sans-serif;
+$light:"pf_square_sans_prolight", sans-serif;
+$med:"pfsquaresanspro-medium", sans-serif;
+$bold:"pf_square_sans_probold", sans-serif;
+
+
+/*-colors--------------------*/
+$yel:#ffcb00;
+
+
+/*-@mixin------------------*/
+ @mixin list(){
+  margin:0;
+  padding:0;
+  li{
+    list-style-type: none;
+  }
+}
+
+@mixin box(){	
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+@mixin inline($alig){
+	display: inline-block;
+	vertical-align: $alig;
+}
+
+@mixin transiton($arg){
+	-webkit-transition: all $arg ease;
+	-moz-transition: all $arg ease;
+	-o-transition: all $arg ease;
+	-ms-transition: all $arg ease;
+	transition: all $arg ease;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  @include has-layout;
+}
+
+#{elements-of-type(text-input)} {
+  @include input-placeholder {
+    color: #999999;
+    font-style: normal;
+    opacity: 1;
+  }
+}

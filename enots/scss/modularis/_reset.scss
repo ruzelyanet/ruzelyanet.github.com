@@ -1,0 +1,73 @@
+body{
+    font:16px $reg;
+}
+
+h2{
+    font:normal 36px $reg;
+    text-transform: uppercase;
+}
+
+a{
+    color: $yel;
+    text-decoration: underline;
+    @include transiton(0.3s);
+    &:hover{
+        text-decoration:none;
+    }
+}
+
+b{
+    font-weight: $bold;
+}
+
+.rubl{
+    font-family: $rubl;
+}
+
+.clearfix{
+    @include clearfix;
+}
+
+.press--left{
+    float:left;
+}
+
+.press--right{
+    float:right;
+}
+
+.l-container{    
+    width:1140px;
+    margin:0 auto;    
+}
+
+.l-container--small{    
+    width:1120px;
+    margin:0 auto;    
+}
+
+.l-container--little{    
+    width:1120px;
+    margin:0 auto;    
+}
+
+.st--right{
+    text-align: right;
+}
+
+.st--center{
+    text-align: center;
+}
+
+.st--med{
+    font-family: $med;
+}
+
+.st--white{
+    color:#ffffff;
+}
+
+
+
+
+

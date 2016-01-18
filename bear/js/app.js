@@ -73,7 +73,7 @@
 		});
 
          $.scrollIt({
-     //    	upKey: 0, 
+     		//upKey: 0, 
   			// downKey: 0        
         });
  
