@@ -1,0 +1,203 @@
+/**
+ * ThemePile Buttons
+ */
+.button {
+  display: inline-block;
+  padding: 7px 25px;
+  border: 1px solid #dddddd;
+  border-bottom-color: #c4c4c4;
+  font-size: 11px;
+  font-family: "Signika Negative", sans-serif;
+  line-height: 24px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow: none;
+  vertical-align: middle;
+  letter-spacing: 1px;
+  color: white !important;
+  cursor: pointer;
+  border-color: #c5c5c5;
+  border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15);
+  background: #fc7068;
+}
+
+.button:HOVER {
+  color: #333;
+  text-decoration: none;
+  background: #bb544b;
+}
+
+.button:FOCUS {
+  outline: thin dotted #333333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.button:ACTIVE {
+  outline: 0;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.button[disabled] {
+  cursor: default;
+  background-image: none;
+  background-color: white;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
+  opacity: 0.2;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* Button Sizes */
+.button_size_large {
+  padding: 15px 30px;
+  font-size: 16px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+
+.button_size_small {
+  padding: 1px 9px;
+  font-size: 11px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+
+.button_type_primary,
+.button_type_warning,
+.button_type_danger,
+.button_type_success,
+.button_type_info,
+.button_type_inverse {
+  color: white !important;
+}
+
+.button_type_primary {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4ac3ff), color-stop(100%, #4a87ff));
+  background: -webkit-linear-gradient(#4ac3ff, #4a87ff);
+  background: -moz-linear-gradient(#4ac3ff, #4a87ff);
+  background: -o-linear-gradient(#4ac3ff, #4a87ff);
+  background: linear-gradient(#4ac3ff, #4a87ff);
+  background-color: #4a87ff;
+  text-shadow: 1px 1px 1px #0076b0;
+}
+
+.button_type_primary:hover, .button_type_primary:active, .button_type_primary[disabled] {
+  color: white;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #17b2ff), color-stop(100%, #1765ff));
+  background: -webkit-linear-gradient(#17b2ff, #1765ff);
+  background: -moz-linear-gradient(#17b2ff, #1765ff);
+  background: -o-linear-gradient(#17b2ff, #1765ff);
+  background: linear-gradient(#17b2ff, #1765ff);
+}
+
+.button_type_primary:ACTIVE {
+  background-color: #1765ff \9;
+}
+
+.button_type_warning {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffb966), color-stop(100%, #ff961a));
+  background: -webkit-linear-gradient(#ffb966, #ff961a);
+  background: -moz-linear-gradient(#ffb966, #ff961a);
+  background: -o-linear-gradient(#ffb966, #ff961a);
+  background: linear-gradient(#ffb966, #ff961a);
+  background-color: #ff961a;
+  text-shadow: 1px 1px 1px #cc6f00;
+}
+
+.button_type_warning:hover, .button_type_warning:active, .button_type_warning[disabled] {
+  color: white;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffa233), color-stop(100%, #e67d00));
+  background: -webkit-linear-gradient(#ffa233, #e67d00);
+  background: -moz-linear-gradient(#ffa233, #e67d00);
+  background: -o-linear-gradient(#ffa233, #e67d00);
+  background: linear-gradient(#ffa233, #e67d00);
+}
+
+.button_type_warning:ACTIVE {
+  background-color: #e67d00 \9;
+}
+
+.button_type_danger {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ee5f5b), color-stop(100%, #bd362f));
+  background: -webkit-linear-gradient(#ee5f5b, #bd362f);
+  background: -moz-linear-gradient(#ee5f5b, #bd362f);
+  background: -o-linear-gradient(#ee5f5b, #bd362f);
+  background: linear-gradient(#ee5f5b, #bd362f);
+  background-color: #bd362f;
+  text-shadow: 1px 1px 1px #9f1411;
+}
+
+.button_type_danger:hover, .button_type_danger:active, .button_type_danger[disabled] {
+  color: white;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e9322d), color-stop(100%, #942a25));
+  background: -webkit-linear-gradient(#e9322d, #942a25);
+  background: -moz-linear-gradient(#e9322d, #942a25);
+  background: -o-linear-gradient(#e9322d, #942a25);
+  background: linear-gradient(#e9322d, #942a25);
+}
+
+.button_type_danger:ACTIVE {
+  background-color: #942a25 \9;
+}
+
+.button_type_success {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #62c462), color-stop(100%, #51a351));
+  background: -webkit-linear-gradient(#62c462, #51a351);
+  background: -moz-linear-gradient(#62c462, #51a351);
+  background: -o-linear-gradient(#62c462, #51a351);
+  background: linear-gradient(#62c462, #51a351);
+  background-color: #51a351;
+  text-shadow: 1px 1px 1px #276627;
+}
+
+.button_type_success:hover, .button_type_success:active, .button_type_success[disabled] {
+  color: white;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #42b142), color-stop(100%, #408140));
+  background: -webkit-linear-gradient(#42b142, #408140);
+  background: -moz-linear-gradient(#42b142, #408140);
+  background: -o-linear-gradient(#42b142, #408140);
+  background: linear-gradient(#42b142, #408140);
+}
+
+.button_type_success:ACTIVE {
+  background-color: #408140 \9;
+}
+
+.button_type_info {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #5bc0de), color-stop(100%, #2f96b4));
+  background: -webkit-linear-gradient(#5bc0de, #2f96b4);
+  background: -moz-linear-gradient(#5bc0de, #2f96b4);
+  background: -o-linear-gradient(#5bc0de, #2f96b4);
+  background: linear-gradient(#5bc0de, #2f96b4);
+  background-color: #2f96b4;
+  text-shadow: 1px 1px 1px #1b6d85;
+}
+
+.button_type_info:hover, .button_type_info:active, .button_type_info[disabled] {
+  color: white;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #31b0d5), color-stop(100%, #24748c));
+  background: -webkit-linear-gradient(#31b0d5, #24748c);
+  background: -moz-linear-gradient(#31b0d5, #24748c);
+  background: -o-linear-gradient(#31b0d5, #24748c);
+  background: linear-gradient(#31b0d5, #24748c);
+}
+
+.button_type_info:ACTIVE {
+  background-color: #24748c \9;
+}
