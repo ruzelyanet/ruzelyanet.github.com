@@ -1,0 +1,9 @@
+select.form-control,textarea.form-control,input[type="text"].form-control,input[type="password"].form-control,input[type="datetime"].form-control,input[type="datetime-local"].form-control,input[type="date"].form-control,input[type="month"].form-control,input[type="time"].form-control,input[type="week"].form-control,input[type="number"].form-control,input[type="email"].form-control,input[type="url"].form-control,input[type="search"].form-control,input[type="tel"].form-control,input[type="color"].form-control{background-color:#fff;border:1px solid transparent;color:$brown;opacity:1;font:20px $thin;padding:5px 15px;border-radius:20px;height:36px;}
+select.form-control:focus,textarea.form-control:focus,input[type="text"].form-control:focus,input[type="password"].form-control:focus,input[type="datetime"].form-control:focus,input[type="datetime-local"].form-control:focus,input[type="date"].form-control:focus,input[type="month"].form-control:focus,input[type="time"].form-control:focus,input[type="week"].form-control:focus,input[type="number"].form-control:focus,input[type="email"].form-control:focus,input[type="url"].form-contro:focus,input[type="search"].form-control:focus,input[type="tel"].form-control:focus,input[type="color"].form-control:focus{outline:0 none;box-shadow:0 0 5px rgba(133,70,167,0.5)}
+input[type="file"].form-control,input[type="image"].form-control,input[type="submit"].form-control,input[type="reset"].form-control,input[type="button"].form-control,input[type="radio"].form-control,input[type="checkbox"].form-control{width:auto}
+textarea.form-control{height:150px;resize:vertical}
+.form-control--brown{border-color:$brown !important}
+::-webkit-input-placeholder{color:$brown;opacity:1;font:20px $thin}
+:-moz-placeholder{color:$brown;opacity:1;font:20px $thin}
+::-moz-placeholder{color:$brown;opacity:1;font:20px $thin}
+:-ms-input-placeholder{color:$brown;opacity:1;font:20px $thin}
