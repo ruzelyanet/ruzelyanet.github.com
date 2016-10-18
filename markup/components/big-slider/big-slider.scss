@@ -1,0 +1,44 @@
+.big-slider{
+	border-bottom: 3px solid $gold;
+	&__item{		
+		position: relative;
+		img{
+			display: block;
+			min-width: 100%;
+			max-width: 100%;
+		}
+	}
+	&__text{
+		position: absolute;
+		top: 40%;
+		left: 0;
+		width: 100%;
+	}
+	.owl-prev{
+		@include bg($slider-left);
+		position: absolute;
+		left: 1%;
+		top: 50%;
+		margin-top: -60px; 
+		font-size: 0;
+	}
+
+	.owl-next{
+		@include bg($slider-right);
+		position: absolute;
+		right: 1%; 
+		top: 50%;
+		margin-top: -60px;
+		font-size: 0;
+	}
+}
+
+.slide-title{
+	color: $gold-dark;
+	font: 50px $f-title;
+	&--big{
+		font-size: 64px;
+		text-transform: uppercase;
+	}
+}
+

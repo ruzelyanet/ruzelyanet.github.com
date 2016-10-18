@@ -1,0 +1,46 @@
+.nav-cat{
+	& > ul{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-size: 18px;
+		font-weight: 600;
+		& > li{
+			padding: 6px 20px;
+			border-bottom: 1px solid #d3d1d1;
+			&:first-child{
+				border-top: 1px solid #d3d1d1;
+			}
+			& > a{
+				color: $blue;
+			}
+		}
+		ul{
+			font-weight: 400;
+			padding-left: 14px;
+			li{
+				list-style-type: none;
+				margin-bottom: 10px;
+				padding-left: 12px;
+				position: relative;
+				&:before{
+					content: "\2022";
+					position: absolute;
+					left: 0;
+					top: 5px;
+					font-size: 18px;
+					line-height: 18px;				
+				}
+				&:last-child{
+					margin-bottom: 0;
+				}
+				a{
+					color: $grey;
+					&:hover{
+						color: $blue;
+					}
+				}
+			}
+		}
+	}
+}
