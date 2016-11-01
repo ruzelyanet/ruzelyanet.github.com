@@ -60,3 +60,14 @@ body{
 .slogan{
 	margin-top: 10%;
 }
+
+@media screen and (max-width: 700px) {
+	body{
+		background-size: auto cover;
+		font-size: 20px;
+	}
+
+	.prymary-text{
+		font-size: 20px;
+	}
+}
