@@ -1,8 +1,0 @@
-.btn{display:inline-block;padding:4px 18px;font:21px $thin;height:36px;text-align:center;text-decoration:none;text-shadow:none;vertical-align:middle;color:#fff;cursor:pointer;border-radius:20px;background:#fff;color:$brown;border:none;white-space:nowrap;}
-.btn:hover{background:$red;color:#fff}
-.btn:FOCUS{outline:thin dotted #333;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}
-.btn:ACTIVE{outline:0;-webkit-box-shadow:inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);-moz-box-shadow:inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);box-shadow:inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05)}
-.btn--brown{background:$brown;color:#fff}
-.btn--red{background:$red;color:#fff;}
-.btn--red:hover{background:$brown}
-.btn[disabled]{cursor:default;background-image:none;background-color:#fff;opacity:.2;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none}
