@@ -1,0 +1,42 @@
+[class^="icon-"], [class*=" icon-"] {
+  background-color: transparent;
+  border: 0 none;
+  color: transparent;
+  display: inline-block;
+  font: 0px/0 a;
+  margin-top: 0;
+  text-shadow: none;
+  vertical-align: middle;
+}
+
+.icon-arrow-right{
+	@include bg($icon-arrow-right);
+}
+
+.icon-prev{
+	@include bg($prev-arrow);	
+}
+
+.icon-next{
+	@include bg($next-arrow);	
+}
+
+.icon-rocket{
+	@include bg($icon-rocket);
+}
+
+.icon-standart{
+	@include bg($icon-standart);
+}
+
+.icon-magazine{
+	@include bg($icon-magazine);
+}
+
+.icon-portal{
+	@include bg($icon-portal);
+}
+
+.icon-theme{
+	@include bg($icon-theme);
+}

@@ -1,0 +1,25 @@
+.big-baner{
+	height: 360px;
+	background: url(../img/general/banner.jpg) no-repeat center top;
+	background-attachment: fixed;
+	background-size: cover;
+	margin-bottom: 60px;
+}
+
+.c-audit{
+	background: rgba(0,0,0,0.7);
+	padding: 40px;
+	height: 214px;
+	color: #fff;
+	margin-top: 74px;
+	&__title{
+		font: 31px $brutal-light;
+		text-transform: uppercase;
+		margin-bottom: 24px;
+	}
+	.btn{
+		width: 139px;
+	}
+}
+
+

@@ -1,0 +1,13 @@
+
+.b-text{
+	max-width: 770px;
+	margin: 0 auto;
+	font: 300 15px/25px $roboto;
+	a{
+		color: #007dbd;
+		text-decoration: underline;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}

@@ -1,0 +1,36 @@
+.keys-item{
+	padding: 0 15px;
+	&__img{
+		margin-bottom: 40px;
+		img{
+			display: block;
+			max-width: 100%;
+		}
+	}
+	&__text{
+		font-size: 13px;
+		line-height: 23px;
+		color: $grey;
+		font-style: italic;
+	}
+}
+
+.keys-carousel{
+	position: relative;
+	padding: 0 85px;
+	.icon-prev{		
+		position: absolute;
+		left: 0;
+		top: 50%;
+		margin-top: -24px;
+		cursor: pointer;
+	}
+
+	.icon-next{		
+		position: absolute;
+		right: 0;
+		top: 50%;
+		margin-top: -24px;
+		cursor: pointer;
+	}
+}

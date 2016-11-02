@@ -1,0 +1,95 @@
+// Common styles of the project
+a{
+	color: $blue;
+}
+
+input.form-control{
+	height: 57px;
+	border-radius: 5px;
+	font: 15px $roboto;
+	color: $grey;
+	border-color: #fff;
+}
+
+input.form-control--border{
+	border-color: #cccccc;
+}
+
+.btn{
+	height: 57px;
+	font: 15px $brutal;
+	text-transform: uppercase;
+	border-color: $blue;	
+	transition: all 0.2s ease-out 0s;
+	color: #2179a6;
+	background: #fff;
+	&:hover{
+		background: #2179a6;
+		color: #fff;
+	}	
+	&-default{
+		background: $blue;
+		color: #fff;
+		&:hover{
+			background: $blue-lite;
+			border-color: $blue-lite;
+			color: #fff;
+ 		}
+	}
+}
+
+.section{
+	padding: 30px 0;
+	&-title{
+		text-align: center;
+		font: 45px $brutal-light;
+		text-transform: uppercase;
+		color: #000;
+		margin-bottom: 60px;
+	}
+}
+
+.worker{
+	text-align: center;
+	padding: 0;
+	border: none;
+	&-name{
+		font: 25px $brutal-light;
+		text-transform: uppercase;
+		color: #000;
+		margin-bottom: 20px;
+	}
+	.caption{
+		line-height: 23px;
+		color: #999999;
+		padding-top: 20px;		
+	}
+}
+
+h4, .h4{
+	font: 25px $brutal-light;
+	text-transform: uppercase;
+	color: #000;
+	margin: 0 0 20px;
+}
+
+.h-white{
+	color: #fff;
+}
+
+.h-text-shadow{
+	text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+}
+
+.form-row{
+	margin-bottom: 30px;
+}
+
+.btn-cw{
+	width: 236px;
+}
+
+.form-submit{
+	margin-bottom: 40px;
+	margin-top: 30px;
+}

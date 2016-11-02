@@ -1,0 +1,55 @@
+.b-scheme{
+	min-height: 633px;
+	background: url(../img/general/scheme.jpg) no-repeat center top;
+	background-size: cover;
+	padding-bottom: 0;
+	&-visual{
+		position: relative;
+		height: 488px;
+		background: url(../img/general/steps.png) no-repeat 0 0;
+		&__footer{
+			position: absolute;
+			left: 0;
+			bottom: 20px;
+			width: 100%;
+			.btn{
+				width: 210px;
+			}
+		}
+	}
+}
+
+.step{
+	position: absolute;
+	color: #fff;
+	font: 15px/20px $brutal-med;
+	text-transform: uppercase;
+	&-1{
+		left: 50px;
+    	top: 327px;
+	}
+	&-2{
+		left: 228px;
+		top: 0;
+	}
+	&-3{
+		left: 408px;
+    	top: 251px;
+	}
+	&-4{
+		left: 585px;
+		top: 0;
+	}
+	&-5{
+		left: 764px;
+    	top: 132px;
+	}
+	&-6{
+		left: 938px;
+		top: 0;
+	}
+	&-7{
+		right: 44px;
+		top: 223px;
+	}
+}
