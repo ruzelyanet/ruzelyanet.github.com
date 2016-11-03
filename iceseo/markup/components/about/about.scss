@@ -3,11 +3,44 @@
 	max-width: 770px;
 	margin: 0 auto;
 	font: 300 15px/25px $roboto;
+	position: relative;
+	background: #fff;
 	a{
 		color: #007dbd;
 		text-decoration: underline;
 		&:hover{
 			text-decoration: none;
 		}
+	}
+}
+
+.fix-media{
+	position: relative;
+}
+
+.media-cup{
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	transition: all 0.2s ease-out 0s;
+	z-index: -1;
+}
+
+.media-pen{
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: block;
+	transition: all 0.2s ease-out 0s;
+	z-index: -1;
+}
+
+@media screen and (max-width: 1800px) {
+	.media-cup{
+		width: 250px;
+	}
+	.media-pen{
+		width: 200px;
 	}
 }

@@ -1,0 +1,40 @@
+.footer{
+	&-top{
+		background: #e6e6e6;
+		padding: 30px 0;
+	}
+	&-logo{
+		img{
+			display: block;
+		}
+	}
+	&-nav{	
+		font: 15px $brutal;
+		text-transform: uppercase;
+		margin: 5px 0;
+		ul{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			li{
+				float: left;
+				margin-left: 32px;
+				a{
+					color: #999999;
+					text-decoration: none;
+					transition: all 0.2s ease-out 0s;
+					&:hover{
+						color: $blue;
+					}
+				}
+			}
+		}
+	}
+}
+
+.copyright{
+	color: #c2c2c2;
+	padding: 5px 0;
+	font-size: 15px;
+	font-weight: 300;
+}

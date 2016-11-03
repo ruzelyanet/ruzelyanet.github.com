@@ -1,6 +1,10 @@
 // Common styles of the project
 a{
 	color: $blue;
+	text-decoration: underline;
+	&:hover{
+		text-decoration: none;
+	}
 }
 
 input.form-control{
@@ -13,6 +17,10 @@ input.form-control{
 
 input.form-control--border{
 	border-color: #cccccc;
+}
+
+.page{
+	padding-top: 150px;
 }
 
 .btn{
@@ -53,6 +61,7 @@ input.form-control--border{
 	text-align: center;
 	padding: 0;
 	border: none;
+	background: none;
 	&-name{
 		font: 25px $brutal-light;
 		text-transform: uppercase;
@@ -66,19 +75,50 @@ input.form-control--border{
 	}
 }
 
-h4, .h4{
-	font: 25px $brutal-light;
+h4, .h4{	
 	text-transform: uppercase;
 	color: #000;
-	margin: 0 0 20px;
+	margin: 20px 0;
+	font-size: 25px;
+}
+
+h4{
+	font-family: $brutal;
+}
+
+.h4{
+	font-family: $brutal-light;
+}
+
+h5, .h5{	
+	text-transform: uppercase;
+	color: #000;
+	margin: 20px 0;
+	font-size: 20px;
+}
+
+h4{
+	font-family: $brutal-med;
+}
+
+.h4{
+	font-family: $brutal;
 }
 
 .h-white{
 	color: #fff;
 }
 
+.h-blue{
+	color: $blue;
+}
+
 .h-text-shadow{
 	text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+}
+
+.h-full{
+	width: 100%;
 }
 
 .form-row{
@@ -92,4 +132,16 @@ h4, .h4{
 .form-submit{
 	margin-bottom: 40px;
 	margin-top: 30px;
+}
+
+table{
+	tr{
+		td{
+			padding: 5px 0;
+		}
+	}	
+}
+
+.h-grey{
+	color: #666666;
 }

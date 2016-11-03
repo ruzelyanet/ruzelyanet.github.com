@@ -9,6 +9,14 @@
   vertical-align: middle;
 }
 
+.icon-car{
+	@include bg($icon-car);
+}
+
+.icon-walk{
+	@include bg($icon-walk);
+}
+
 .icon-arrow-right{
 	@include bg($icon-arrow-right);
 }
@@ -39,4 +47,8 @@
 
 .icon-theme{
 	@include bg($icon-theme);
+}
+
+.icon-mr-r{
+	margin-right: 12px;
 }
