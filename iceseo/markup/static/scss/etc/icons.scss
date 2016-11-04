@@ -49,6 +49,69 @@
 	@include bg($icon-theme);
 }
 
+.icon-close{
+	@include bg($icon-close);	
+}
+
 .icon-mr-r{
 	margin-right: 12px;
 }
+
+.icon-complecs{
+	@include bg($icon-complecs);	
+}
+
+.icon-guranted{
+	@include bg($icon-guranted);	
+}
+
+.icon-time{
+	@include bg($icon-time);	
+	margin-right: 10px;
+}
+
+.icon-prof{
+	@include bg($icon-prof);	
+}
+
+.icon-auto{
+	@include bg($icon-auto);
+	margin-left: 8px;
+	margin-top: 10px;
+}
+
+.icon-prices{
+	@include bg($icon-prices);
+	margin-bottom: 7px;
+    margin-left: 10px;
+}
+
+.icon-complecs-white{
+	@include bg($icon-complecs-white);	
+}
+
+.icon-guranted-white{
+	@include bg($icon-guranted-white);	
+}
+
+.icon-time-white{
+	@include bg($icon-time-white);	
+	margin-right: 10px;
+}
+
+.icon-prof-white{
+	@include bg($icon-prof-white);	
+}
+
+.icon-auto-white{
+	@include bg($icon-auto-white);
+	margin-left: 8px;
+	margin-top: 10px;
+}
+
+.icon-prices-white{
+	@include bg($icon-prices-white);
+	margin-bottom: 7px;
+    margin-left: 10px;
+}
+

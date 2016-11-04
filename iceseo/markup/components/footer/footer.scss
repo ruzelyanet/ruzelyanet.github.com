@@ -19,7 +19,8 @@
 			li{
 				float: left;
 				margin-left: 32px;
-				a{
+				span{
+					cursor: pointer;
 					color: #999999;
 					text-decoration: none;
 					transition: all 0.2s ease-out 0s;

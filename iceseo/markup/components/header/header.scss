@@ -52,6 +52,12 @@
 
 .link-callback{
 	margin-left: 25px;
+	cursor: pointer;
+	color: $blue;
+	text-decoration: underline;
+	&:hover{
+		text-decoration: none;
+	}
 }
 
 .c-region{

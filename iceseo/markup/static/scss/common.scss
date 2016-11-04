@@ -7,12 +7,26 @@ a{
 	}
 }
 
-input.form-control{
+::-webkit-input-placeholder {
+	color:#999999;
+}
+::-moz-placeholder{
+	color:#999999;
+}
+:-moz-placeholder{
+	color:#999999;
+}
+:-ms-input-placeholder{
+	color:#999999;
+}
+
+.form-control{
 	height: 57px;
 	border-radius: 5px;
 	font: 15px $roboto;
-	color: $grey;
+	color: #000000;
 	border-color: #fff;
+	border: 1px solid #cccccc; 
 }
 
 input.form-control--border{
@@ -126,7 +140,7 @@ h4{
 }
 
 .btn-cw{
-	width: 236px;
+	min-width: 236px;
 }
 
 .form-submit{
@@ -144,4 +158,8 @@ table{
 
 .h-grey{
 	color: #666666;
+}
+
+.container{
+	min-width: 1170px;
 }
