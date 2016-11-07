@@ -1,0 +1,30 @@
+[class^="icon-"], [class*=" icon-"] {
+  background-color: transparent;
+  border: 0 none;
+  color: transparent;
+  display: inline-block;
+  font: 0px/0 a;
+  margin-top: 0;
+  text-shadow: none;
+  vertical-align: middle;
+}
+
+.icon-menu{
+	@include bg($icon-menu);
+}
+
+.icon-account{
+	@include bg($icon-account);
+}
+
+.icon-close{
+	@include bg($icon-close);
+}
+
+.icon-fc{
+  @include bg($icon-fc); 
+}
+
+.icon-in{
+  @include bg($icon-in);
+}

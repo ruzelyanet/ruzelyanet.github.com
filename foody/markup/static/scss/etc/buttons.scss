@@ -1,0 +1,21 @@
+.btn{
+	height: 48px;
+	border-radius: 28px;
+	padding: 0 30px;
+	font: 300 18px $roboto;
+	text-transform: uppercase;
+	transition: all 0.2s ease-out 0s;
+	&-primary{
+		background: none;
+		border-color: $green;
+		color: $green;
+		&:hover{
+			background: $green;
+			color: #000;
+			border-color: $green;
+		}
+	}
+	&-new-line{
+		white-space: pre-line;
+	}
+}
