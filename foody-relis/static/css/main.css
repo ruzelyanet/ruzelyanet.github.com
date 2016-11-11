@@ -7519,7 +7519,7 @@ blockquote {
 
 .train-carousel .owl-prev {
   left: 14px;
-  background-image: url(../img/png-sprite/96dpi/spritefl7h4sll3di.png);
+  background-image: url(../img/png-sprite/96dpi/spritejc96jacq5mi.png);
   background-position: -80px 0px;
   width: 76px;
   height: 76px;
@@ -7529,7 +7529,7 @@ blockquote {
 
 .train-carousel .owl-next {
   right: 14px;
-  background-image: url(../img/png-sprite/96dpi/spritefl7h4sll3di.png);
+  background-image: url(../img/png-sprite/96dpi/spritejc96jacq5mi.png);
   background-position: 0px 0px;
   width: 76px;
   height: 76px;
@@ -7840,7 +7840,7 @@ blockquote {
 
 .clients .owl-prev {
   left: 14px;
-  background-image: url(../img/png-sprite/96dpi/spritefl7h4sll3di.png);
+  background-image: url(../img/png-sprite/96dpi/spritejc96jacq5mi.png);
   background-position: -80px 0px;
   width: 76px;
   height: 76px;
@@ -7850,7 +7850,7 @@ blockquote {
 
 .clients .owl-next {
   right: 14px;
-  background-image: url(../img/png-sprite/96dpi/spritefl7h4sll3di.png);
+  background-image: url(../img/png-sprite/96dpi/spritejc96jacq5mi.png);
   background-position: 0px 0px;
   width: 76px;
   height: 76px;
@@ -7948,7 +7948,7 @@ blockquote {
 
 .friends-carousel .owl-prev {
   left: 14px;
-  background-image: url(../img/png-sprite/96dpi/spritefl7h4sll3di.png);
+  background-image: url(../img/png-sprite/96dpi/spritejc96jacq5mi.png);
   background-position: -80px 0px;
   width: 76px;
   height: 76px;
@@ -7958,7 +7958,7 @@ blockquote {
 
 .friends-carousel .owl-next {
   right: 14px;
-  background-image: url(../img/png-sprite/96dpi/spritefl7h4sll3di.png);
+  background-image: url(../img/png-sprite/96dpi/spritejc96jacq5mi.png);
   background-position: 0px 0px;
   width: 76px;
   height: 76px;
@@ -8024,6 +8024,18 @@ blockquote {
   font-size: 30px;
 }
 
+.intro {
+  color: #fff;
+  text-align: center;
+  height: 228px;
+  padding: 30px 0;
+  margin-bottom: 20px;
+}
+
+.intro img {
+  max-width: 100%;
+}
+
 .lk-header {
   position: fixed;
   top: 0;
@@ -8059,18 +8071,6 @@ blockquote {
 
 .lk-nav a:hover {
   color: #44d8a2;
-}
-
-.intro {
-  color: #fff;
-  text-align: center;
-  height: 228px;
-  padding: 30px 0;
-  margin-bottom: 20px;
-}
-
-.intro img {
-  max-width: 100%;
 }
 
 .c-validity {
@@ -8261,6 +8261,32 @@ html body .sub-menu li a {
   margin: 0 auto;
 }
 
+.sevice-item {
+  font-size: 16px;
+  line-height: 26px;
+  padding: 16px;
+}
+
+.sevice-item-bg {
+  background: #262c35;
+  color: #fff;
+}
+
+.sevice-item img {
+  max-width: 100%;
+}
+
+.sevice-title {
+  font-size: 25px;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+  margin-top: 20px;
+}
+
+.chat-img {
+  margin-bottom: -16px;
+}
+
 .b-package {
   margin: 0 -7px;
 }
@@ -8340,32 +8366,6 @@ html body .sub-menu li a {
   width: 77%;
   display: inline-block;
   vertical-align: middle;
-}
-
-.sevice-item {
-  font-size: 16px;
-  line-height: 26px;
-  padding: 16px;
-}
-
-.sevice-item-bg {
-  background: #262c35;
-  color: #fff;
-}
-
-.sevice-item img {
-  max-width: 100%;
-}
-
-.sevice-title {
-  font-size: 25px;
-  text-transform: uppercase;
-  margin-bottom: 22px;
-  margin-top: 20px;
-}
-
-.chat-img {
-  margin-bottom: -16px;
 }
 
 .price-pck {
@@ -8676,7 +8676,7 @@ html body .sub-menu li a {
 }
 
 .icon-menu {
-  background-image: url(../img/png-sprite/96dpi/spritefl7h4sll3di.png);
+  background-image: url(../img/png-sprite/96dpi/spritejc96jacq5mi.png);
   background-position: -160px -42px;
   width: 38px;
   height: 37px;
@@ -8685,7 +8685,7 @@ html body .sub-menu li a {
 }
 
 .icon-account {
-  background-image: url(../img/png-sprite/96dpi/spritefl7h4sll3di.png);
+  background-image: url(../img/png-sprite/96dpi/spritejc96jacq5mi.png);
   background-position: -160px 0px;
   width: 38px;
   height: 38px;
@@ -8694,7 +8694,7 @@ html body .sub-menu li a {
 }
 
 .icon-close {
-  background-image: url(../img/png-sprite/96dpi/spritefl7h4sll3di.png);
+  background-image: url(../img/png-sprite/96dpi/spritejc96jacq5mi.png);
   background-position: -82px -80px;
   width: 40px;
   height: 40px;
@@ -8703,7 +8703,7 @@ html body .sub-menu li a {
 }
 
 .icon-fc {
-  background-image: url(../img/png-sprite/96dpi/spritefl7h4sll3di.png);
+  background-image: url(../img/png-sprite/96dpi/spritejc96jacq5mi.png);
   background-position: -92px -134px;
   width: 13px;
   height: 24px;
@@ -8712,7 +8712,7 @@ html body .sub-menu li a {
 }
 
 .icon-in {
-  background-image: url(../img/png-sprite/96dpi/spritefl7h4sll3di.png);
+  background-image: url(../img/png-sprite/96dpi/spritejc96jacq5mi.png);
   background-position: -160px -83px;
   width: 23px;
   height: 23px;
@@ -8721,7 +8721,7 @@ html body .sub-menu li a {
 }
 
 .c-cos a:hover .icon-fc {
-  background-image: url(../img/png-sprite/96dpi/spritefl7h4sll3di.png);
+  background-image: url(../img/png-sprite/96dpi/spritejc96jacq5mi.png);
   background-position: -109px -134px;
   width: 13px;
   height: 24px;
@@ -8730,7 +8730,7 @@ html body .sub-menu li a {
 }
 
 .c-cos a:hover .icon-in {
-  background-image: url(../img/png-sprite/96dpi/spritefl7h4sll3di.png);
+  background-image: url(../img/png-sprite/96dpi/spritejc96jacq5mi.png);
   background-position: -126px -80px;
   width: 23px;
   height: 23px;
@@ -8739,7 +8739,7 @@ html body .sub-menu li a {
 }
 
 .icon-log-out {
-  background-image: url(../img/png-sprite/96dpi/spritefl7h4sll3di.png);
+  background-image: url(../img/png-sprite/96dpi/spritejc96jacq5mi.png);
   background-position: -46px -134px;
   width: 42px;
   height: 31px;
@@ -8748,7 +8748,7 @@ html body .sub-menu li a {
 }
 
 .icon-log-out:hover {
-  background-image: url(../img/png-sprite/96dpi/spritefl7h4sll3di.png);
+  background-image: url(../img/png-sprite/96dpi/spritejc96jacq5mi.png);
   background-position: 0px -134px;
   width: 42px;
   height: 31px;
@@ -8757,7 +8757,7 @@ html body .sub-menu li a {
 }
 
 .icon-xml {
-  background-image: url(../img/png-sprite/96dpi/spritefl7h4sll3di.png);
+  background-image: url(../img/png-sprite/96dpi/spritejc96jacq5mi.png);
   background-position: 0px -80px;
   width: 37px;
   height: 50px;
@@ -8766,7 +8766,7 @@ html body .sub-menu li a {
 }
 
 .icon-pdf {
-  background-image: url(../img/png-sprite/96dpi/spritefl7h4sll3di.png);
+  background-image: url(../img/png-sprite/96dpi/spritejc96jacq5mi.png);
   background-position: -41px -80px;
   width: 37px;
   height: 50px;
