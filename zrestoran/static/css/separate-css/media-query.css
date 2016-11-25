@@ -1,0 +1,224 @@
+@media screen and (max-width: 1800px) {
+	
+	.nav-top{
+		display: none;
+	}
+
+	.sidebar{
+		width: 400px;
+	}
+
+	.primary{
+		margin-left: 400px;
+	}
+
+	.sandwich{
+		display: inline-block;
+	}
+
+	.c-phone{
+		margin-right: 66px;
+	}
+
+	.skill-item__img{
+		width: 115px;
+		height: 115px;
+	}
+
+}
+
+@media screen and (max-width: 1440px) {
+	
+	body{
+		padding-top: 80px;		
+	}
+
+	.header{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+
+	.sidebar{
+		width: 100%;
+		position: static;
+		text-align: center;
+		padding: 30px 10px;
+	}
+
+	.logo{
+		width: 327px;
+		max-width: 100%;
+		margin-bottom: 0;
+	}
+
+	.sidebar .cat-nav{
+		display: none;
+	}
+
+	.sidebar .apply{
+		display: none;
+	}
+
+	.primary{
+		margin-left: 0;
+	}
+
+	.header-right-section{
+		width: 100%;		
+	}	
+
+	.mob-dropmenu{
+		position: fixed;
+		height: 100%;
+		overflow: auto;
+		top: 0;
+		right:0;
+	}
+
+	.mob-dropmenu .cat-nav, .mob-dropmenu .apply{
+		display: block;
+	}
+
+	.section-body{
+		padding: 30px;
+	}
+
+}
+
+@media screen and (max-width: 1200px) {
+	.skill-item__img{
+		width: 160px;
+		height: 160px;
+	}
+
+	.section-body{
+		padding: 20px;
+	}
+
+	.footer-section{
+		margin-bottom: 30px;
+	}
+
+	.footer-contacts{
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+
+	.mob-dropmenu .cat-nav{
+		display: block;
+	}
+
+	.img-slider{
+		height: auto;
+	}
+
+	.img-slider.owl-carousel .owl-item img{
+		width: 100%;
+	}
+
+	.action{
+		height: auto;
+	}
+
+	.action-slider{
+		height: auto;
+	}
+
+	.testimonials-slider__item{
+		text-align: center;
+	}
+
+	.testimonials-slider__item-img{
+		float: none;
+		margin-bottom: 40px;
+	}
+
+	.testimonials-slider__item-img img{
+		display: inline-block !important;
+		vertical-align: top;
+	}
+
+	.testimonials-slider__item-info{
+		margin: 0;
+	}
+
+	.testimonials-slider .owl-prev, .testimonials-slider .owl-next{
+		top: 84px;
+		margin-top: 0;
+	}
+
+	.apply--dark{
+		max-width: 380px;
+		margin: 0 auto;
+	}
+
+	.footer{
+		text-align: center;
+	}
+
+}
+
+@media screen and (max-width: 768px) {
+	
+	.btn-apply{
+		padding: 11px 12px;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	.header-right-section{
+		padding:0 40px;
+		text-align: center;
+	}
+	
+	.c-phone{
+		margin: 10px 0 0;
+	}
+	
+	.skill-item{
+		padding: 20px;
+	}
+
+	.skill-item:after{
+		content: "";
+		display: table-cell;
+		vertical-align: middle;
+		height: 80px;
+	}
+
+
+	.skill-item__img{
+		width: 80px;
+		height: 80px;
+		margin: 0;
+		float: left;
+	}
+
+	.skill-item__info{
+		height: auto;
+		display: table-cell;
+		vertical-align: middle;
+		padding-left: 28px;
+		text-align: left;		
+	}
+
+	.testimonials-slider{
+		padding: 0;
+	}
+
+	.testimonials-slider .owl-prev, .testimonials-slider .owl-next{
+		top: 176px;
+	}
+
+}
+
+@media screen and (max-width: 460px){
+	.c-phone{
+		font-size: 20px;
+	}
+}
