@@ -27,7 +27,7 @@
 
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
 	
 	body{
 		padding-top: 80px;		
@@ -104,6 +104,29 @@
 	.footer-contacts{
 		text-align: center;
 	}
+
+	.have-list-nav{
+		margin-right: 60px;
+	}
+
+	.list-nav{
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	.sidebar-dinamic__body{
+		display: none;
+		position: absolute;
+		top: 0;
+		right: 10px;
+		background: #fff;
+		width: 460px;		
+		min-height: 100%;
+		padding-top: 2px;
+		z-index: 20;	
+		box-shadow: 0 0 5px rgba(0,0,0,0.5);	
+	}		
 }
 
 @media screen and (max-width: 1000px) {
@@ -213,6 +236,17 @@
 
 	.testimonials-slider .owl-prev, .testimonials-slider .owl-next{
 		top: 176px;
+	}
+
+	.b-contacts__info{
+		text-align: left;
+		padding: 30px 20px;
+	}
+
+	.cont-item{
+		margin:0 0 20px 0;
+		width: auto;
+		display: block;
 	}
 
 }

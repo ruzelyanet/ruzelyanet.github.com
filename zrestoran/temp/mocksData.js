@@ -1,3 +1,24 @@
+'breadcrumbs': {
+    news: {
+        page: 'Новости'  
+    },
+    menu: {
+        page: 'Меню'      
+    },
+    about: {
+        page: 'О ресторане'      
+    },
+    testimonials: {
+        page: 'Отзывы'      
+    },
+    booking: {
+        page: 'Бронирование'      
+    },
+    interior: {
+        page: 'Интерьер'      
+    }
+},
+
 'head': {
     defaults: {
         title: 'default title',
@@ -92,6 +113,30 @@ _template: {
 },
 
 __pages: [{
+                name: 'about',
+                href: 'about.html'
+             },{
+                name: 'booking',
+                href: 'booking.html'
+             },{
+                name: 'contacts',
+                href: 'contacts.html'
+             },{
                 name: 'index',
                 href: 'index.html'
+             },{
+                name: 'interior',
+                href: 'interior.html'
+             },{
+                name: 'menu',
+                href: 'menu.html'
+             },{
+                name: 'news',
+                href: 'news.html'
+             },{
+                name: 'post',
+                href: 'post.html'
+             },{
+                name: 'testimonials',
+                href: 'testimonials.html'
              }]
