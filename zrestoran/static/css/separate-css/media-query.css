@@ -249,10 +249,26 @@
 		display: block;
 	}
 
+	h1{
+		font-size: 30px;
+	}
+
+	.b-drinks-table h3{
+		font-size: 18px;
+	}
+
+	.sidebar-dinamic__body{
+		width: 420px;
+	}
+
 }
 
 @media screen and (max-width: 460px){
 	.c-phone{
 		font-size: 20px;
+	}
+
+	h1{
+		font-size: 25px;
 	}
 }
