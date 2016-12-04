@@ -1,4 +1,11 @@
 $(document).ready(function(){
+	
+	$(".call-menu").click(function(){
+		$(this).parent().find(">div").slideToggle();
+		$(this).toggleClass("call-menu--open");
+	});
+
+	$(".form-fix").sticky({topSpacing:25});
 
 	$(".js-call-list-menu").click(function(){
 		$(".sidebar-dinamic__body").fadeIn();
@@ -71,6 +78,7 @@ $(document).ready(function(){
 	$('.img-slider').owlCarousel({
 	    loop:true,	    
 	    nav:true,
+	    autoplay: true,
 	    responsive:{
 	        0:{
 	            items:1
