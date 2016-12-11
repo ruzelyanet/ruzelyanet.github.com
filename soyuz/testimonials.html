@@ -1,0 +1,695 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>default title</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <meta name="viewport" content="width=480">
+
+        <meta content="telephone=no" name="format-detection">
+        <!-- This make sence for mobile browsers. It means, that content has been optimized for mobile browsers -->
+        <meta name="HandheldFriendly" content="true">
+        <link href="static/css/separate-css/bootstrap.css" rel="stylesheet" type="text/css">
+
+        <link href="static/css/main.css" rel="stylesheet" type="text/css">
+
+        <link href="static/css/separate-css/media-query.css" rel="stylesheet" type="text/css">
+
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <script>
+            (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
+        </script>
+
+    </head>
+
+    <body>
+
+
+        <div class="sidebar">
+            <div class="sidebar__header">
+                <a href="/" class="logo">
+                    <img src="static/img/general/logo.png" alt="">
+                </a>
+            </div>
+
+            <div class="sidebar__body">
+
+                <div class="widget widget-phone text-center">
+                    <div class="c-phone">
+                        <i class="icon-phone-sm"></i>+7 (499) 190-52-61
+                    </div>
+                    <button class="btn btn-block btn-primary" data-toggle="modal" data-target="#popup-apply">
+                        Зарезервировать
+                    </button>
+                </div>
+
+                <div class="widget widget-nav">
+                    <div class="widget-title">Меню</div>
+                    <nav class="nav nav-left">
+                        <ul>
+                            <li>
+                                <a href="#">О компании</a>
+                            </li>
+                            <li>
+                                <a href="#">Меню</a>
+                                <span class="c-cursor"></span>
+                                <div class="nav-level-2">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Ресторан</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Банкетный зал</a>	
+                                            <div class="nav-level-3">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">Ресторан</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Банкетный зал</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#">Домики</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Новогодние корпоративы</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Видео</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">Интерьер</a>
+                            </li>
+                            <li>
+                                <a href="#">Банный комплекс</a>
+                            </li>
+                            <li>
+                                <a href="#">Бронирование</a>
+                            </li>
+                            <li>
+                                <a href="#">Отзывы</a>
+                            </li>
+                            <li>
+                                <a href="#">Новости</a>
+                            </li>
+                            <li>
+                                <a href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="widget widget-cat">
+                    <div class="widget-title">Мы организуем</div>
+                    <div class="cat-nav">
+                        <ul>
+                            <li>
+                                <a href="#"><span class="cat-nav__icon"><i class="icon-ban"></i></span>БАНКЕТЫ</a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="cat-nav__icon"><i class="icon-sv"></i></span>СВАДЬБЫ</a>
+                            </li>
+                            <li class="cat-nav__active">
+                                <a href="#"><span class="cat-nav__icon"><i class="icon-corp"></i></span>КОРПОРТАТИВЫ</a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="cat-nav__icon"><i class="icon-dn"></i></span>ДНИ РОЖДЕНИЯ</a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="cat-nav__icon"><i class="icon-dnd"></i></span>ДЕТСКИЕ ПРАЗДНИКИО</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--.cat-nav-->
+                </div>
+
+                <div class="widget widget-apply form-fix">
+                    <div class="widget-title">Онлайн заявка</div>
+                    <div class="form">
+                        <form>
+                            <div class="form-row to-book">
+                                <select class="form-control">
+                                    <option>Забронировать стол</option>
+                                    <option>На две персоны</option>
+                                    <option>На три персоны</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <input class="form-control" type="text" placeholder="Ваше имя">
+                            </div>
+                            <div class="form-row">
+                                <input class="form-control" type="tel" placeholder="Ваш телефон">
+                            </div>
+                            <div class="form-row">
+                                <input class="form-control" type="text" placeholder="Ваши пожелания">
+                            </div>
+                            <div class="form-row">
+                                <button class="btn btn-block btn-primary">Отправить заявку</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--.apply-->
+            </div>
+
+        </div>
+        <!--.sidebar-->
+
+        <div class="primary">
+            <div class="header clearfix">
+
+                <button class="btn btn-small btn-primary" data-toggle="modal" data-target="#popup-apply">
+                    <i class="icon-apply visible-sm-inline-block visible-xs-inline-block"></i>
+                    <span class="hidden-sm hidden-xs">Зарезервировать</span>
+                </button>
+
+                <div class="pull-right">
+                    <span class="h-phone">+7 (499) 190-52-61</span>
+
+                    <span class="sandwich">
+
+            			<span class="ic-nav ic-nav-1"></span>
+                    <span class="ic-nav ic-nav-2"></span>
+                    <span class="ic-nav"></span>
+                    </span>
+                </div>
+
+                <div class="mob-dropmenu">
+
+                    <div class="widget widget-phone text-center">
+                        <div class="c-phone">
+                            <i class="icon-phone-sm"></i>+7 (499) 190-52-61
+                        </div>
+                        <button class="btn btn-block btn-primary" data-toggle="modal" data-target="#popup-apply">
+                            Зарезервировать
+                        </button>
+                    </div>
+
+
+                    <div class="widget widget-nav">
+                        <div class="widget-title">Меню</div>
+                        <div class="nav nav-right">
+                            <ul>
+                                <li>
+                                    <a href="#">О компании</a>
+                                </li>
+                                <li>
+                                    <a href="#">Меню</a>
+                                    <span class="c-cursor c-cursor-js"></span>
+                                    <div class="nav-level-2">
+                                        <ul>
+                                            <li>
+                                                <a href="#">Ресторан</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Банкетный зал</a>
+                                                <span class="c-cursor c-cursor-js"></span>
+                                                <div class="nav-level-3">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="#">Ресторан</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Банкетный зал</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">Домики</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Новогодние корпоративы</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Видео</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">Интерьер</a>
+                                </li>
+                                <li>
+                                    <a href="#">Банный комплекс</a>
+                                </li>
+                                <li>
+                                    <a href="#">Бронирование</a>
+                                </li>
+                                <li>
+                                    <a href="#">Отзывы</a>
+                                </li>
+                                <li>
+                                    <a href="#">Новости</a>
+                                </li>
+                                <li>
+                                    <a href="#">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="widget widget-cat">
+                        <div class="widget-title">Мы организуем</div>
+                        <div class="cat-nav">
+                            <ul>
+                                <li>
+                                    <a href="#"><span class="cat-nav__icon"><i class="icon-ban"></i></span>БАНКЕТЫ</a>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="cat-nav__icon"><i class="icon-sv"></i></span>СВАДЬБЫ</a>
+                                </li>
+                                <li class="cat-nav__active">
+                                    <a href="#"><span class="cat-nav__icon"><i class="icon-corp"></i></span>КОРПОРТАТИВЫ</a>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="cat-nav__icon"><i class="icon-dn"></i></span>ДНИ РОЖДЕНИЯ</a>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="cat-nav__icon"><i class="icon-dnd"></i></span>ДЕТСКИЕ ПРАЗДНИКИО</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--.cat-nav-->
+                    </div>
+
+                    <div class="widget widget-apply">
+                        <div class="widget-title">Онлайн заявка</div>
+                        <div class="form">
+                            <form>
+                                <div class="form-row to-book">
+                                    <select class="form-control">
+                                        <option>Забронировать стол</option>
+                                        <option>На две персоны</option>
+                                        <option>На три персоны</option>
+                                    </select>
+                                </div>
+                                <div class="form-row">
+                                    <input class="form-control" type="text" placeholder="Ваше имя">
+                                </div>
+                                <div class="form-row">
+                                    <input class="form-control" type="tel" placeholder="Ваш телефон">
+                                </div>
+                                <div class="form-row">
+                                    <input class="form-control" type="text" placeholder="Ваши пожелания">
+                                </div>
+                                <div class="form-row">
+                                    <button class="btn btn-block btn-primary">Отправить заявку</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--.apply-->
+
+                </div>
+                <!--.mob-dropmenu-->
+
+            </div>
+            <!--.header-->
+            <div class="content">
+
+                <div class="breadcrumbs">
+                    <a href="#">Главная</a> / <span>Отзывы</span>
+                </div>
+
+                <div class="section section-body--grey">
+                    <div class="section-header text-center">
+                        <h2>Популярные отзывы клиентов</h2> 
+                    </div>
+                    <div class="section-body">
+                        <div class="testimonials-slider">
+
+                            <div class="testimonials-slider__item">
+                                <div class="testimonials-slider__item-container">
+                                    <div class="testimonials-slider__item-img">
+                                        <img src="static/img/content/testimonials.jpg" alt="" class="img-circle">
+                                    </div>
+                                    <div class="testimonials-slider__item-info">
+                                        <div class="testimonials-slider__item-autor">Алеся Семенова</div>
+                                        <div class="testimonials-slider__item-date">12.05.16</div>
+                                        <p>
+                                            До конца ноября в ресторане будут готовить традиционные аутентичные блюда, которые познакомят гостей с корейской кухней. Все представленные позиции придуманы шеф-поваром Лией Но (кстати, она же совсем недавно обновляла меню для «Киану» на Патриарших,
+                                            а в середине лета устраивала ужины с сет-меню в Elements by Edward Kwon). Говорят, что корейские супы считаются панацеей при простудах, а кимчи — идеальной закуской к крепкому алкоголю (к водке, например). Стоимость
+                                            всех блюд варьируется от 600 р. до 1200 р. Советуем заранее бронировать столик.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="testimonials-slider__item">
+                                <div class="testimonials-slider__item-container">
+                                    <div class="testimonials-slider__item-img">
+                                        <img src="static/img/content/testimonials.jpg" alt="" class="img-circle">
+                                    </div>
+                                    <div class="testimonials-slider__item-info">
+                                        <div class="testimonials-slider__item-autor">Алеся Семенова</div>
+                                        <div class="testimonials-slider__item-date">12.05.16</div>
+                                        <p>
+                                            До конца ноября в ресторане будут готовить традиционные аутентичные блюда, которые познакомят гостей с корейской кухней. Все представленные позиции придуманы шеф-поваром Лией Но (кстати, она же совсем недавно обновляла меню для «Киану» на Патриарших,
+                                            а в середине лета устраивала ужины с сет-меню в Elements by Edward Kwon). Говорят, что корейские супы считаются панацеей при простудах, а кимчи — идеальной закуской к крепкому алкоголю (к водке, например). Стоимость
+                                            всех блюд варьируется от 600 р. до 1200 р. Советуем заранее бронировать столик.
+                                        </p>
+                                        <p>
+                                            До конца ноября в ресторане будут готовить традиционные аутентичные блюда, которые познакомят гостей с корейской кухней. Все представленные позиции придуманы шеф-поваром Лией Но (кстати, она же совсем недавно обновляла меню для «Киану» на Патриарших,
+                                            а в середине лета устраивала ужины с сет-меню в Elements by Edward Kwon). Говорят, что корейские супы считаются панацеей при простудах, а кимчи — идеальной закуской к крепкому алкоголю (к водке, например). Стоимость
+                                            всех блюд варьируется от 600 р. до 1200 р. Советуем заранее бронировать столик.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--.testimonials-slider-->
+                    </div>
+                </div>
+
+                <div class="section section-body--grey">
+                    <div class="section-body">
+                        <h2 class="text-center">Оставить отзыв</h2>
+                        <div class="leave-testimonial">
+                            <div class="form">
+                                <form>
+                                    <div class="form-row">
+                                        <input type="text" class="form-control form-control-grey" placeholder="Ваше имя">
+                                    </div>
+                                    <div class="form-row">
+                                        <input type="email" class="form-control form-control-grey" placeholder="Email">
+                                    </div>
+                                    <div class="form-row">
+                                        <textarea placeholder="Написать отзыв" class="form-control form-control-grey"></textarea>
+                                    </div>
+                                    <div class="form-row">
+                                        <button class="btn btn-light btn-apply btn-block">Оставить отзыв</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="post post--bg">
+                            <div class="post-title"><a href="#">Aлеся Семенова</a>
+                            </div>
+                            <div class="post-date">12.05.16</div>
+                            <div class="post-info post-info--big">
+                                До конца ноября в ресторане будут готовить традиционные аутентичные блюда, которые познакомят гостей с корейской кухней. Все представленные позиции придуманы шеф-поваром Лией Но (кстати, она же совсем недавно обновляла меню для «Киану» на Патриарших,
+                                а в середине лета устраивала ужины с сет-меню в Elements by Edward Kwon).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="post post--bg">
+                            <div class="post-title"><a href="#">Aлеся Семенова</a>
+                            </div>
+                            <div class="post-date">12.05.16</div>
+                            <div class="post-info post-info--big">
+                                До конца ноября в ресторане будут готовить традиционные аутентичные блюда, которые познакомят гостей с корейской кухней. Все представленные позиции придуманы шеф-поваром Лией Но (кстати, она же совсем недавно обновляла меню для «Киану» на Патриарших,
+                                а в середине лета устраивала ужины с сет-меню в Elements by Edward Kwon).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="post post--bg">
+                            <div class="post-title"><a href="#">Aлеся Семенова</a>
+                            </div>
+                            <div class="post-date">12.05.16</div>
+                            <div class="post-info post-info--big">
+                                До конца ноября в ресторане будут готовить традиционные аутентичные блюда, которые познакомят гостей с корейской кухней. Все представленные позиции придуманы шеф-поваром Лией Но (кстати, она же совсем недавно обновляла меню для «Киану» на Патриарших,
+                                а в середине лета устраивала ужины с сет-меню в Elements by Edward Kwon).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="post post--bg">
+                            <div class="post-title"><a href="#">Aлеся Семенова</a>
+                            </div>
+                            <div class="post-date">12.05.16</div>
+                            <div class="post-info post-info--big">
+                                До конца ноября в ресторане будут готовить традиционные аутентичные блюда, которые познакомят гостей с корейской кухней. Все представленные позиции придуманы шеф-поваром Лией Но (кстати, она же совсем недавно обновляла меню для «Киану» на Патриарших,
+                                а в середине лета устраивала ужины с сет-меню в Elements by Edward Kwon).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="post post--bg">
+                            <div class="post-title"><a href="#">Aлеся Семенова</a>
+                            </div>
+                            <div class="post-date">12.05.16</div>
+                            <div class="post-info post-info--big">
+                                До конца ноября в ресторане будут готовить традиционные аутентичные блюда, которые познакомят гостей с корейской кухней. Все представленные позиции придуманы шеф-поваром Лией Но (кстати, она же совсем недавно обновляла меню для «Киану» на Патриарших,
+                                а в середине лета устраивала ужины с сет-меню в Elements by Edward Kwon).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="post post--bg">
+                            <div class="post-title"><a href="#">Aлеся Семенова</a>
+                            </div>
+                            <div class="post-date">12.05.16</div>
+                            <div class="post-info post-info--big">
+                                До конца ноября в ресторане будут готовить традиционные аутентичные блюда, которые познакомят гостей с корейской кухней. Все представленные позиции придуманы шеф-поваром Лией Но (кстати, она же совсем недавно обновляла меню для «Киану» на Патриарших,
+                                а в середине лета устраивала ужины с сет-меню в Elements by Edward Kwon).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="post post--bg">
+                            <div class="post-title"><a href="#">Aлеся Семенова</a>
+                            </div>
+                            <div class="post-date">12.05.16</div>
+                            <div class="post-info post-info--big">
+                                До конца ноября в ресторане будут готовить традиционные аутентичные блюда, которые познакомят гостей с корейской кухней. Все представленные позиции придуманы шеф-поваром Лией Но (кстати, она же совсем недавно обновляла меню для «Киану» на Патриарших,
+                                а в середине лета устраивала ужины с сет-меню в Elements by Edward Kwon).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="post post--bg">
+                            <div class="post-title"><a href="#">Aлеся Семенова</a>
+                            </div>
+                            <div class="post-date">12.05.16</div>
+                            <div class="post-info post-info--big">
+                                До конца ноября в ресторане будут готовить традиционные аутентичные блюда, которые познакомят гостей с корейской кухней. Все представленные позиции придуманы шеф-поваром Лией Но (кстати, она же совсем недавно обновляла меню для «Киану» на Патриарших,
+                                а в середине лета устраивала ужины с сет-меню в Elements by Edward Kwon).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="post post--bg">
+                            <div class="post-title"><a href="#">Aлеся Семенова</a>
+                            </div>
+                            <div class="post-date">12.05.16</div>
+                            <div class="post-info post-info--big">
+                                До конца ноября в ресторане будут готовить традиционные аутентичные блюда, которые познакомят гостей с корейской кухней. Все представленные позиции придуманы шеф-поваром Лией Но (кстати, она же совсем недавно обновляла меню для «Киану» на Патриарших,
+                                а в середине лета устраивала ужины с сет-меню в Elements by Edward Kwon).
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="c-pagination">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <<</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <</a>
+                        </li>
+                        <li>
+                            <span>1</span>
+                        </li>
+                        <li>
+                            <a href="#">2</a>
+                        </li>
+                        <li>
+                            <a href="#">3</a>
+                        </li>
+                        <li>
+                            <a href="#">4</a>
+                        </li>
+                        <li>
+                            <a href="#">5</a>
+                        </li>
+                        <li>
+                            <a href="#">></a>
+                        </li>
+                        <li>
+                            <a href="#">>></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <!--.content-->
+
+            <div class="footer">
+                <div class="row">
+                    <div class="footer-section col-lg-4 col-md-6">
+                        <div class="footer-logo">
+                            <a href="#">
+                                <img src="static/img/general/logo-footer.png" alt="">
+                            </a>
+                        </div>
+                        <nav class="footer-nav">
+                            <ul>
+                                <li><a href="#">О компании</a>
+                                </li>
+                                <li><a href="#">Меню</a>
+                                </li>
+                                <li><a href="#">Интерьер</a>
+                                </li>
+                                <li><a href="#">Банный комплекс</a>
+                                </li>
+                                <li><a href="#">Бронирование</a>
+                                </li>
+                                <li><a href="#">Отзывы</a>
+                                </li>
+                                <li><a href="#">Новости</a>
+                                </li>
+                                <li><a href="#">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="soc">
+                            <a href="#"><span class="icon-vk"></span></a>
+                            <a href="#"><span class="icon-fc"></span></a>
+                            <a href="#"><span class="icon-tw"></span></a>
+                            <a href="#"><span class="icon-ok"></span></a>
+                            <a href="#"><span class="icon-mail"></span></a>
+                            <a href="#"><span class="icon-gmail"></span></a>
+                        </div>
+                    </div>
+                    <div class="footer-section col-lg-4 col-md-6">
+                        <h3 class="text-center">Онлайн заявка</h3>
+                        <div class="apply apply--dark">
+                            <div class="form">
+                                <form>
+                                    <div class="form-row to-book">
+                                        <select class="form-control">
+                                            <option>Забронировать стол</option>
+                                            <option>На две персоны</option>
+                                            <option>На три персоны</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-row">
+                                        <input class="form-control" type="text" placeholder="Ваше имя">
+                                    </div>
+                                    <div class="form-row">
+                                        <input class="form-control" type="tel" placeholder="Ваш телефон">
+                                    </div>
+                                    <div class="form-row">
+                                        <input class="form-control" type="text" placeholder="Ваши пожелания">
+                                    </div>
+                                    <div class="form-row">
+                                        <button class="btn btn-block btn-primary">Отправить заявку</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="row">
+                            <div class="footer-contacts col-lg-12 col-md-6">
+                                <h3>Контакты</h3>
+                                <address>
+
+                					Адрес: Москва, Авиационная ул., д.17<br>
+
+                					Ресторан: +7 (499)190-52-61, 190-60-11<br>
+
+                					Банкетная служба: +7 (965) 190-02-72<br>
+
+                					Банный комплекс: +7 (499) 190-50-61<br>
+
+                					E-mail: info@zrestoran.ru
+
+                				</address>
+                            </div>
+                            <div class="col-lg-12 col-md-6">
+                                <h3>Мы Вас приглашаем!</h3>
+                                <p>
+                                    <i>Мы всегда рады видеть Вас в нашем ресторане с уже вековой историей!</i>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--.footer-->
+
+        </div>
+        <!--.primary-->
+
+
+        <div class="modal fade" id="popup-apply" tabindex="-1" role="dialog" aria-labelledby="apply">
+            <div class="modal-dialog modal-md">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <div class="popup-form">
+                    <h3 class="text-center">Онлайн заявка</h3>
+                    <div class="form">
+                        <form>
+                            <div class="form-row to-book">
+                                <select class="form-control">
+                                    <option>Забронировать стол</option>
+                                    <option>На две персоны</option>
+                                    <option>На три персоны</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <input class="form-control" type="text" placeholder="Ваше имя">
+                            </div>
+                            <div class="form-row">
+                                <input class="form-control" type="tel" placeholder="Ваш телефон">
+                            </div>
+                            <div class="form-row">
+                                <input class="form-control" type="text" placeholder="Ваши пожелания">
+                            </div>
+                            <div class="form-row">
+                                <button class="btn btn-block btn-primary">Отправить заявку</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <script src="static/js/separate-js/jquery.js"></script>
+        <script src="static/js/separate-js/bootstrap.min.js"></script>
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="static/js/main.min.js"></script>
+
+        <script src="static/js/separate-js/app.js"></script>
+
+    </body>
+
+</html>

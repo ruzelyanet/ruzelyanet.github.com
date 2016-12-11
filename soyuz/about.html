@@ -1,0 +1,505 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>default title</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <meta name="viewport" content="width=480">
+
+        <meta content="telephone=no" name="format-detection">
+        <!-- This make sence for mobile browsers. It means, that content has been optimized for mobile browsers -->
+        <meta name="HandheldFriendly" content="true">
+        <link href="static/css/separate-css/bootstrap.css" rel="stylesheet" type="text/css">
+
+        <link href="static/css/main.css" rel="stylesheet" type="text/css">
+
+        <link href="static/css/separate-css/media-query.css" rel="stylesheet" type="text/css">
+
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <script>
+            (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
+        </script>
+
+    </head>
+
+    <body>
+
+
+        <div class="sidebar">
+            <div class="sidebar__header">
+                <a href="/" class="logo">
+                    <img src="static/img/general/logo.png" alt="">
+                </a>
+            </div>
+
+            <div class="sidebar__body">
+
+                <div class="widget widget-phone text-center">
+                    <div class="c-phone">
+                        <i class="icon-phone-sm"></i>+7 (499) 190-52-61
+                    </div>
+                    <button class="btn btn-block btn-primary" data-toggle="modal" data-target="#popup-apply">
+                        Зарезервировать
+                    </button>
+                </div>
+
+                <div class="widget widget-nav">
+                    <div class="widget-title">Меню</div>
+                    <nav class="nav nav-left">
+                        <ul>
+                            <li>
+                                <a href="#">О компании</a>
+                            </li>
+                            <li>
+                                <a href="#">Меню</a>
+                                <span class="c-cursor"></span>
+                                <div class="nav-level-2">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Ресторан</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Банкетный зал</a>	
+                                            <div class="nav-level-3">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">Ресторан</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Банкетный зал</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#">Домики</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Новогодние корпоративы</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Видео</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">Интерьер</a>
+                            </li>
+                            <li>
+                                <a href="#">Банный комплекс</a>
+                            </li>
+                            <li>
+                                <a href="#">Бронирование</a>
+                            </li>
+                            <li>
+                                <a href="#">Отзывы</a>
+                            </li>
+                            <li>
+                                <a href="#">Новости</a>
+                            </li>
+                            <li>
+                                <a href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="widget widget-cat">
+                    <div class="widget-title">Мы организуем</div>
+                    <div class="cat-nav">
+                        <ul>
+                            <li>
+                                <a href="#"><span class="cat-nav__icon"><i class="icon-ban"></i></span>БАНКЕТЫ</a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="cat-nav__icon"><i class="icon-sv"></i></span>СВАДЬБЫ</a>
+                            </li>
+                            <li class="cat-nav__active">
+                                <a href="#"><span class="cat-nav__icon"><i class="icon-corp"></i></span>КОРПОРТАТИВЫ</a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="cat-nav__icon"><i class="icon-dn"></i></span>ДНИ РОЖДЕНИЯ</a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="cat-nav__icon"><i class="icon-dnd"></i></span>ДЕТСКИЕ ПРАЗДНИКИО</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--.cat-nav-->
+                </div>
+
+                <div class="widget widget-apply form-fix">
+                    <div class="widget-title">Онлайн заявка</div>
+                    <div class="form">
+                        <form>
+                            <div class="form-row to-book">
+                                <select class="form-control">
+                                    <option>Забронировать стол</option>
+                                    <option>На две персоны</option>
+                                    <option>На три персоны</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <input class="form-control" type="text" placeholder="Ваше имя">
+                            </div>
+                            <div class="form-row">
+                                <input class="form-control" type="tel" placeholder="Ваш телефон">
+                            </div>
+                            <div class="form-row">
+                                <input class="form-control" type="text" placeholder="Ваши пожелания">
+                            </div>
+                            <div class="form-row">
+                                <button class="btn btn-block btn-primary">Отправить заявку</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--.apply-->
+            </div>
+
+        </div>
+        <!--.sidebar-->
+
+        <div class="primary">
+            <div class="header clearfix">
+
+                <button class="btn btn-small btn-primary" data-toggle="modal" data-target="#popup-apply">
+                    <i class="icon-apply visible-sm-inline-block visible-xs-inline-block"></i>
+                    <span class="hidden-sm hidden-xs">Зарезервировать</span>
+                </button>
+
+                <div class="pull-right">
+                    <span class="h-phone">+7 (499) 190-52-61</span>
+
+                    <span class="sandwich">
+
+            			<span class="ic-nav ic-nav-1"></span>
+                    <span class="ic-nav ic-nav-2"></span>
+                    <span class="ic-nav"></span>
+                    </span>
+                </div>
+
+                <div class="mob-dropmenu">
+
+                    <div class="widget widget-phone text-center">
+                        <div class="c-phone">
+                            <i class="icon-phone-sm"></i>+7 (499) 190-52-61
+                        </div>
+                        <button class="btn btn-block btn-primary" data-toggle="modal" data-target="#popup-apply">
+                            Зарезервировать
+                        </button>
+                    </div>
+
+
+                    <div class="widget widget-nav">
+                        <div class="widget-title">Меню</div>
+                        <div class="nav nav-right">
+                            <ul>
+                                <li>
+                                    <a href="#">О компании</a>
+                                </li>
+                                <li>
+                                    <a href="#">Меню</a>
+                                    <span class="c-cursor c-cursor-js"></span>
+                                    <div class="nav-level-2">
+                                        <ul>
+                                            <li>
+                                                <a href="#">Ресторан</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Банкетный зал</a>
+                                                <span class="c-cursor c-cursor-js"></span>
+                                                <div class="nav-level-3">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="#">Ресторан</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Банкетный зал</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">Домики</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Новогодние корпоративы</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Видео</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">Интерьер</a>
+                                </li>
+                                <li>
+                                    <a href="#">Банный комплекс</a>
+                                </li>
+                                <li>
+                                    <a href="#">Бронирование</a>
+                                </li>
+                                <li>
+                                    <a href="#">Отзывы</a>
+                                </li>
+                                <li>
+                                    <a href="#">Новости</a>
+                                </li>
+                                <li>
+                                    <a href="#">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="widget widget-cat">
+                        <div class="widget-title">Мы организуем</div>
+                        <div class="cat-nav">
+                            <ul>
+                                <li>
+                                    <a href="#"><span class="cat-nav__icon"><i class="icon-ban"></i></span>БАНКЕТЫ</a>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="cat-nav__icon"><i class="icon-sv"></i></span>СВАДЬБЫ</a>
+                                </li>
+                                <li class="cat-nav__active">
+                                    <a href="#"><span class="cat-nav__icon"><i class="icon-corp"></i></span>КОРПОРТАТИВЫ</a>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="cat-nav__icon"><i class="icon-dn"></i></span>ДНИ РОЖДЕНИЯ</a>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="cat-nav__icon"><i class="icon-dnd"></i></span>ДЕТСКИЕ ПРАЗДНИКИО</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--.cat-nav-->
+                    </div>
+
+                    <div class="widget widget-apply">
+                        <div class="widget-title">Онлайн заявка</div>
+                        <div class="form">
+                            <form>
+                                <div class="form-row to-book">
+                                    <select class="form-control">
+                                        <option>Забронировать стол</option>
+                                        <option>На две персоны</option>
+                                        <option>На три персоны</option>
+                                    </select>
+                                </div>
+                                <div class="form-row">
+                                    <input class="form-control" type="text" placeholder="Ваше имя">
+                                </div>
+                                <div class="form-row">
+                                    <input class="form-control" type="tel" placeholder="Ваш телефон">
+                                </div>
+                                <div class="form-row">
+                                    <input class="form-control" type="text" placeholder="Ваши пожелания">
+                                </div>
+                                <div class="form-row">
+                                    <button class="btn btn-block btn-primary">Отправить заявку</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--.apply-->
+
+                </div>
+                <!--.mob-dropmenu-->
+
+            </div>
+            <!--.header-->
+            <div class="content">
+
+                <div class="breadcrumbs">
+                    <a href="#">Главная</a> / <span>О ресторане</span>
+                </div>
+
+                <div class="container">
+
+                    <div class="section">
+                        <div class="section-body">
+                            <h1 class="text-center">О компании</h1>
+                            <p>
+                                <img src="static/img/content/about.jpg" alt="" class="img-responsive">
+                            </p>
+                            <p>
+                                Ресторан заработал в начале ноября в Рыбниковом переулке, по соседству с пожарной частью (отсюда и название). Открыл «Тягу» обозреватель «Афиши-Рестораны» Александр Ильин, который отвечает за концепцию, кухню и дух заведения. По его словам, «ресторан
+                                в первую очередь должен кормить людей, во вторую – отыскивать новые смыслы. Поэтому мы поставили в меню блюда, которые в Москве почитают неприлично старомодными (в частности, салат «Цезарь» и пасту карбонара), и привели
+                                их в идеальную, на наш взгляд, форму».
+                            </p>
+                            <p>
+                                Меню получилось радикально коротким. Стартуют с утки — ее запекают в течение 10 часов и подают с соусом из грецких орехов и моченым яблоком, слегка маринованным с бадьяном (350 р.). Из горячих закусок советуют кабачковые драники (250 р.) со сметаной и
+                                хрустящие свиные уши темпура (250 р.), которые подают с майонезом, приправленным острым пюре из капусты кимчи.
+                            </p>
+                            <p>
+                                Супов в меню всего четыре, первый из них — куриный бульон с лапшой (200 р.), который подают на стамбульский лад с лимоном. Капусту для щей (300 р.) прежде томят, как начинку для пирожков, затем варят с бульоном из говяжьих хвостов и тушеным луком, а сервируют,
+                                добавив в тарелку печеной картошки. Густая марокканская харира из чечевицы и нута с бараниной (400 р.) — пряная и острая, уже не суп, еще не рагу — почти обед.
+
+                            </p>
+                            <p>
+                                Коктейльную карту для «Обратной тяги» сделал Василий Жеглов («Южане», «Китайская грамота»). Прежде всего советуют заказывать «Копченую Маргариту» (560 р.) и «Мескаль негрони» (560 р.), приготовленные на текиле, настоянной на копченой груше, и «Бангкок
+                                сауэр» (460 р.), в основу которого идет бурбон на кокосовых сливках. Пива в «Обратной тяге» минимум, всего один кран. Сейчас в нем ирландский лагер (360 р. за 0,5 л). В винной карте — 11 белых и 17 красных вин, 2 шампанских,
+                                а также 3 белых (от 300 р.), 4 красных (от 280 р.) и пара игристых (от 580 р.) по бокалам.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!--.content-->
+
+            <div class="footer">
+                <div class="row">
+                    <div class="footer-section col-lg-4 col-md-6">
+                        <div class="footer-logo">
+                            <a href="#">
+                                <img src="static/img/general/logo-footer.png" alt="">
+                            </a>
+                        </div>
+                        <nav class="footer-nav">
+                            <ul>
+                                <li><a href="#">О компании</a>
+                                </li>
+                                <li><a href="#">Меню</a>
+                                </li>
+                                <li><a href="#">Интерьер</a>
+                                </li>
+                                <li><a href="#">Банный комплекс</a>
+                                </li>
+                                <li><a href="#">Бронирование</a>
+                                </li>
+                                <li><a href="#">Отзывы</a>
+                                </li>
+                                <li><a href="#">Новости</a>
+                                </li>
+                                <li><a href="#">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="soc">
+                            <a href="#"><span class="icon-vk"></span></a>
+                            <a href="#"><span class="icon-fc"></span></a>
+                            <a href="#"><span class="icon-tw"></span></a>
+                            <a href="#"><span class="icon-ok"></span></a>
+                            <a href="#"><span class="icon-mail"></span></a>
+                            <a href="#"><span class="icon-gmail"></span></a>
+                        </div>
+                    </div>
+                    <div class="footer-section col-lg-4 col-md-6">
+                        <h3 class="text-center">Онлайн заявка</h3>
+                        <div class="apply apply--dark">
+                            <div class="form">
+                                <form>
+                                    <div class="form-row to-book">
+                                        <select class="form-control">
+                                            <option>Забронировать стол</option>
+                                            <option>На две персоны</option>
+                                            <option>На три персоны</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-row">
+                                        <input class="form-control" type="text" placeholder="Ваше имя">
+                                    </div>
+                                    <div class="form-row">
+                                        <input class="form-control" type="tel" placeholder="Ваш телефон">
+                                    </div>
+                                    <div class="form-row">
+                                        <input class="form-control" type="text" placeholder="Ваши пожелания">
+                                    </div>
+                                    <div class="form-row">
+                                        <button class="btn btn-block btn-primary">Отправить заявку</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="row">
+                            <div class="footer-contacts col-lg-12 col-md-6">
+                                <h3>Контакты</h3>
+                                <address>
+
+                					Адрес: Москва, Авиационная ул., д.17<br>
+
+                					Ресторан: +7 (499)190-52-61, 190-60-11<br>
+
+                					Банкетная служба: +7 (965) 190-02-72<br>
+
+                					Банный комплекс: +7 (499) 190-50-61<br>
+
+                					E-mail: info@zrestoran.ru
+
+                				</address>
+                            </div>
+                            <div class="col-lg-12 col-md-6">
+                                <h3>Мы Вас приглашаем!</h3>
+                                <p>
+                                    <i>Мы всегда рады видеть Вас в нашем ресторане с уже вековой историей!</i>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--.footer-->
+
+        </div>
+        <!--.primary-->
+
+
+        <div class="modal fade" id="popup-apply" tabindex="-1" role="dialog" aria-labelledby="apply">
+            <div class="modal-dialog modal-md">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <div class="popup-form">
+                    <h3 class="text-center">Онлайн заявка</h3>
+                    <div class="form">
+                        <form>
+                            <div class="form-row to-book">
+                                <select class="form-control">
+                                    <option>Забронировать стол</option>
+                                    <option>На две персоны</option>
+                                    <option>На три персоны</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <input class="form-control" type="text" placeholder="Ваше имя">
+                            </div>
+                            <div class="form-row">
+                                <input class="form-control" type="tel" placeholder="Ваш телефон">
+                            </div>
+                            <div class="form-row">
+                                <input class="form-control" type="text" placeholder="Ваши пожелания">
+                            </div>
+                            <div class="form-row">
+                                <button class="btn btn-block btn-primary">Отправить заявку</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <script src="static/js/separate-js/jquery.js"></script>
+        <script src="static/js/separate-js/bootstrap.min.js"></script>
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="static/js/main.min.js"></script>
+
+        <script src="static/js/separate-js/app.js"></script>
+
+    </body>
+
+</html>
