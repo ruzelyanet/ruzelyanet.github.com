@@ -54,6 +54,10 @@
 		display: none;
 	}
 
+	.hidden-in-md{
+		display: none;
+	}
+
 	.primary{
 		margin-left: 0;
 	}
@@ -81,6 +85,12 @@
 }
 
 @media screen and (max-width: 1200px) {
+
+
+	.sidebar-dinamic__header > .btn{
+		margin-bottom: 0;
+	}
+
 	.skill-item__img{
 		width: 160px;
 		height: 160px;
