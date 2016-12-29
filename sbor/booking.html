@@ -1,0 +1,333 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+
+	<meta charset="utf-8" />
+	<meta name="Keywords" content="" />
+	<meta name="Description" content="" />
+
+	<title>boking</title>
+
+	<link href="css/style.css" type="text/css" rel="stylesheet" />
+	<link href="css/waterwheel-carousel.css" type="text/css" rel="stylesheet" />
+	<link href="css/jquery-ui-1.10.0.custom.css" type="text/css" rel="stylesheet" />
+	<link href="css/zebra_datepicker.css" type="text/css" rel="stylesheet" />
+	<link href="css/uniform.default.css" type="text/css" rel="stylesheet" />
+	<link href="css/jquery.fancybox-1.3.2.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="js/scripts.js"></script>
+	
+	<!--[if lt IE 9]>
+		<script src="js/html5.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+	<div class="main">
+		<div class="wrapper">
+			<header id="header">
+				<div class="in-header">
+					<div class="toolbar">
+						<div class="in-toolbar">
+							<nav class="menu">
+								<ul>
+									<li>
+										<a href="#">Спецпредложения</a>
+									</li>
+									<li>
+										<a href="#">Наши партнёры</a>
+									</li>
+									<li>
+										<a href="#">О проекте</a>
+									</li>
+									<li>
+										<a href="#">Контакты</a>
+									</li>
+								</ul>
+							</nav>
+							<nav class="service">					
+								<ul>
+									<li>
+										<a href="#">Обратная связь</a>
+									</li>
+									<li>
+										<a href="#">Помощь</a>
+									</li>
+									<li>
+										<a href="#">Оплата</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="main-in-header">
+						<div class="logo"><a href="#"><img src="images/logo.png" alt="" /></a></div>
+						<div class="tel">
+							+7 745 779-79-97
+						</div>
+					</div>
+					<div class="filter-search">
+						<div class="in-filter-search">
+							<div class="title-search">
+								Найти базу для сборов:
+							</div>
+							<form method="GET" action="" class="form-filter">
+								<div class="this-filter">
+									<div class="select-search">
+										<select>
+											<option>Страна</option>
+											<option>Узбекистан</option>
+											<option>натсикебзУ</option>
+										</select>
+										<select>
+											<option>Вид спорта</option>
+											<option>бокс</option>
+											<option>скоб</option>
+										</select>	
+										<select>
+											<option>Сезон</option>
+											<option>лето</option>
+											<option>отел</option>
+										</select>	
+									</div>
+									<div class="text-search">
+										<input type="text" name="" value="" placeholder="Поиск по ключевым словам" />
+									</div>
+								</div>
+								<div class="submit-search">
+									<input type="submit" value="найти" />
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="baner">
+						<img src="images/header-bg.png" alt="" />
+					</div>						
+				</div>
+			</header><!-- header -->
+			<section id="content">
+				<h1>Бронирование</h1>
+				<div class="warning">
+					Обязательные поля <span class="required_fields">*</span>
+				</div>
+				<form action="" method="POST"  class="booking">
+					<div class="gen-time-arrival">						
+						<div class="form-section">
+							<h3>
+								Время пребывания в отеле:
+							</h3>
+							<div class="left-min-block-form">
+								<div class="input-title">Дата пребытия:</div>
+								<div class="input-wrapper">
+									<input type="text" value="" name="" id="datepicker" /><span class="required_fields">*</span>
+								</div>
+							</div>
+							<div class="right-min-block-form">
+								<div class="input-title">Дата выезда:</div>
+								<div class="input-wrapper">
+									<input type="text" value="" name=""  id="datepicker" /><span class="required_fields">*</span>						
+								</div>	
+							</div>		
+						</div>
+						<div class="form-section">
+							<h3>Состав спортменов:</h3>
+							<div class="composition">
+								<div class="left-min-block-form">
+									<div class="input-title">Юноши:</div>
+									<input type="text" name="" value=" " /><span class="required_fields">*</span>
+								</div>
+								<div class="right-min-block-form">
+									<div class="input-title">Возвраст от:</div>
+									<input type="text" name="" value=" " /><span class="required_fields">*</span>
+								</div>
+							</div>							
+							<div class="left-min-block-form">
+								<div class="input-title">Девушки:</div>
+								<input type="text" name="" value=" " /><span class="required_fields">*</span>
+							</div>
+							<div class="right-min-block-form">
+								<div class="input-title">Возвраст от:</div>
+								<input type="text" name="" value=" " /><span class="required_fields">*</span>
+							</div>							
+						</div>
+						<div class="form-section">
+							<h3>Сопровождающий и тренерский состав:</h3>
+							<div class="left-min-block-form">
+								<div class="input-title">Кол-во мужчин:</div>								
+								<input type="text" value="" name=""/><span class="required_fields">*</span>					
+							</div>
+							<div class="right-min-block-form">
+								<div class="input-title">Кол-во женщин:</div>								
+								<input type="text" value="" name=""/><span class="required_fields">*</span>																
+							</div>		
+						</div>
+						<div class="form-section">
+							<h3>Трансфер:</h3>
+							<div class="composition">
+								<div class="left-min-block-form">
+									<div class="input-title">Пункт отправки:</div>								
+									<input type="text" value="" name=""/><span class="required_fields">*</span>								
+								</div>
+								<div class="right-min-block-form">
+									<div class="input-title">Пункт назначения:</div>								
+									<input type="text" value="" name=""/><span class="required_fields">*</span>																
+								</div>
+							</div>
+							<div class="input-title">Вид транспорта:</div>	
+							<div class="bus">
+								<label>
+									<input type="checkbox" name="bus" />
+									Автобус<span class="required_fields">*</span>
+								</label>
+							</div>
+							<div class="micro-bus">
+								<label>
+									<input type="checkbox" name="micro-bus" />
+									Микроавстобус<span class="required_fields">*</span>
+								</label>
+							</div>
+							<div class="train">
+								<label>
+									<input type="checkbox" name="train" />
+									Поезд<span class="required_fields">*</span>
+								</label>
+							</div>
+							<div class="plane">
+								<label>
+									<input type="checkbox" name="plane" />
+									Самолет<span class="required_fields">*</span>
+								</label>
+							</div>
+						</div>
+						<div class="form-section">
+							<div class="visa-support">
+								<label>
+									<input type="checkbox" name="plane" />
+									Визовая поддержка<span class="required_fields">*</span>
+								</label>
+							</div>
+						</div>
+						<div class="form-section">
+							<div class="input-title">Вид спорта:</div>
+							<select>
+								<option>
+									Футбол
+								</option>
+								<option>
+									Баскет болл
+								</option>
+								<option>
+									Валебойлл 
+								</option>
+								<option>
+									Бокс
+								</option>
+							</select><span class="required_fields">*</span>
+						</div>
+						<div class="form-section">
+							<h3>Контаткные данные:</h3>							
+							<div class="contact-data">
+								<div class="input-title">Номер телефона:</div>
+								<input type="text" value="" name="number-tel" /><span class="required_fields">*</span>							
+							</div>
+							<div class="contact-data">
+								<div class="input-title">Email:</div>
+								<input type="text" value="" name="number-tel" /><span class="required_fields">*</span>	
+							</div>
+							<div class="contact-data">
+								<div class="input-title">Название школы:</div>
+								<input type="text" value="" name="number-tel" /><span class="required_fields">*</span>	
+							</div>
+							<div class="contact-data">
+								<div class="input-title">Ф.И.О.:</div>
+								<input type="text" value="" name="number-tel" /><span class="required_fields">*</span>	
+							</div>							
+						</div>
+						<div class="form-section">
+							<div class="input-title">Номер телефона:</div>
+							<textarea></textarea>				
+							<div class="example">
+								<span>Например:</span> побольше полотенец и кондиционер
+							</div>
+						</div>
+					</div>
+					<div class="sbmit-buttons-form">
+						<div class="cancel">
+							<a href="#">Отмена</a>
+						</div>
+						<a href="#thanks-popap" class="click-popap">							
+							<input type="submit" value="Забронировать" class="booking-button" class=""/>
+						</a>	
+					</div>
+				</form>
+			</section><!-- content -->
+		</div><!--wrapper-->	
+	</div><!-- main -->
+	<footer id="footer">
+		<div class="top-footer">
+			<div class="in-top-footer">
+				<div class="first-block-footer">
+					<div class="copyright">
+						<span>© 2013 Sport-sbor.ru</span><br />
+						Все права защищены
+					</div>
+					<div class="footer-menu">
+						<ul>
+							<li>
+								<a href="#">О нас</a>
+							</li>
+							<li>
+								<a href="#">Для организации</a>
+							</li>
+							<li>
+								<a href="#">Сотрудничество</a>
+							</li>
+							<li>
+								<a href="#">О работе сайта</a>
+							</li>
+						</ul>
+					</div>
+				</div>			
+				<div class="second-block-footer">
+					<div class="footer-location">
+						г.Москва Ул. Шаламин <br />
+						Кузминча5/5/45
+					</div>
+					<div class="footer-tel">
+						<span>+7 745</span> 774-74-59
+					</div>
+				</div>
+				<div class="third-block-footer">
+					<a href="#">info@sport-sbor.ru</a><br />
+					<a href="#">support@sport-sbor.ru</a>
+				</div>
+				<div class="fourth-block-footer">
+					<a href="#"><img src="images/manufacturer.png" /></a>
+				</div>
+			</div>
+		</div>
+		<div class="footer-tags">
+			<a href="#">Футбол,</a> <a href="#">Баскетбол,</a>  <a href="#">Волейбол,</a>  <a href="#">Плавание,</a>  <a href="#">Хоккей,</a>
+			<a href="#">Фигурное катание,</a><a href="#">Каратэ,</a> <a href="#"> Теннис,</a>  <a href="#">Футбол.</a>  <a href="#">Баскетбол,</a>  
+			<a href="#"> Волейбол,</a>  <a href="#">Плавание,</a>  <a href="#">Хоккей,</a><a href="#">Фигурное катание,</a>  <a href="#">Каратэ,</a>  
+			<a href="#">Теннис,</a><a href="#">Плавание,</a>  <a href="#">Хоккей,</a>  <a href="#">Фигурное катание,</a>  <a href="#">Каратэ,</a>  <a href="#">Теннис,</a>  
+			<a href="#">Футбол. </a><a href="#">Баскетбол,</a>  <a href="#">Волейбол,</a>  <a href="#">Плавание,</a>  <a href="#">Хоккей,</a>  <a href="#">Фигурное катание,</a>
+			<a href="#">Каратэ,</a>	<a href="#">Теннис,</a> <a href="#">Футбол.</a>  <a href="#">Баскетбол,</a>  <a href="#">Волейбол,</a>
+			<a href="#">Баскетбол,</a>  <a href="#">Волейбол,</a>  <a href="#">Плавание,</a>  <a href="#">Хоккей,</a>  <a href="#">Фигурное катание, </a>
+			<a href="#">Каратэ,</a><a href="#">Теннис,</a> 			 
+		</div>
+	</footer><!-- footer -->
+	<div style="display:none;">
+		<div class="thanks-popap" id="thanks-popap">
+			<div class="title-popap">
+				Благодарим за использование сервиса!
+			</div>
+			<p>
+				Менеджер свяжется с Вами в ближайшие 24 часа <br />по указанными контактными данными.
+			</p>
+		</div>
+	</div>
+	</div>
+</body>
+</html>
+
