@@ -1,0 +1,12 @@
+
+.b-about{
+	background: url(../img/general/about-bg.jpg) no-repeat center top / cover;
+	color: #fff;
+	.section{
+		padding-left: 44px;
+		padding-right: 44px;
+		&-header{
+			margin-bottom: 20px;
+		}
+	}
+}

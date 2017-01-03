@@ -1,0 +1,111 @@
+
+.b-skills{
+	background: url(../img/general/skills-bg.jpg) no-repeat center top / cover #078cd6;
+}
+
+
+@keyframes anim {
+    0% {
+    	transform: scale(0.6);
+    }
+    50%{
+		transform: scale(1.2);
+    }   
+    100% {
+    	transform: scale(1);
+    }
+}
+
+.skill-item{
+	display: inline-block;
+	vertical-align: top;
+	width: 330px;
+	margin: 0 15px 20px;
+	color: #fff;	
+	&:hover{
+		.slill-f{
+			border-color: #1ab394;
+			span{
+				background: #1ab394;				 
+			    animation-name: anim;			    
+			}
+		}
+		.icon-custumer{
+			@include bg($icon-custumer-hover);
+		}
+		.icon-science{
+			@include bg($icon-science-hover);	
+		}
+		.icon-guranted{
+			@include bg($icon-guranted-hover);	
+		}		
+		.icon-custumized{
+			@include bg($icon-custumized-hover);	
+		}
+		.icon-sert{
+			@include bg($icon-sert-hover);
+		}
+		.icon-ourser{
+			@include bg($icon-ourser-hover);
+		}
+		.icon-quolity{
+			@include bg($icon-quolity-hover);
+		}
+		.icon-billm{
+			@include bg($icon-billm-hover);
+		}
+		.icon-relationships{
+			@include bg($icon-relationships-hover);
+		}
+	}
+}
+
+.slill-f{
+	width: 176px;
+	height: 176px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	margin-bottom: 20px;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	@include trs(0.2s, 0s);
+	i{
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		z-index: 5;
+	}
+	&:before{
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		height: 100%;
+	}
+	&:after{
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		height: 100%;
+	}
+	span{
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #fff;
+		border-radius: 50%;
+		font-size: 0;		
+		transform: scale(0.6);
+		
+		animation-fill-mode: forwards;
+	    animation-delay: 0s;	    
+	    animation-duration: 0.3s;
+	}
+}
+
+.skill-i{
+	font-size: 20px;
+}

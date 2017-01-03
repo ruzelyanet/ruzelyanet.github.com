@@ -27,7 +27,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
             waveSeparationFactor: .7,
             centerOffset: 10,
             startingItemSeparation: 160,
-           itemSeparationFactor: .9,
+           	itemSeparationFactor: .9,
             itemDecreaseFactor: .83, /*отвечает за размер второстепенной картинки*/
 			opacityDecreaseFactor: 1,
 			movedToCenter: function(){

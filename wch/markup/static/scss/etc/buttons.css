@@ -1,0 +1,42 @@
+.btn{
+	height: 43px;
+	font: 16px "latosemibold", sans-serif;
+	text-transform: uppercase;
+	border: 3px solid;	
+	padding: 6px 28px;
+	border-radius: 22px;
+	@include trs(0.2s, 0s);
+	&-green{
+		color: #1ab394;
+		border-color: #1ab394;
+		&:hover{
+			background: #1ab394;
+			color: #fff;
+		}
+	}	
+
+	&-white{
+		color: #fff;
+		border-color: #fff;
+		background: none;
+		&:hover{
+			background: #fff;
+			color: #000;
+		}
+	}
+}
+
+.btn-blank{
+	box-sizing: border-box;
+	height: 43px;
+	border: none;
+	padding: 0 10px;
+	@include trs(0.3s, 0s);
+	background: none;
+	&:hover{
+		i{
+			transform: scale(1.2);
+			color: $blue;
+		}
+	}
+}

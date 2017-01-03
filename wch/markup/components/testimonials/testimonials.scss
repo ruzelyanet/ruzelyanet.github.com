@@ -1,0 +1,94 @@
+
+.b-testimonials{
+	background: url(../img/general/testimonials-bg.png) no-repeat left top / cover $blue;
+	.container{
+		position: relative;
+	}
+
+	.arrow{
+		display: block;
+		font-size: 0;
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		margin-top: -31px;
+		&--left{
+			@include bg($arrow-left);
+			left: 0;
+		}
+		&--right{
+			@include bg($arrow-right);
+			right: 0;
+		}
+	}
+}
+
+.testimonials-list{
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 0 60px;
+}
+
+.testimonials-text{
+	font: 30px "latolight_italic", sans-serif;	
+	color: #fff;
+	position: relative; 
+	height: 210px;
+	overflow: hidden;
+	padding: 42px;
+	background: url(../img/general/quote-left.png) no-repeat left top, url(../img/general/quote-right.png) no-repeat right bottom, ;	
+}
+
+.testimonial-item{		
+	transform: translateY(-50px);
+	opacity: 0;
+	@include trs(0.5s, 0s);
+	position: absolute;
+	top: 42px;
+	left: 42px;	
+	height: 123px;
+	overflow: hidden;
+	&.active{		
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.testimonials-autors{
+	height: 138px;
+	width: 400px;
+	margin: 0 auto 20px;
+	overflow: hidden;
+}
+
+.testimonial-signature{
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	&:before{
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		height: 1px;
+		width: 170px;
+		background: #fff;
+	}
+	&:after{
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		height: 1px;
+		width: 170px;
+		background: #fff;
+	}
+}
+
+.autor-name{
+	font-family: "latosemibold", sans-serif;
+	margin: 0 11px;
+}
+
+.autor-post{
+	font-family: "latoregular", sans-serif;	
+	margin: 0 11px;
+}

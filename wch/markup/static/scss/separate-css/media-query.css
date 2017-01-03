@@ -1,0 +1,65 @@
+/* Large devices (large desktops, 1200px and up) */
+@media screen and (max-width: 1200px) {
+
+
+
+}
+
+/* Medium devices (desktops, 1024px and up) */
+@media screen and (max-width: 1024px) {
+
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media screen and (max-width: 992px) {
+	
+	.post-item .media-left{
+		display: block;
+		margin-bottom: 10px;
+		padding: 0;
+	}	
+		
+	.post-item .media-body{
+		display: block;	
+		max-width: 100%;
+	}
+
+	.post-item .media-object{
+		max-width: 100%;
+	}
+
+	.footer{
+		text-align: center;
+	}
+
+	.footer-info > div{
+		margin-bottom: 20px;
+	}
+
+	.anim-slider, .big-slider{
+		height: 555px;
+	}
+
+}
+
+/* Small devices (tablets, 768px and up) */
+@media screen and (max-width: 768px) {
+	
+	
+	
+	.testimonial-signature:before{
+		display: none;
+	}
+
+	.testimonial-signature:after{
+		display: none;
+	}
+
+}
+
+/* Small devices (tablets, 500px and up) */
+@media screen and (max-width: 500px) {
+	
+	
+}

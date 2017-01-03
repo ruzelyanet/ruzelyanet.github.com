@@ -1,0 +1,76 @@
+[class^="icon-"], [class*=" icon-"] {
+  background-color: transparent;
+  border: 0 none;
+  color: transparent;
+  display: inline-block;
+  vertical-align: middle;
+  font: 0px/0;
+  margin-top: 0;
+  text-shadow: none;
+}
+
+.icon-audit{
+	@include bg($icon-audit);
+	margin-right: 10px;
+}
+
+.icon-icode{
+	@include bg($icon-icode);	
+}
+
+.icon-bill{
+	@include bg($icon-bill);	
+}
+
+.icon-sevices{
+	@include bg($icon-sevices);	
+}
+
+.icon-billing{
+	@include bg($icon-billing);	
+}
+
+.icon-soft{
+	@include bg($icon-soft);	
+}
+
+.icon-webinar{
+	@include bg($icon-webinar);	
+}
+
+
+.icon-custumer{
+	@include bg($icon-custumer);
+}
+
+.icon-science{
+	@include bg($icon-science);	
+}
+
+.icon-guranted{
+	@include bg($icon-guranted);	
+}
+
+.icon-custumized{
+	@include bg($icon-custumized);	
+}
+
+.icon-sert{
+	@include bg($icon-sert);	
+}
+
+.icon-ourser{
+	@include bg($icon-ourser);	
+}
+
+.icon-quolity{
+	@include bg($icon-quolity);	
+}
+
+.icon-billm{
+	@include bg($icon-billm);	
+}
+
+.icon-relationships{
+	@include bg($icon-relationships);	
+}
