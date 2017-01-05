@@ -1,0 +1,90 @@
+body
+	font 15px/23px 'PT Sans', sans-serif;
+	color #3d3d3d
+
+h3
+	font-size 24px
+	font-weight bold
+	color #2f1b15
+
+a
+	color #1f5f97
+	text-decoration underline
+	&:hover
+		text-decoration none
+		
+.page
+	background url(../img/general/bg.jpg)
+	padding 60px 112px
+	&__header
+		margin-bottom 40px
+
+.wrapper
+	background #797979
+
+.section
+	margin-bottom 62px 
+
+.form-cell	
+	display table
+	width 100%
+	margin-top 2px
+	&:first-child
+		margin-top 0
+	&__item
+		display table-cell
+		vertical-align bottom
+		&:last-child
+			width 100%
+			padding-left 18px
+	.control-label
+		white-space nowrap
+	
+.form-control
+	font 30px "cor", sans-serif
+	color #231f20
+	height 60px
+	border-radius 0
+	border: none
+	padding 12px 15px
+	position relative
+	background none
+	&:focus
+		box-shadow none
+	
+.input-wrap	
+	position relative
+	&:before
+		content ""
+		height 3px
+		width 100%
+		background url(../img/general/border.png) repeat-x
+		position absolute
+		left 0
+		bottom 0
+	
+.control-label
+	font-size 22px
+	font-weight 700
+	color #2f1b15
+	margin 0
+	
+.checkbox
+	font-weight 700
+	font-size 20px
+	margin-bottom 12px
+	label
+		font-weight 700
+		font-size 20px
+		color #000000
+		padding-left 26px
+		.jq-checkbox
+			position absolute !important
+			left 0
+			top 3px
+
+.personal-data
+	label
+		display block
+
+
