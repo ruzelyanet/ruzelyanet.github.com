@@ -1,0 +1,22 @@
+mixin future()
+	+b.future.section&attributes(attributes)
+		block
+		h3 Какие у вас планы на будущее?
+		p Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.
+		.form-inline
+			.radio
+				label
+					input(type="radio" name="future")
+					span Верстать
+			.radio
+				label
+					input(type="radio" name="future" checked)
+					span Прокачиваться в JS
+			.radio
+				label
+					input(type="radio" name="future")
+					span Менеджерство
+			.radio
+				label
+					input(type="radio" name="future")
+					span Другое
