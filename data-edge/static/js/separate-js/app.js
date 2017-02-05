@@ -2,6 +2,10 @@
 $(document).ready(function(){
 
 
+	if($(window).width() > 992){
+		var s = skrollr.init();
+	}
+
 	//choice form
 	$("input[name=selectFormContacts]").change(function(){		
 		
