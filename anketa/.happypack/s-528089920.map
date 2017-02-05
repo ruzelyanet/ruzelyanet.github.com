@@ -1,0 +1,1 @@
+{"version":3,"sources":["app\\scripts\\app.js"],"names":[],"mappings":";;AAAA;;;;AACA;;;;;;AAEA,sBAAE,YAAM;AACP;AAEA,CAHD","file":"app.js","sourceRoot":"C:/Users/ruzel-admin/Desktop/ruzelyanet.github.io/anketa","sourcesContent":["import svg4everybody from 'svg4everybody';\r\nimport $ from 'jquery';\r\n\r\n$(() => {\r\n\tsvg4everybody();\t\r\n\t\r\n});"]}
