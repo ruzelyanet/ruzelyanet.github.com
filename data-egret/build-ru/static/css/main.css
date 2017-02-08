@@ -10821,3 +10821,13 @@ textarea.form-control {
     margin: 0 25px;
   }
 }
+
+
+.text-link{
+  color: #2c2d2d;
+}
+
+.text-link:hover{
+  color: #2c2d2d;
+  text-decoration: none; 
+}
