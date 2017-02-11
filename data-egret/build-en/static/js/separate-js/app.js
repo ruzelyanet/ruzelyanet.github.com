@@ -1,6 +1,9 @@
 
 $(document).ready(function(){
 
+	if($(window).width() >= 1260){
+		var s = skrollr.init();
+	}
 
 	if($(window).width() > 992){
 		$(".activity-list .activity-item:first-child").addClass("js-accordion--open");
