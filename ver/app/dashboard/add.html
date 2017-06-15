@@ -1,0 +1,107 @@
+<div class="page">
+
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-boxed nav-justified">
+                <li><a href="javascript:;"><i class="color-primary fa fa-newspaper-o"></i> Новости</a></li>
+                <li><a href="javascript:;"><i class="color-danger fa fa-play-circle"></i> Прямой эфир</a></li>
+                <li><a href="javascript:;"><i class="color-warning fa fa-star-o"></i> Архив</a></li>
+                <li><a href="javascript:;"><i class="color-success fa fa-diamond"></i> Тетрадь</a></li>
+                <li><a href="javascript:;"><i class="color-cyan fa fa-floppy-o"></i> База знаний</a></li>
+                <li class="btn-wrap"><button class="btn btn-primary btn-lg" type="button"><i class="fa fa-pencil-square-o"></i> Создать сайт</button></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel-body"><strong>Добавить прямой эфир в расписание</strong></div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel-body text-right"><a href="#/dashboard/add"><i class="fa fa-calendar-plus-o"></i> Добавить прямой эфир</a></div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-body padding-xl">
+            <form class="ng-pristine ng-valid add-form1" role="form">
+                <div class="row">
+                    <div class="col-sm-5" >
+                        <div class="form-group">
+                            <label for="InputTitle">Заголовок мероприятия</label>
+                            <input id="InputTitle" class="form-control" type="text" placeholder="">
+                        </div>
+                        <div class="form-group schedulegroup">
+                            <label>Дата прямого эфира</label>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="input-group ui-datepicker" data-ng-controller="DatepickerDemoCtrl">
+                                        <input type="text" 
+                                               class="form-control"
+                                               uib-datepicker-popup="{{format}}"
+                                               ng-model="dt"
+                                               is-open="popup1.opened"
+                                               min-date="minDate"
+                                               max-date="maxDate"
+                                               datepicker-options="dateOptions"
+                                               date-disabled="disabled(date, mode)"
+                                               ng-required="true"
+                                               close-text="Close"
+                                               alt-input-formats="altInputFormats" />
+                                        <span class="input-group-addon" ng-click="open1()"><i class="fa fa-calendar"></i></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="input-group" data-ng-controller="TimepickerDemoCtrl" style="margin-top: -37px; margin-bottom: -37px;">
+                                        <div ng-model="mytime" ng-change="changed()" style="display:inline-block;">
+                                            <uib-timepicker class="ui-timepicker" hour-step="hstep" minute-step="mstep" show-meridian="false"></uib-timepicker>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Выберите спикеров</label>
+                            <div class="input-group" style="width: 100%;">
+                            <div class="ui-select" style="width: 100%;">
+                                <select>
+                                    <option>Алексей Сапфиров 1</option>
+                                    <option>Алексей Сапфиров 2</option>
+                                    <option>Алексей Сапфиров 3</option>
+                                </select>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="form-group">
+                            <label>Доступ</label>
+                            <div class="accessgroup">
+                                <dl class="dl-vertical">
+                                    <dd>
+                                        <label class="ui-checkbox"><input name="checkbox1" type="checkbox" value="option1" checked><span>Вход свободный, для всех</span></label>
+                                        <span class="help-block">Данную трансляцию могут видеть все - гости, партнеры</span>
+                                    </dd>
+                                    <dd>
+                                        <label class="ui-checkbox"><input name="checkbox1" type="checkbox" value="option2" checked><span>Для пользователей системы</span></label>
+                                        <span class="help-block">Для людей, оплативших систему, партнерство в клубе</span>
+                                    </dd>
+                                    <dd>
+                                        <label class="ui-checkbox"><input name="checkbox1" type="checkbox" value="option3"><span>Для членов клуба</span></label>
+                                        <span class="help-block">Для тех, кто оплатил систему и бизнес с компанией</span>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button class="btn btn-line-primary send pull-right" type="submit"><i class="fa fa-calendar-plus-o"></i> Добавить эфир</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,75 @@
+<div class="page-form-ele page">
+
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-boxed nav-justified">
+                <li><a href="javascript:;"><i class="color-primary fa fa-newspaper-o"></i> Новости</a></li>
+                <li><a href="javascript:;"><i class="color-danger fa fa-play-circle"></i> Прямой эфир</a></li>
+                <li><a href="javascript:;"><i class="color-warning fa fa-star-o"></i> Архив</a></li>
+                <li><a href="javascript:;"><i class="color-success fa fa-diamond"></i> Тетрадь</a></li>
+                <li><a href="javascript:;"><i class="color-cyan fa fa-floppy-o"></i> База знаний</a></li>
+                <li class="btn-wrap"><button class="btn btn-primary btn-lg" type="button"><i class="fa fa-pencil-square-o"></i> Создать сайт</button></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel-body"><strong>Добавить материал в базу знаний</strong></div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel-body action-menu">
+                <ul class="list-unstyled list-inline">
+                    <li><a href="#/knowbase/add"><i class="fa fa-file-text-o"></i> Добавить материал</a></li>
+                    <li><a href="#/knowbase/category"><i class="fa fa-file-text-o"></i> Добавить категорию</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-body padding-xl">
+            <form class="ng-pristine ng-valid" role="form">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label for="InputTitle">Имя категории</label>
+                            <input id="InputTitle" class="form-control" type="text" placeholder="">
+                            <br>
+                            <p>Введите имя категории и выберите, какая группа пользователей может просматривать данные материалы. Все пользователи, только те, кто оплатил систему, или только те, кто в вашем бизнесе</p>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="form-group">
+                            <label>Доступ</label>
+                            <div class="accessgroup">
+                                <dl class="dl-vertical">
+                                    <dd>
+                                        <label class="ui-checkbox"><input name="checkbox1" type="checkbox" value="option1" checked><span>Вход свободный, для всех</span></label>
+                                        <span class="help-block">Данную трансляцию могут видеть все - гости, партнеры</span>
+                                    </dd>
+                                    <dd>
+                                        <label class="ui-checkbox"><input name="checkbox1" type="checkbox" value="option2" checked><span>Для партнеров клуба</span></label>
+                                        <span class="help-block">Для людей, оплативших систему, партнерство в клубе</span>
+                                    </dd>
+                                    <dd>
+                                        <label class="ui-checkbox"><input name="checkbox1" type="checkbox" value="option3"><span>Для членов клуба</span></label>
+                                        <span class="help-block">Для тех, кто оплатил систему и бизнес с компанией</span>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <button class="btn btn-line-primary send pull-right" type="submit">Сохранить <i class="fa fa-save"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
