@@ -1,5 +1,6 @@
 https://frontendmasters.com
-Soulmates - 1qw23er4
+Soulmates 
+1qw23er4
 
 https://frontendmasters.com/courses/javascript-basics/
 https://frontendmasters.com/courses/js-fundamentals-to-functional/
