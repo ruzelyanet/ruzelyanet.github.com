@@ -1,131 +1,146 @@
+
 $(document).ready(function(){
-	
-	$(".c-cursor-js").click(function(){
-		$(this).parent().toggleClass("marked");
-		$(this).parent().find(">div").slideToggle();
-		$(this).toggleClass("c-cursor--open");
+
+	$(".call-mobi-nav").click(function(){
+		$(".menu").stop().slideToggle();
 	});
 
-	$(".form-fix").sticky({topSpacing:25});
-
-	$(".js-call-list-menu").click(function(){
-		$(".sidebar-dinamic__body").fadeIn();
+	$(".slider-list").slick({
+		fade: true,
+		dots: true,
+		autoplay: true,
+  		autoplaySpeed: 3000
 	});
 
-	$(".js-close-list-menu").click(function(){
-		$(".sidebar-dinamic__body").fadeOut();
-	});
-
-	$(".img-slideshow__small a").click(function(){
-		var href = $(this).attr("href");			
-		$(".img-slideshow__big img").attr({
-			src: href
-		});
-		return false;
-	});
-
-	//input mask
-    $('input[type=tel]').mask('+7 (999) 999-99-99', {
-        autoclear: false
-    });
-	
-	$(".sandwich").click(function(){
-		$(this).toggleClass("sandwich--close");
-		$(".mob-dropmenu").slideToggle();
-	});
-
-
-	$('.simle-slider').owlCarousel({
-	    loop: false,	    
-	    nav: true,	    
-	    margin: 10,	    
-	    items: 1
-	});
-
-	$('.img-slideshow__list').owlCarousel({
-	    loop:false,	    
-	    nav:true,	    
-	    margin: 10,	 	      
-	    responsive:{
-	        0:{
-	            items:2
+	particlesJS("particles-js", {
+	    particles: {
+	        number: {
+	            value: 80,
+	            density: {
+	                enable: !0,
+	                value_area: 800
+	            }
 	        },
-	        600:{
-	            items:3
+	        color: {
+	            value: "#4aa1d9"
 	        },
-	        1000:{
-	            items:6
+	        shape: {
+	            type: "circle",
+	            stroke: {
+	                width: 0,
+	                color: "#000000"
+	            },
+	            polygon: {
+	                nb_sides: 5
+	            }
+	        },
+	        opacity: {
+	            value: .5,
+	            random: !1,
+	            anim: {
+	                enable: !1,
+	                speed: 1,
+	                opacity_min: .1,
+	                sync: !1
+	            }
+	        },
+	        size: {
+	            value: 3,
+	            random: !0,
+	            anim: {
+	                enable: !1,
+	                speed: 40,
+	                size_min: .1,
+	                sync: !1
+	            }
+	        },
+	        line_linked: {
+	            enable: !0,
+	            distance: 150,
+	            color: "#4aa1d9",
+	            opacity: .4,
+	            width: 1
+	        },
+	        move: {
+	            enable: !0,
+	            speed: 6,
+	            direction: "none",
+	            random: !1,
+	            straight: !1,
+	            out_mode: "out",
+	            bounce: !1,
+	            attract: {
+	                enable: !1,
+	                rotateX: 600,
+	                rotateY: 1200
+	            }
 	        }
-	    }
-	});
-
-	$('.testimonials-slider').owlCarousel({
-	    loop:true,	    
-	    nav:true,
-	    autoHeight:true,
-	    responsive:{
-	        0:{
-	            items:1
+	    },
+	    interactivity: {
+	        detect_on: "canvas",
+	        events: {
+	            onhover: {
+	                enable: !0,
+	                mode: "grab"
+	            },
+	            onclick: {
+	                enable: !0,
+	                mode: "push"
+	            },
+	            resize: !0
 	        },
-	        600:{
-	            items:1
-	        },
-	        1000:{
-	            items:1
+	        modes: {
+	            grab: {
+	                distance: 140,
+	                line_linked: {
+	                    opacity: 1
+	                }
+	            },
+	            bubble: {
+	                distance: 400,
+	                size: 40,
+	                duration: 2,
+	                opacity: 8,
+	                speed: 3
+	            },
+	            repulse: {
+	                distance: 200,
+	                duration: .4
+	            },
+	            push: {
+	                particles_nb: 4
+	            },
+	            remove: {
+	                particles_nb: 2
+	            }
 	        }
-	    }
+	    },
+	    retina_detect: !0
 	});
-
-	$('.img-slider').owlCarousel({
-	    loop:true,	    
-	    nav:true,
-	    autoplay: true,
-	    responsive:{
-	        0:{
-	            items:1
-	        },
-	        600:{
-	            items:1
-	        },
-	        1000:{
-	            items:1
-	        }
-	    }
-	});
-
-	$('.news-slider').owlCarousel({
-	    loop:false,	    
-	    nav:false,
-	    margin: 50,
-	    responsive:{
-	        0:{
-	            items:1
-	        },
-	        600:{
-	            items:2
-	        },
-	        1000:{
-	            items:3
-	        }
-	    }
-	});
-
-
-	$('.action-slider').owlCarousel({
-	    loop:true,	    
-	    nav:true,
-	    responsive:{
-	        0:{
-	            items:1
-	        },
-	        600:{
-	            items:1
-	        },
-	        1000:{
-	            items:1
-	        }
-	    }
-	});
-	
 
 });
+
+
+if($("#map").length){
+	ymaps.ready(init);
+}
+
+function init () {
+
+	var lat = $("#map").data("lat"),
+		lng = $("#map").data("lng");
+
+    var myMap = new ymaps.Map('map', {
+            center: [lat, lng],
+            zoom: 15
+        }),
+
+        myPlacemark = new ymaps.Placemark([lat, lng], {
+            
+        }, {
+           	
+        });
+        
+    myMap.geoObjects.add(myPlacemark);
+    myMap.behaviors.disable('scrollZoom');
+}

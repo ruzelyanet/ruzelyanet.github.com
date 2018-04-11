@@ -7,16 +7,15 @@
         <title>default title</title>
         <meta content="" name="description">
         <meta content="" name="keywords">
-        <meta name="viewport" content="width=480">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <meta content="telephone=no" name="format-detection">
         <!-- This make sence for mobile browsers. It means, that content has been optimized for mobile browsers -->
         <meta name="HandheldFriendly" content="true">
+
         <link href="static/css/separate-css/bootstrap.css" rel="stylesheet" type="text/css">
-
-        <link href="static/css/main.css" rel="stylesheet" type="text/css">
-
-        <link href="static/css/separate-css/media-query.css" rel="stylesheet" type="text/css">
+        <link href="static/css/separate-css/slick.css" rel="stylesheet" type="text/css">
+        <link href="static/css/maingg9nspy994zp1nzlac3di.min.css" rel="stylesheet" type="text/css">
 
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <script>
@@ -28,934 +27,541 @@
     <body>
 
 
-        <div class="sidebar">
-            <div class="sidebar__header">
-                <a href="/" class="logo">
-                    <img src="static/img/general/logo.png" alt="">
-                </a>
-            </div>
+        <div class="header">
+            <div class="container">
+                <div class="row align-items-end">
 
-            <div class="sidebar__body">
-
-                <div class="widget widget-phone text-center">
-                    <div class="c-phone">
-                        <i class="icon-phone-sm"></i>+7 (499) 190-52-61
+                    <div class="col-xl-3">
+                        <div class="phone">
+                            <span>Бесплатно по России</span>
+                            <div class="phone-numb">
+                                <a href="tel:8-800-500-44-43">8-800-500-44-43</a>
+                            </div>
+                            <div class="stiker-ad">
+                                МЫ ПЕРЕЕХАЛИ<i class="icon-arrow-down"></i>
+                            </div>
+                        </div>
                     </div>
-                    <button class="btn btn-block btn-primary" data-toggle="modal" data-target="#popup-apply">
-                        Зарезервировать
-                    </button>
-                </div>
 
-                <div class="widget widget-nav">
-                    <div class="widget-title">Меню</div>
-                    <nav class="nav nav-left">
+                    <div class="col-xl-6">
+                        <div class="text-center">
+                            <a href="/" class="logo">
+                                <img src="static/img/general/logo.png" alt="">
+                            </a>
+                            <div class="slogan">
+                                Ради общего блага
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3">
+                        <div class="d-flex flex-xl-column flex-md-row flex-sm-column flex-column justify-content-center justify-content-sm-between">
+
+                            <div class="header-tools d-flex align-items-center justify-content-center justify-content-lg-end justify-content-sm-center">
+                                <form class="search d-flex">
+                                    <input type="text" class="form-control">
+                                    <button><i class="icon-search"></i>
+                                    </button>
+                                </form>
+
+                                <div class="lng btn-group">
+                                    <button type="button" class="btn btn-gold dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        RUS
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <button class="dropdown-item" type="button">USA</button>
+                                        <button class="dropdown-item" type="button">ITALI</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--.header-tools-->
+
+                            <div class="soc d-flex justify-content-center justify-content-lg-end justify-content-sm-center">
+                                <a href="#"><i class="icon-yt"></i></a>
+                                <a href="#"><i class="icon-fb"></i></a>
+                                <a href="#"><i class="icon-in"></i></a>
+                                <a href="#"><i class="icon-vk"></i></a>
+                                <a href="#"><i class="icon-ok"></i></a>
+                                <a href="#"><i class="icon-tg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--.header-->
+
+        <div class="text-center p-3 d-none-xl d-lg-none">
+            <span class="call-mobi-nav">
+        		Меню
+        		<span class="burger">
+        			<span></span>
+            </span>
+            </span>
+        </div>
+
+        <div class="menu">
+            <div class="container">
+                <ul class="nav nav-pills nav-fill">
+                    <li class="nav-item">
+                        <a href="#">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Компания</a>
                         <ul>
                             <li>
-                                <a href="#">О компании</a>
-                            </li>
-                            <li>
-                                <a href="#">Меню</a>
-                                <span class="c-cursor"></span>
-                                <div class="nav-level-2">
-                                    <ul>
-                                        <li>
-                                            <a href="#">Ресторан</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Банкетный зал</a>	
-                                            <div class="nav-level-3">
-                                                <ul>
-                                                    <li>
-                                                        <a href="#">Ресторан</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Банкетный зал</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="#">Домики</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Новогодние корпоративы</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Видео</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#">Интерьер</a>
-                            </li>
-                            <li>
-                                <a href="#">Банный комплекс</a>
-                            </li>
-                            <li>
-                                <a href="#">Бронирование</a>
-                            </li>
-                            <li>
-                                <a href="#">Отзывы</a>
+                                <a href="#">Мероприятия</a>
                             </li>
                             <li>
                                 <a href="#">Новости</a>
                             </li>
                             <li>
-                                <a href="#">Контакты</a>
+                                <a href="#">Благотворительный фонд</a>
                             </li>
                         </ul>
-                    </nav>
-                </div>
-
-                <div class="widget widget-cat">
-                    <div class="widget-title">Мы организуем</div>
-                    <div class="cat-nav">
-                        <ul>
-                            <li>
-                                <a href="#"><span class="cat-nav__icon"><i class="icon-ban"></i></span>БАНКЕТЫ</a>
-                            </li>
-                            <li>
-                                <a href="#"><span class="cat-nav__icon"><i class="icon-sv"></i></span>СВАДЬБЫ</a>
-                            </li>
-                            <li class="cat-nav__active">
-                                <a href="#"><span class="cat-nav__icon"><i class="icon-corp"></i></span>КОРПОРТАТИВЫ</a>
-                            </li>
-                            <li>
-                                <a href="#"><span class="cat-nav__icon"><i class="icon-dn"></i></span>ДНИ РОЖДЕНИЯ</a>
-                            </li>
-                            <li>
-                                <a href="#"><span class="cat-nav__icon"><i class="icon-dnd"></i></span>ДЕТСКИЕ ПРАЗДНИКИО</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!--.cat-nav-->
-                </div>
-
-                <div class="widget widget-apply form-fix">
-                    <div class="widget-title">Онлайн заявка</div>
-                    <div class="form">
-                        <form>
-                            <div class="form-row to-book">
-                                <select class="form-control">
-                                    <option>Забронировать стол</option>
-                                    <option>На две персоны</option>
-                                    <option>На три персоны</option>
-                                </select>
-                            </div>
-                            <div class="form-row">
-                                <input class="form-control" type="text" placeholder="Ваше имя">
-                            </div>
-                            <div class="form-row">
-                                <input class="form-control" type="tel" placeholder="Ваш телефон">
-                            </div>
-                            <div class="form-row">
-                                <input class="form-control" type="text" placeholder="Ваши пожелания">
-                            </div>
-                            <div class="form-row">
-                                <button class="btn btn-block btn-primary">Отправить заявку</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <!--.apply-->
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Продукция</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Обучение</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="link-partners">Бизнес-партнерам <i class="icon-user"></i></a>
+                    </li>
+                </ul>
             </div>
-
         </div>
-        <!--.sidebar-->
+        <!--.menu-->
+        <div class="container">
 
-        <div class="primary">
-            <div class="header clearfix">
-                <div class="pull-left">
-                    <div class="title-sub-menu">
-                        <span class="sandwich">
+            <div class="slider slider-main mb-4">
 
-            				<span class="ic-nav ic-nav-1"></span>
-                        <span class="ic-nav ic-nav-2"></span>
-                        <span class="ic-nav"></span>
-                        </span>
-
-                        <span>Меню</span>
+                <div class="slider-list">
+                    <div class="slider-item">
+                        <div class="slider-item-text">
+                            НОВОЕ КАЧЕСТВО ВАШЕЙ
+                            <br>ЖИЗНИ НАЧИНАЕТСЯ ЗДЕСЬ
+                        </div>
                     </div>
-
-                    <span class="h-phone">+7 (499) 190-52-61</span>	
+                    <div class="slider-item">
+                        <div class="slider-item-text">
+                            ЖИЗНИ НАЧИНАЕТСЯ ЗДЕСЬ
+                        </div>
+                    </div>
+                    <div class="slider-item">
+                        <div class="slider-item-text">
+                            НОВОЕ КАЧЕСТВО ВАШЕЙ
+                        </div>
+                    </div>
                 </div>
-
-                <button class="btn btn-small btn-primary pull-right" data-toggle="modal" data-target="#popup-apply">
-                    <i class="icon-apply visible-sm-inline-block visible-xs-inline-block"></i>
-                    <span class="hidden-sm hidden-xs">Зарезервировать</span>
-                </button>
-
-                <div class="mob-dropmenu">
-
-                    <div class="widget widget-phone text-center">
-                        <div class="c-phone">
-                            <i class="icon-phone-sm"></i>+7 (499) 190-52-61
-                        </div>
-                        <button class="btn btn-block btn-primary" data-toggle="modal" data-target="#popup-apply">
-                            Зарезервировать
-                        </button>
-                    </div>
-
-
-                    <div class="widget widget-nav">
-                        <div class="widget-title">Меню</div>
-                        <div class="nav nav-right">
-                            <ul>
-                                <li>
-                                    <a href="#">О компании</a>
-                                </li>
-                                <li>
-                                    <a href="#">Меню</a>
-                                    <span class="c-cursor c-cursor-js"></span>
-                                    <div class="nav-level-2">
-                                        <ul>
-                                            <li>
-                                                <a href="#">Ресторан</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Банкетный зал</a>
-                                                <span class="c-cursor c-cursor-js"></span>
-                                                <div class="nav-level-3">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="#">Ресторан</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">Банкетный зал</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <a href="#">Домики</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Новогодние корпоративы</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Видео</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="#">Интерьер</a>
-                                </li>
-                                <li>
-                                    <a href="#">Банный комплекс</a>
-                                </li>
-                                <li>
-                                    <a href="#">Бронирование</a>
-                                </li>
-                                <li>
-                                    <a href="#">Отзывы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Новости</a>
-                                </li>
-                                <li>
-                                    <a href="#">Контакты</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="widget widget-cat">
-                        <div class="widget-title">Мы организуем</div>
-                        <div class="cat-nav">
-                            <ul>
-                                <li>
-                                    <a href="#"><span class="cat-nav__icon"><i class="icon-ban"></i></span>БАНКЕТЫ</a>
-                                </li>
-                                <li>
-                                    <a href="#"><span class="cat-nav__icon"><i class="icon-sv"></i></span>СВАДЬБЫ</a>
-                                </li>
-                                <li class="cat-nav__active">
-                                    <a href="#"><span class="cat-nav__icon"><i class="icon-corp"></i></span>КОРПОРТАТИВЫ</a>
-                                </li>
-                                <li>
-                                    <a href="#"><span class="cat-nav__icon"><i class="icon-dn"></i></span>ДНИ РОЖДЕНИЯ</a>
-                                </li>
-                                <li>
-                                    <a href="#"><span class="cat-nav__icon"><i class="icon-dnd"></i></span>ДЕТСКИЕ ПРАЗДНИКИО</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--.cat-nav-->
-                    </div>
-
-                    <div class="widget widget-apply">
-                        <div class="widget-title">Онлайн заявка</div>
-                        <div class="form">
-                            <form>
-                                <div class="form-row to-book">
-                                    <select class="form-control">
-                                        <option>Забронировать стол</option>
-                                        <option>На две персоны</option>
-                                        <option>На три персоны</option>
-                                    </select>
-                                </div>
-                                <div class="form-row">
-                                    <input class="form-control" type="text" placeholder="Ваше имя">
-                                </div>
-                                <div class="form-row">
-                                    <input class="form-control" type="tel" placeholder="Ваш телефон">
-                                </div>
-                                <div class="form-row">
-                                    <input class="form-control" type="text" placeholder="Ваши пожелания">
-                                </div>
-                                <div class="form-row">
-                                    <button class="btn btn-block btn-primary">Отправить заявку</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <!--.apply-->
-
-                </div>
-                <!--.mob-dropmenu-->
-
+                <div id="particles-js"></div>
             </div>
-            <!--.header-->
-            <div class="content">
+            <!--.slider-->
 
-                <div class="b-luring">
-                    <div class="row">
-                        <div class="col-lg-8 col-md-8">
-                            <div class="img-slider">
-                                <img src="static/img/content/slider.jpg" alt="">
-                                <img src="static/img/content/slider.jpg" alt="">
-                                <img src="static/img/content/slider.jpg" alt="">
-                            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="mb-4">
+                        <a href="#">
+                            <img src="static/img/content/company-1.jpg" alt="" class="w-100">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mb-4">
+                        <a href="#">
+                            <img src="static/img/content/company-2.jpg" alt="" class="w-100">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-6 mb-4">
+                    <div class="ibox mb-2">
+                        <div class="ibox-header">
+                            НОВОСТИ
                         </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="action">
-                                <div class="action-title">
-                                    <i class="icon-ac"></i>  <span>Наши акции!</span>
+                        <div class="ibox-body">
+                            <div class="post d-md-flex">
+                                <div class="post-img">
+                                    <img src="static/img/content/post-1.jpg">
                                 </div>
-                                <div class="action-slider">
-                                    <div class="action-slider_item text-center">
-                                        <span class="action-big">
-
-                                            С воскресения<br>
-
-                                            по четверг скидка
-
-                                        </span>
-                                        <br>
-                                        <span class="action-lg">15%</span>
-                                        <br>
-                                        <div class="action-sm">
-                                            <span class="h-uc">на банкеты</span>
-                                            <div class="action-bottom">Не действует в декабре</div>
+                                <div class="post-body d-flex flex-column">
+                                    <div class="mb-auto">
+                                        <div class="post-title">X НПК 2018</div>
+                                        <div class="post-poster">
+                                            Приглашаем вас принять участие в X Научно-практической конференции Компании «Центр Регион»!
                                         </div>
                                     </div>
 
-                                    <div class="action-slider_item text-center">
-                                        <span class="action-big">
+                                    <div class="post-more">
+                                        <a href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                                            С воскресения<br>
+                    <div class="row align-items-end">
+                        <div class="col-6">
+                            <a href="#" class="all-news">Все новости</a> 
+                        </div>
+                        <div class="col-6 text-right">
+                            <a href="#" class="link-archive">Архив</a>
+                        </div>
+                    </div>
+                </div>
 
-                                            по четверг скидка
-
-                                        </span>
-                                        <br>
-                                        <span class="action-lg">15%</span>
-                                        <br>
-                                        <div class="action-sm">
-                                            <span class="h-uc">на банкеты</span>
-                                            <br>
-                                            <div class="action-bottom">Не действует в декабре</div>
+                <div class="col-xl-6 mb-4">
+                    <div class="ibox mb-2">
+                        <div class="ibox-header ibox-header-lite">
+                            ОБУЧЕНИЕ
+                        </div>
+                        <div class="ibox-body">
+                            <div class="post d-md-flex">
+                                <div class="post-img">
+                                    <img src="static/img/content/post-2.jpg">
+                                </div>
+                                <div class="post-body d-flex flex-column">
+                                    <div class="mb-auto">
+                                        <div class="post-title">X НПК 2018</div>
+                                        <div class="post-poster">
+                                            Приглашаем вас принять участие в X Научно-практической конференции Компании «Центр Регион»!
                                         </div>
                                     </div>
+
+                                    <div class="post-more">
+                                        <a href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-end">
+                        <div class="col-6">
+                            <a href="#" class="all-news">Все новости</a> 
+                        </div>
+                        <div class="col-6 text-right">
+                            <a href="#" class="link-archive">Архив</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subscribe mb-4">
+                <div class="subscribe-title">
+                    ХОЧУ БЫТЬ В КУРСЕ НОВОСТЕЙ
+                </div>
+                <form>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="form-group">
+                                <input type="text" placeholder="Имя" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="form-group">
+                                <input type="email" placeholder="e-mail" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 offset-lg-0 offset-md-4">
+                            <button class="btn btn-gold btn-block">Подписаться</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!--.subscribe-->
+
+            <div class="b-splash-products mb-4">
+                <div class="row">
+                    <div class="col-xl-6 offset-xl-0 col-lg-12 offset-lg-0 col-md-6 offset-md-3">
+                        <div class="splash-product splash-product-yellow d-flex flex-xl-row flex-lg-row flex-column">
+                            <div class="splash-product-body mr-auto">
+                                <div class="splash-product-title color-blue">
+                                    КФС
+                                </div>
+                                <div class="splash-product-poster">
+                                    Корректоры
+                                    <br>функционального
+                                    <br>состояния
+                                </div>
+                            </div>
+                            <div class="splash-product-img">
+                                <a href="#">
+                                    <img src="static/img/content/news-1.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6 offset-xl-0 col-lg-12 offset-lg-0 col-md-6 offset-md-3">
+                        <div class="splash-product splash-product-yellow d-flex flex-xl-row flex-lg-row flex-column">
+                            <div class="splash-product-body mr-auto">
+                                <div class="splash-product-title color-green">
+                                    ЭВОХЛОРОФИЛЛ
+                                </div>
+                                <div class="splash-product-poster">
+                                    Решение
+                                    <br>фундаментальных
+                                    <br>задач по здоровью
+                                </div>
+                            </div>
+                            <div class="splash-product-img">
+                                <a href="#">
+                                    <img src="static/img/content/news-2.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6 offset-xl-0 col-lg-12 offset-lg-0 col-md-6 offset-md-3">
+                        <div class="splash-product splash-product-yellow d-flex flex-xl-row flex-lg-row flex-column">
+                            <div class="splash-product-img mr-auto">
+                                <a href="#">
+                                    <img src="static/img/content/news-3.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="splash-product-body">
+                                <div class="splash-product-title color-orange">
+                                    ПРОТЕТИОН
+                                </div>
+                                <div class="splash-product-poster">
+                                    Эксклюзивная формула
+                                    <br>для оболожения
+                                    <br>организма
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6 offset-xl-0 col-lg-12 offset-lg-0 col-md-6 offset-md-3">
+                        <div class="splash-product splash-product-yellow d-flex flex-xl-row flex-lg-row flex-column">
+                            <div class="splash-product-img mr-auto">
+                                <a href="#">
+                                    <img src="static/img/content/news-4.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="splash-product-body mr-auto">
+                                <div class="splash-product-title color-pink">
+                                    РЕСВЕРАТРОЛ
+                                </div>
+                                <div class="splash-product-poster">
+                                    Прекрасное
+                                    <br>здоровье
+                                    <br>в любом возрасте
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--.b-luring-->
+                <div class="text-center">
+                    <a href="#" class="all-products">Все продукты</a>
+                </div>
+            </div>
+            <!--.b-splash-products-->
 
-                <div class="b-skills">
+
+            <div class="ibox">
+                <div class="ibox-header mb-5">
+                    НОВЫЕ ПОСТУПЛЕНИЯ
+                </div>
+                <div class="ibox-body">
                     <div class="row">
 
-                        <div class="col-lg-2 col-md-4 col-sm-4">
-                            <div class="skill-item skill-item-1">
-                                <div class="skill-item__img">
-                                    <img src="static/img/general/icon-al.png" alt="">
+                        <div class="col-xl-6 mb-4">
+                            <div class="post d-md-flex">
+                                <div class="post-img">
+                                    <img src="static/img/content/post-3.jpg">
                                 </div>
-                                <div class="skill-item__info">
-                                    Алкоголь без пробкового сбора
+                                <div class="post-body d-flex flex-column">
+                                    <div class="mb-auto">
+                                        <div class="post-title">ЭВОХЛОРОФИЛЛ-Э</div>
+                                        <div class="post-poster">
+                                            Приглашаем вас принять участие в
+                                            <br>X Научно-практической конференции Компании «Центр Регион»!
+                                            <br>Ждем вас по адресу:
+                                            <br>г. Москва, метро «Партизанская», ГК «Измайлово», корпус «Гамма-Дельта», зал «Москва»
+                                        </div>
+                                    </div>
+
+                                    <div class="post-more">
+                                        <a href="#">Подробнее</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-2 col-md-4 col-sm-4">
-                            <div class="skill-item skill-item-2">
-                                <div class="skill-item__img">
-                                    <img src="static/img/general/icon-bn.png" alt="">
+                        <div class="col-xl-6 mb-4">
+                            <div class="post d-md-flex">
+                                <div class="post-img">
+                                    <img src="static/img/content/post-4.jpg">
                                 </div>
-                                <div class="skill-item__info">
-                                    Банкеты от 10
-                                    <br>до 300 персон
+                                <div class="post-body d-flex flex-column">
+                                    <div class="mb-auto">
+                                        <div class="post-title">КОРРЕКТОР №1</div>
+                                        <div class="post-poster">
+                                            Приглашаем вас принять участие в
+                                            <br>X Научно-практической конференции Компании «Центр Регион»!
+                                            <br>Ждем вас по адресу:
+                                            <br>г. Москва, метро «Партизанская», ГК «Измайлово», корпус «Гамма-Дельта», зал «Москва»
+                                        </div>
+                                    </div>
+
+                                    <div class="post-more">
+                                        <a href="#">Подробнее</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-lg-2 col-md-4 col-sm-4">
-                            <div class="skill-item skill-item-3">
-                                <div class="skill-item__img">
-                                    <img src="static/img/general/icon-st.png" alt="">
-                                </div>
-                                <div class="skill-item__info">
-                                    Бесплатная охраняемая парковка
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-2 col-md-4 col-sm-4">
-                            <div class="skill-item skill-item-4">
-                                <div class="skill-item__img">
-                                    <img src="static/img/general/icon-sep.png" alt="">
-                                </div>
-                                <div class="skill-item__info">
-                                    Все три зала изолированы друг от друга
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-2 col-md-4 col-sm-4">
-                            <div class="skill-item skill-item-5">
-                                <div class="skill-item__img">
-                                    <img src="static/img/general/icon-vh.png" alt="">
-                                </div>
-                                <div class="skill-item__info">
-                                    У каждого зала отдельный вход и выход
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-2 col-md-4 col-sm-4">
-                            <div class="skill-item skill-item-6">
-                                <div class="skill-item__img">
-                                    <img src="static/img/general/icon-ar.png" alt="">
-                                </div>
-                                <div class="skill-item__info">
-                                    Мы не взимаем арендную плату за отдельный зал
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
-                <!--.b-skills-->
-
-                <div class="b-cols row">
-                    <div class="col-lg-8 col-md-8 col-sm-12">
-
-                        <div class="section">
-                            <div class="section-body">
-                                <div class="h2">Ресторан «Союз» - проведение свадеб в Москве</div>
-
-                                <p>
-                                    Конечно, столица не может пожаловаться на недостаток заведений ресторанного типа. Однако, тем не менее, найти красивый ресторан для свадьбы — не такая уж простая задача. Дело в том, что когда речь идет о самом торжественном дне в жизни любой пары или
-                                    просто важном событии, которое хочется отпраздновать в кругу любимых и близких — нужны не просто неплохие, но самые лучшие рестораны для свадьбы.
-                                </p>
-
-                                <p>
-                                    Можно сбиться с ног в поисках такого места — а можно сразу обратиться в «Союз», давно завоевавший популярность среди москвичей. Он возглавляет лучшие рестораны Москвы для свадьбы и приглашает гостей как достойно отметить важные события в жизни, так и
-                                    просто приятно провести время.
-                                </p>
-
-                                <h4>Мы устроили первый в мире свадебный маникенчелендж</h4>
-
-                                <p class="text-center">
-                                    <img src="static/img/content/video.jpg" alt="" class="img-responsive">
-                                </p>
-
-                                <h4>
-
-                                    Разнообразие возможностей
-
-                                </h4>
-
-                                <p>
-                                    «Союз» расположился в одноименном гостиничном комплексе и занимает весь первый этаж. Таким образом, места хватит всем, и гости будут чувствовать себя исключительно комфортно. Кроме того, если вы ищете красивый ресторан для свадьбы в Москве недорого, «Союз»
-                                    предлагает вам демократичные цены и оригинальное разнообразное меню, в котором найдутся блюда на любой вкус.
-                                </p>
-
-                                <p>
-                                    Разнообразием порадует не только меню, но и наличие нескольких залов, каждый из которых оформлен в своем неповторимом стиле.
-                                </p>
-
-                                <ul>
-                                    <li>
-                                        Теплые тона «Банкетного» зала, изысканное оформление и изящные декорации делают его идеальным, если вы ищете ресторан для свадьбы недорого и стремитесь организовать впечатляющее, при этом солидное торжество. Зал рассчитан на сто персон, так что все гости
-                                        легко разместятся.
-                                    </li>
-                                    <li>
-                                        «Русский зал» рассчитан на тридцать человек. Его отличает традиционный русский стиль. Зал идеально подойдет для семейного торжества. Если вы ищете рестораны Москвы для проведения свадеб без лишнего размаха, в узком семейном кругу, «Союз» и «Русский зал»
-                                        станут лучшим выбором.
-                                    </li>
-                                    <li>
-                                        «Венский зал» оформлен в изысканном венском стиле и вмещает до 20 персон. Отличный вариант для уютных дружеских посиделок.
-                                    </li>
-                                </ul>
-
-                                <p>
-                                    В «Ирландском баре» есть только самое необходимое: бар и четыре столика. Лучшее место, чтобы наслаждаться изысканными творениями нашего повара.
-                                </p>
-
-                                <h4>Идеальное решение для каждого</h4>
-
-                                <p>
-                                    Каждое утро вы можете начать приятно и вкусно, выбрав у нас сытный завтрак среди их впечатляющего ассортимента. Более того, сделать это вы можете на свежем воздухе, ведь «Союз» располагается в особо охраняемой природной зоне Москвы.
-                                </p>
-
-                                <p>
-                                    Означает это также, что если вы ищете рестораны с верандой для свадьбы, «Союз» является идеальным вариантом, который порадует вас не только манящими запахами ароматных блюд, но и чистым воздухом. Не секрет, что рестораны с верандой особенно привлекательны
-                                    для проведения торжеств — и, в частности, поэтому «Союз» является излюбленным местом для проведения банкетов, фуршетов, корпоративных вечеров, празднования свадеб и юбилеев.
-                                </p>
-
-                                <p>
-                                    Помимо того, что у нас можно отметить свадьбу, мы заботимся и повседневной жизни наших клиентов, поэтому у нас вы найдете выгодные варианты корпоративного питания.
-                                </p>
-
-                                <p>
-                                    Итак, «Союз» является оптимальным решением не только, если вы ищете рестораны Москвы для проведения свадьбы, но и отличным выбором на каждый день. Кроме того, тут вы можете весело отметить Новый Год в шумной компании, с конкурсами, розыгрышами, викторинами
-                                    и развлечениями.
-                                </p>
-
-                                <p>
-                                    В «Союзе» вы сможете выбрать банкетный зал для свадьбы или иного торжества, идеально подходящий выбранному стилю и формату празднования, а также как приятно провести вечер в уютном ресторане или в парковой зоне на свежем воздухе. В результате, вы сможете
-                                    отметить свадьбу или иное важное событие, сытно позавтракать и чудесно начать новый день, задорно встретить Новый год или просто расслабиться на природе — и все это, не покидая Москвы и не переплачивая!
-                                </p>
-
-                                <p>
-                                    Ресторан находится в районе САО (район Химки или Ленинградка) по адресу Москва, ул. Левобережная, д. 12. Забронировать банкет или столик вы можете по телефону +7 (499) 458-90-86.
-                                </p>
-
-
-                                <div class="post-images row">
-                                    <div class="post-images_item col-lg-4 col-md-4 col-sm-4">
-                                        <img src="static/img/content/img-small.png" alt="">
-                                    </div>
-                                    <div class="post-images_item col-lg-4 col-md-4 col-sm-4">
-                                        <img src="static/img/content/img-small.png" alt="">
-                                    </div>
-                                    <div class="post-images_item col-lg-4 col-md-4 col-sm-4">
-                                        <img src="static/img/content/img-small.png" alt="">
-                                    </div>
-                                    <div class="post-images_item col-lg-4 col-md-4 col-sm-4">
-                                        <img src="static/img/content/img-small.png" alt="">
-                                    </div>
-                                    <div class="post-images_item col-lg-4 col-md-4 col-sm-4">
-                                        <img src="static/img/content/img-small.png" alt="">
-                                    </div>
-                                    <div class="post-images_item col-lg-4 col-md-4 col-sm-4">
-                                        <img src="static/img/content/img-small.png" alt="">
-                                    </div>
-                                    <div class="post-images_item col-lg-4 col-md-4 col-sm-4">
-                                        <img src="static/img/content/img-small.png" alt="">
-                                    </div>
-                                    <div class="post-images_item col-lg-4 col-md-4 col-sm-4">
-                                        <img src="static/img/content/img-small.png" alt="">
-                                    </div>
-                                </div>
-
-                                <p>
-                                    <img src="static/img/content/video-2.jpg" alt="" class="img-responsive">
-                                </p>
-
-                                <h4>Условия проведения свадеб и банкетов</h4>
-
-                                <p>5 залов + шатер:</p>
-
-                                <ol>
-                                    <li>до 20 персон</li>
-                                    <li>до 35 персон</li>
-                                    <li>до 80 персон (к залу отдается летняя беседка)</li>
-                                    <li>до 100 персон (к залу отдается летняя веранда)</li>
-                                    <li>до 270 персон (к залу отдается летняя веранда и шатер на 70 персон (если он не занят))</li>
-                                    <li>
-                                        Средняя стоимость проведения свадьбы или банкета - 3000 руб. с человека, в будние дни скидка 20% (кроме пятницы и субботы). Мы можем провести банкет на 10, 15, 25, 30, 40, 50, 60 человек.
-                                    </li>
-                                </ol>
-
-                                <p>Сюда входит:</p>
-
-                                <ul>
-                                    <li>
-                                        26 видов холодных закусок из них 3 вида салата на выбор (закуски из расчета 1 порция на 4 персоны).
-                                    </li>
-                                    <li>
-                                        3 вида горячих закусок
-                                    </li>
-                                    <li>
-                                        орячие блюда из 7-8 видов шашлыков, ассорти мяса (семга, перепелка, свинина, баранина, баранина корейка, курица, люля-кебаб из баранины, люля-кебаб из телятины, люля- кебаб из курицы) подается на специальной деревянной тарелке, крутящейся вокруг своей
-                                        оси, вертикально выставляются шашлыки на шампурах (7-8 шт.), в центре фаршированный ананас с окошками в нем поджигается сухой спирт, весь ананас выложен на тарелке при подаче гасится свет и подается под лезгинку,
-                                        официанты выставляются в ряд, делают круг и ставят блюда на стол. Подача называется огненный ананас.
-                                    </li>
-                                    <li>
-                                        фрукты (мандарин, киви, виноград, груша, яблоко)
-                                    </li>
-                                    <li>
-                                        прохладительные напитки по 1 бут. на 2 персоны (лимонад, сок, морс, вода с газом, вода без газа)
-                                    </li>
-                                </ul>
-
-                                <p>Алкоголь разрешается привести с собой, так же можно довести свои деликатесы, и торт.</p>
-
-                                <p>
-                                    К банкету дополнительно предлагаем:
-                                </p>
-
-                                <ol>
-                                    <li>Торт - классическое тирамису "итальянский сад", украшенный лесными ягодами, у нас своя кондитерская;</li>
-                                    <li>Осетрина или севрюга целиком запеченная;</li>
-                                    <li>Поросенок целиком запеченный;</li>
-                                    <li>Утка фаршированная;</li>
-                                    <li>Индейка фаршированная;</li>
-                                    <li>Так же предлагаем размещение в нашей гостинице;</li>
-                                    <li>К любому банкету на номер в гостиницу скидка 30%;</li>
-                                    <li>Молодожёнам справляющие свадьбу от 100 до 150 персон 50% скидка на номер;</li>
-                                    <li>От 150 персон номер люкс в подарок + фруктовая ваза и шампанское в номер;</li>
-                                </ol>
-
-                                <p>Скидки с базовых цен на номера.</p>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <div class="section">
-                            <div class="section-body">
-                                <div class="b-menu">
-                                    <div class="b-menu__title">Меню:</div>
-                                    <ul class="b-menu__list">
-                                        <li><a href="#">Холодные овощные закуски</a>
-                                        </li>
-                                        <li><a href="#">Салаты</a>
-                                        </li>
-                                        <li><a href="#">Холодные мясные закуски</a>
-                                        </li>
-                                        <li><a href="#">Холодные рыбные закуски</a>
-                                        </li>
-                                        <li><a href="#">Кисломолочные продукты</a>
-                                        </li>
-                                        <li><a href="#">Выпечка</a>
-                                        </li>
-                                        <li><a href="#">Гарниры</a>
-                                        </li>
-                                        <li><a href="#">Соусы</a>
-                                        </li>
-                                        <li><a href="#">Супы</a>
-                                        </li>
-                                        <li><a href="#">Горячие закуски</a>
-                                        </li>
-                                        <li><a href="#">Гриль</a>
-                                        </li>
-                                        <li><a href="#">Блюда на мангале</a>
-                                        </li>
-                                        <li><a href="#">Десерты</a>
-                                        </li>
-                                        <li><a href="#">Горячие блюда из мяса</a>
-                                        </li>
-                                        <li><a href="#">Горячие блюда из рыбы и морепродуктов</a>
-                                        </li>
-                                        <li><a href="#">Горячие блюда из птицы</a>
-                                        </li>
-                                        <li><a href="#">Паста</a>
-                                        </li>
-                                        <li><a href="#">Банкетное предложение</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!--.b-menu-->
-
-                                <div class="b-menu">
-                                    <div class="b-menu__title">Винная карта:</div>
-                                    <ul class="b-menu__list">
-                                        <li><a href="#">Игристые вина</a>
-                                        </li>
-                                        <li><a href="#">Белые вина</a>
-                                        </li>
-                                        <li><a href="#">Красные вина</a>
-                                        </li>
-                                        <li><a href="#">Белые вина</a>
-                                        </li>
-                                        <li><a href="#">Красные вина</a>
-                                        </li>
-                                        <li><a href="#">Вино по бокалам</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!--.b-menu-->
-
-                                <div class="b-menu">
-                                    <div class="b-menu__title">Алкоголь:</div>
-                                    <ul class="b-menu__list">
-                                        <li><a href="#">Водка</a>
-                                        </li>
-                                        <li><a href="#">Текила / Teguila</a>
-                                        </li>
-                                        <li><a href="#">Джин / Gin</a>
-                                        </li>
-                                        <li><a href="#">Виски / Whisky</a>
-                                        </li>
-                                        <li><a href="#">Ром / Rum</a>
-                                        </li>
-                                        <li><a href="#">Вермут / Vermouth</a>
-                                        </li>
-                                        <li><a href="#">Ликеры / Liqueurs</a>
-                                        </li>
-                                        <li><a href="#">Коньяк / Cognac</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!--.b-menu-->
-
-                                <div class="b-menu">
-                                    <div class="b-menu__title">Безалкогольные напитки:</div>
-                                    <ul class="b-menu__list">
-                                        <li><a href="#">Прохладительные напитки</a>
-                                        </li>
-                                        <li><a href="#">Соки</a>
-                                        </li>
-                                        <li><a href="#">Свежевыжатые соки</a>
-                                        </li>
-                                        <li><a href="#">Кофе</a>
-                                        </li>
-                                        <li><a href="#">Чай</a>
-                                        </li>
-                                        <li><a href="#">Пиво разливное</a>
-                                        </li>
-                                        <li><a href="#">Пиво бутылочное</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!--.b-menu-->
-
-                                <div class="b-menu">
-                                    <div class="b-menu__title">Алкогольные напитки:</div>
-                                    <ul class="b-menu__list">
-                                        <li><a href="#">Алкогольные коктейли</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!--.b-menu-->
-
-                                <a href="#" class="btn btn-block btn-primary">Смотреть Всё меню</a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <!--.b-cols-->
-
-                <div class="c-seperator"></div>
-
-                <div class="section">
-                    <div class="section-header text-center">
-                        <div class="h2">Отзывы клиентов</div>
-                        <a href="#">смотреть все отзывы</a>
-                    </div>
-                    <div class="section-body section-body--grey">
-                        <div class="testimonials-slider">
-
-                            <div class="testimonials-slider__item">
-                                <div class="testimonials-slider__item-container">
-                                    <div class="testimonials-slider__item-img">
-                                        <img src="static/img/content/testimonials.jpg" alt="" class="img-circle">
-                                    </div>
-                                    <div class="testimonials-slider__item-info">
-                                        <div class="testimonials-slider__item-autor">Алеся Семенова</div>
-                                        <div class="testimonials-slider__item-date">12.05.16</div>
-                                        <p>
-                                            До конца ноября в ресторане будут готовить традиционные аутентичные блюда, которые познакомят гостей с корейской кухней. Все представленные позиции придуманы шеф-поваром Лией Но (кстати, она же совсем недавно обновляла меню для «Киану» на Патриарших,
-                                            а в середине лета устраивала ужины с сет-меню в Elements by Edward Kwon). Говорят, что корейские супы считаются панацеей при простудах, а кимчи — идеальной закуской к крепкому алкоголю (к водке, например). Стоимость
-                                            всех блюд варьируется от 600 р. до 1200 р. Советуем заранее бронировать столик.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="testimonials-slider__item">
-                                <div class="testimonials-slider__item-container">
-                                    <div class="testimonials-slider__item-img">
-                                        <img src="static/img/content/testimonials.jpg" alt="" class="img-circle">
-                                    </div>
-                                    <div class="testimonials-slider__item-info">
-                                        <div class="testimonials-slider__item-autor">Алеся Семенова</div>
-                                        <div class="testimonials-slider__item-date">12.05.16</div>
-                                        <p>
-                                            До конца ноября в ресторане будут готовить традиционные аутентичные блюда, которые познакомят гостей с корейской кухней. Все представленные позиции придуманы шеф-поваром Лией Но (кстати, она же совсем недавно обновляла меню для «Киану» на Патриарших,
-                                            а в середине лета устраивала ужины с сет-меню в Elements by Edward Kwon). Говорят, что корейские супы считаются панацеей при простудах, а кимчи — идеальной закуской к крепкому алкоголю (к водке, например). Стоимость
-                                            всех блюд варьируется от 600 р. до 1200 р. Советуем заранее бронировать столик.
-                                        </p>
-                                        <p>
-                                            До конца ноября в ресторане будут готовить традиционные аутентичные блюда, которые познакомят гостей с корейской кухней. Все представленные позиции придуманы шеф-поваром Лией Но (кстати, она же совсем недавно обновляла меню для «Киану» на Патриарших,
-                                            а в середине лета устраивала ужины с сет-меню в Elements by Edward Kwon). Говорят, что корейские супы считаются панацеей при простудах, а кимчи — идеальной закуской к крепкому алкоголю (к водке, например). Стоимость
-                                            всех блюд варьируется от 600 р. до 1200 р. Советуем заранее бронировать столик.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <!--.testimonials-slider-->
-                    </div>
-                </div>
-
             </div>
-            <!--.content-->
+
+            <div class="ibox mb-4">
+                <div class="ibox-header mb-4">
+                    НАШИ ПРОЕКТЫ
+                </div>
+                <div class="ibox-body">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-6 mb-2">
+                            <div class="project">
+                                <a href="#">
+                                    <span class="project-name">
+                                        <span>Баннер 1</span>
+                                    </span>
+                                    <img src="static/img/content/banner-1.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 mb-2">
+                            <div class="project">
+                                <a href="#">
+                                    <span class="project-name">
+                                        <span>Баннер 2</span>
+                                    </span>
+                                    <img src="static/img/content/banner-2.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 mb-2">
+                            <div class="project">
+                                <a href="#">
+                                    <span class="project-name">
+                                        <span>Баннер 3</span>
+                                    </span>
+                                    <img src="static/img/content/banner-3.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 mb-2">
+                            <div class="project">
+                                <a href="#">
+                                    <span class="project-name">
+                                        <span>Баннер 4</span>
+                                    </span>
+                                    <img src="static/img/content/banner-4.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <a href="#" class="all-products">Все проекты</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="ibox mb-4">
+                <div class="ibox-header mb-0">
+                    МЫ ПЕРЕЕХАЛИ
+                </div>
+                <div class="ibox-body">
+                    <div id="map" class="yaMap" data-lat="55.753718" data-lng="37.622710"></div>
+                </div>
+            </div>
 
             <div class="footer">
                 <div class="row">
-                    <div class="footer-section col-lg-4 col-md-6">
-                        <div class="footer-logo">
-                            <a href="#">
+                    <div class="col-xl-4">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="footer-nav">
+                                    <li>
+                                        <a href="#">О КОМПАНИИ</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">НОВОСТИ</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">БЛАГОТВОРИТЕЛЬНОСТЬ</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">ПРОДУКЦИЯ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="footer-nav">
+                                    <li>
+                                        <a href="#">ДИСТРИБЬЮТОРАМ</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">ИНТЕРНЕТ-КОНФЕРЕНЦИИ</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">ТЕЛЕВИДЕНИЕ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4">
+                        <div class="footer-logo text-center">
+                            <a href="/">
                                 <img src="static/img/general/logo-footer.png" alt="">
                             </a>
                         </div>
-                        <nav class="footer-nav">
-                            <ul>
-                                <li><a href="#">О компании</a>
-                                </li>
-                                <li><a href="#">Меню</a>
-                                </li>
-                                <li><a href="#">Интерьер</a>
-                                </li>
-                                <li><a href="#">Банный комплекс</a>
-                                </li>
-                                <li><a href="#">Бронирование</a>
-                                </li>
-                                <li><a href="#">Отзывы</a>
-                                </li>
-                                <li><a href="#">Новости</a>
-                                </li>
-                                <li><a href="#">Контакты</a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <div class="soc">
-                            <a href="#"><span class="icon-vk"></span></a>
-                            <a href="#"><span class="icon-fc"></span></a>
-                            <a href="#"><span class="icon-tw"></span></a>
-                            <a href="#"><span class="icon-ok"></span></a>
-                            <a href="#"><span class="icon-mail"></span></a>
-                            <a href="#"><span class="icon-gmail"></span></a>
-                        </div>
                     </div>
-                    <div class="footer-section col-lg-4 col-md-6">
-                        <h3 class="text-center">Онлайн заявка</h3>
-                        <div class="apply apply--dark">
-                            <div class="form">
-                                <form>
-                                    <div class="form-row to-book">
-                                        <select class="form-control">
-                                            <option>Забронировать стол</option>
-                                            <option>На две персоны</option>
-                                            <option>На три персоны</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-row">
-                                        <input class="form-control" type="text" placeholder="Ваше имя">
-                                    </div>
-                                    <div class="form-row">
-                                        <input class="form-control" type="tel" placeholder="Ваш телефон">
-                                    </div>
-                                    <div class="form-row">
-                                        <input class="form-control" type="text" placeholder="Ваши пожелания">
-                                    </div>
-                                    <div class="form-row">
-                                        <button class="btn btn-block btn-primary">Отправить заявку</button>
-                                    </div>
-                                </form>
+                    <div class="col-xl-4">
+                        <div class="last-info d-flex flex-column">
+                            <div class="site-conunt mt-auto">
+                                <img src="static/img/content/count.png" alt="">
+                            </div>
+                            <div class="copyright">
+                                &copy; 2018 Официальный сайт Компании «Центр Регион»
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div class="row">
-                            <div class="footer-contacts col-lg-12 col-md-6">
-                                <h3>Контакты</h3>
-                                <address>
-
-                					Адрес: Москва, Авиационная ул., д.17<br>
-
-                					Ресторан: +7 (499)190-52-61, 190-60-11<br>
-
-                					Банкетная служба: +7 (965) 190-02-72<br>
-
-                					Банный комплекс: +7 (499) 190-50-61<br>
-
-                					E-mail: info@zrestoran.ru
-
-                				</address>
-                            </div>
-                            <div class="col-lg-12 col-md-6">
-                                <h3>Мы Вас приглашаем!</h3>
-                                <p>
-                                    <i>Мы всегда рады видеть Вас в нашем ресторане с уже вековой историей!</i>
-                                </p>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
-            <!--.footer-->
 
-        </div>
-        <!--.primary-->
-
-
-        <div class="modal fade" id="popup-apply" tabindex="-1" role="dialog" aria-labelledby="apply">
-            <div class="modal-dialog modal-md">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                </button>
-                <div class="popup-form">
-                    <h3 class="text-center">Онлайн заявка</h3>
-                    <div class="form">
-                        <form>
-                            <div class="form-row to-book">
-                                <select class="form-control">
-                                    <option>Забронировать стол</option>
-                                    <option>На две персоны</option>
-                                    <option>На три персоны</option>
-                                </select>
-                            </div>
-                            <div class="form-row">
-                                <input class="form-control" type="text" placeholder="Ваше имя">
-                            </div>
-                            <div class="form-row">
-                                <input class="form-control" type="tel" placeholder="Ваш телефон">
-                            </div>
-                            <div class="form-row">
-                                <input class="form-control" type="text" placeholder="Ваши пожелания">
-                            </div>
-                            <div class="form-row">
-                                <button class="btn btn-block btn-primary">Отправить заявку</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
         </div>
 
 
 
 
-        <script src="static/js/separate-js/jquery.js"></script>
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+
+
+
+
+        <script src="static/js/separate-js/popper.min.js"></script>
+        <script src="static/js/separate-js/jquery-3.3.1.min.js"></script>
         <script src="static/js/separate-js/bootstrap.min.js"></script>
+        <script src="static/js/separate-js/slick.min.js"></script>
+        <script src="static/js/separate-js/particles.min.js"></script>
 
         <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
-        <script src="static/js/main.min.js"></script>
-
+        <script src="static/js/maingg9nspy994zp1nzlac3di.min.js"></script>
         <script src="static/js/separate-js/app.js"></script>
-
     </body>
 
 </html>
