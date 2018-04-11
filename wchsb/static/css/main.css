@@ -19648,6 +19648,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   padding-right: 40px;
   background: transparent;
   height: 100px;
+  width: 100%;
+  padding-right:;
   font: 30px "latolight", sans-serif;
 }
 
