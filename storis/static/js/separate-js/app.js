@@ -1,11 +1,12 @@
 $(document).ready(function () {
 
-
     // -- video --
     var video = $("#company-movie");
 
 
 
+
+    // -- video muted switch
     video.muted = true;
 
     function muted() {
@@ -24,25 +25,15 @@ $(document).ready(function () {
 
 
 
+    // -- Video reload
     function playReload(i) {
-        console.log(i);
-
         if (i == 0) {
-            $("#company-movie")[0].load();
+            video[0].load();
         }
         else {
-            $("#company-movie").trigger("pause");
-            //$("#company-movie").pause();
+            video.trigger("pause");
         }
-
     }
-
-
-
-
-
-
-
 
 
 
@@ -50,7 +41,7 @@ $(document).ready(function () {
     // -- storis slider --
     var storis = $(".storis-list"),
         initStoris = false,
-        interval = 14000,
+        interval = 15000,
         storisIntervalId;
 
     storis.owlCarousel({
@@ -91,8 +82,14 @@ $(document).ready(function () {
         clearTimeout(storisIntervalId);
     }
 
+
+    // -- slider dots start
     if (initStoris) {
-        storisInterval(interval);
+        video[0].load();
+
+        video.on("loadstart", function () {
+            storisInterval(interval);
+        });
     }
 
     storis.on("changed.owl.carousel", function (i) {
