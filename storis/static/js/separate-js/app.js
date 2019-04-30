@@ -1,9 +1,8 @@
 $(document).ready(function () {
 
     // -- video --
-    var video = $("#company-movie");
-
-
+    var video = $("#company-movie"),
+        videoobj = document.getElementById('company-movie');;
 
 
     // -- video muted switch
@@ -53,7 +52,6 @@ $(document).ready(function () {
         nav: true,
         navText: ["<img src='static/img/general/icon-prev.svg'>", "<img src='static/img/general/icon-next.svg'>"],
         margin: 20,
-
         responsive: {
             567: {
                 margin: 20,
@@ -83,15 +81,32 @@ $(document).ready(function () {
     }
 
 
-    // -- slider dots start
-    if (initStoris) {
-        video[0].load();
 
-        video.on("loadstart", function () {
-            storisInterval(interval);
+
+
+
+
+    // -- video load
+    function loadVideo() {
+        video[0].load();
+        videoobj.addEventListener('loadeddata', function () {
+            if (videoobj.readyState >= 2) {
+                storisClearInterval();
+                storisInterval(interval);
+
+                // start video dots
+                storisDots();
+            }
         });
     }
 
+
+    loadVideo();
+
+
+
+
+    // -- slider change
     storis.on("changed.owl.carousel", function (i) {
         var currentIndex = i.item.index;
 
@@ -109,37 +124,42 @@ $(document).ready(function () {
     });
 
 
+
+
+
     //storis dots
-    var strorisIndex = 0;
-    $(".storis .owl-dots .owl-dot:eq(" + strorisIndex + ") span").addClass(
-        "isActive inActive"
-    );
+    function storisDots() {
+        var strorisIndex = 0;
+        $(".storis .owl-dots .owl-dot:eq(" + strorisIndex + ") span").addClass(
+            "isActive inActive"
+        );
 
-    storis.on("to.owl.carousel changed.owl.carousel", function (e) {
-        var count = e.item.count - 1;
+        storis.on("to.owl.carousel changed.owl.carousel", function (e) {
+            var count = e.item.count - 1;
 
-        if (e.item.index >= strorisIndex) {
-            strorisIndex = e.item.index;
+            if (e.item.index >= strorisIndex) {
+                strorisIndex = e.item.index;
 
-            $(".storis .owl-dots .owl-dot span").removeClass("inActive");
-            $(
-                ".storis .owl-dots .owl-dot:eq(" + e.item.index + ") span"
-            ).addClass("isActive inActive");
-        } else if (e.item.index <= strorisIndex) {
-            $(".storis .owl-dots .owl-dot span").removeClass("inActive");
-            $(
-                ".storis .owl-dots .owl-dot:eq(" + e.item.index + ") span"
-            ).addClass("isActive inActive");
+                $(".storis .owl-dots .owl-dot span").removeClass("inActive");
+                $(
+                    ".storis .owl-dots .owl-dot:eq(" + e.item.index + ") span"
+                ).addClass("isActive inActive");
+            } else if (e.item.index <= strorisIndex) {
+                $(".storis .owl-dots .owl-dot span").removeClass("inActive");
+                $(
+                    ".storis .owl-dots .owl-dot:eq(" + e.item.index + ") span"
+                ).addClass("isActive inActive");
 
-            for (var i = 0; i <= count; i++) {
-                if (i > e.item.index) {
-                    $(
-                        ".storis .owl-dots .owl-dot:eq(" + i + ") span"
-                    ).removeClass("isActive inActive");
+                for (var i = 0; i <= count; i++) {
+                    if (i > e.item.index) {
+                        $(
+                            ".storis .owl-dots .owl-dot:eq(" + i + ") span"
+                        ).removeClass("isActive inActive");
+                    }
                 }
             }
-        }
-    });
+        });
+    }
 
 
 });
