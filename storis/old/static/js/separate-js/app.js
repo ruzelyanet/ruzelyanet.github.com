@@ -36,6 +36,7 @@ $(document).ready(function () {
     // -- Video reload //загрузить видео сначала
     function playReload(i) {
         if (i == 0) {
+            //video.currentTime=0;
             video[0].load();
         }
         else {
@@ -97,7 +98,7 @@ $(document).ready(function () {
         }
     });
 
-    //console.log(interval);
+
 
 
 
