@@ -90,14 +90,7 @@ $(document).ready(function () {
         },
         onInitialized: function (e) {
 
-            console.log(videoobj.readyState);
-
-
-
             loadVideo();
-
-
-
 
             // return start stories true
             return (initStoris = true);
@@ -131,6 +124,8 @@ $(document).ready(function () {
 
                 if (progressVideoLoad == 100) {
                     progressVideoLoad == 100;
+
+                    storis.trigger("next.owl.carousel");
                 }
 
             }, 100);
@@ -162,6 +157,11 @@ $(document).ready(function () {
                         $(".storis .owl-dots .owl-dot:eq(" + i.item.index + ") span").css({
                             width: proc + "%"
                         });
+
+                        console.log("next");
+
+                        storis.trigger("next.owl.carousel");
+
                     }
 
                 }, 100);
@@ -187,6 +187,7 @@ $(document).ready(function () {
                         $(".storis .owl-dots .owl-dot:eq(" + i.item.index + ") span").css({
                             width: proc + "%"
                         });
+                        storis.trigger("next.owl.carousel");
                     }
 
                 }, 100);
@@ -196,7 +197,6 @@ $(document).ready(function () {
 
             // -- slider change
             storis.on("changed.owl.carousel", function (i) {
-
 
                 // video voice icon existence
                 if (i.item.index != 0) {
