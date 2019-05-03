@@ -9,8 +9,6 @@ $(document).ready(function () {
 
 
 
-
-
     // -- video muted switch
     video.muted = true;
     function muted(el) {
@@ -114,19 +112,23 @@ $(document).ready(function () {
 
             var progressVideoLoad = 0
 
+
             var progressVideo = setInterval(function () {
 
-                var videoCurrentTime = videoobj.currentTime;
-                progressVideoLoad = Math.floor(videoCurrentTime / videoLength * 100);
+                if (videoobj.readyState) {
 
-                $(".storis .owl-dots .owl-dot:eq(0) span").css({
-                    width: progressVideoLoad + "%"
-                });
+                    var videoCurrentTime = videoobj.currentTime;
+                    progressVideoLoad = Math.floor(videoCurrentTime / videoLength * 100);
 
-                if (progressVideoLoad == 100) {
-                    progressVideoLoad == 100;
+                    $(".storis .owl-dots .owl-dot:eq(0) span").css({
+                        width: progressVideoLoad + "%"
+                    });
 
-                    storis.trigger("next.owl.carousel");
+                    if (progressVideoLoad == 100) {
+                        progressVideoLoad == 100;
+
+                        storis.trigger("next.owl.carousel");
+                    }
                 }
 
             }, 100);
@@ -158,8 +160,6 @@ $(document).ready(function () {
                         $(".storis .owl-dots .owl-dot:eq(" + i.item.index + ") span").css({
                             width: proc + "%"
                         });
-
-                        console.log("next");
 
                         storis.trigger("next.owl.carousel");
 
@@ -209,8 +209,6 @@ $(document).ready(function () {
                 }
 
                 playReload(i.item.index);
-
-
 
 
                 if (i.item.index != 0) {
