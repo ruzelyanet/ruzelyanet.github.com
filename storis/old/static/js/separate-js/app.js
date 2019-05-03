@@ -36,7 +36,12 @@ $(document).ready(function () {
     // -- Video reload //загрузить видео сначала
     function playReload(i) {
         if (i == 0) {
+<<<<<<< HEAD
+            //video.currentTime=0;
+            video[0].load();
+=======
             video.currentTime = 0;
+>>>>>>> master
         }
         else {
             video.trigger("pause");
