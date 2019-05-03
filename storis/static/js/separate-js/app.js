@@ -1,8 +1,8 @@
-var videoobj = document.getElementById('company-movie'),
-    videoLength = videoobj.duration,
-    interval = 2000;
+var videoobj = document.getElementById('company-movie');
 
 $(document).ready(function () {
+
+    var interval = 2000;
 
     // -- video --
     var video = $("#company-movie");
@@ -110,15 +110,19 @@ $(document).ready(function () {
         // выполнение после загрузки видео
         videoobj.addEventListener('loadeddata', function () {
 
-            var progressVideoLoad = 0
+            var videoLength = videoobj.duration;
 
+            var progressVideoLoad = 0
 
             var progressVideo = setInterval(function () {
 
                 if (videoobj.readyState) {
 
                     var videoCurrentTime = videoobj.currentTime;
+
                     progressVideoLoad = Math.floor(videoCurrentTime / videoLength * 100);
+
+
 
                     $(".storis .owl-dots .owl-dot:eq(0) span").css({
                         width: progressVideoLoad + "%"
@@ -132,6 +136,7 @@ $(document).ready(function () {
                 }
 
             }, 100);
+
 
 
             var currentIndex = 0;
