@@ -1,30 +1,39 @@
+var videoobj = document.getElementById('company-movie'),
+    videoLength = videoobj.duration,
+    interval = 2000;
+
 $(document).ready(function () {
 
     // -- video --
-    var video = $("#company-movie"),
-        videoobj = document.getElementById('company-movie');;
+    var video = $("#company-movie");
+
+
+
 
 
     // -- video muted switch
     video.muted = true;
-
-    function muted() {
+    function muted(el) {
         if (video.muted) {
             video.prop('muted', false);
             video.muted = false;
+
+            el.find("i").removeClass("icon-voice-on").addClass("icon-voice-off");
         } else {
             video.prop('muted', true);
             video.muted = true;
+            el.find("i").removeClass("icon-voice-off").addClass("icon-voice-on");
         }
     }
 
     $(".switch-voice").click(function () {
-        muted();
+        var $this = $(this);
+        muted($this);
     });
+    // -- video muted switch end
 
 
-
-    // -- Video reload
+    // -- Video reload //загрузить видео сначала
     function playReload(i) {
         if (i == 0) {
             video[0].load();
@@ -34,16 +43,31 @@ $(document).ready(function () {
         }
     }
 
+    //storis autoswitcher slider
+    function storisInterval(interval) {
+
+        storisIntervalId = setInterval(function () {
+            storis.trigger("next.owl.carousel");
+        }, interval);
+
+    }
+
+    //storis reset autoswitcher slider
+    function storisClearInterval() {
+        clearTimeout(storisIntervalId);
+    }
 
 
 
     // -- storis slider --
-    var storis = $(".storis-list"),
+    var storis = $(".storis-list"), // сам слайдер
         initStoris = false,
-        interval = 15000,
-        storisIntervalId;
+        //interval = Math.ceil(videoLength) * 1000,
+        storisIntervalId,
+        videoCurrentTime = 0;
 
-    storis.owlCarousel({
+
+    storis.owlCarousel({ // подключение слайдре
         loop: false,
         items: 1,
         // animateOut: "fadeOut",
@@ -52,6 +76,7 @@ $(document).ready(function () {
         nav: true,
         navText: ["<img src='static/img/general/icon-prev.svg'>", "<img src='static/img/general/icon-next.svg'>"],
         margin: 20,
+        autoplayHoverPause: true,
         responsive: {
             567: {
                 margin: 20,
@@ -63,24 +88,16 @@ $(document).ready(function () {
                 center: false
             }
         },
-        onInitialize: function () {
+        onInitialized: function (e) {
+
+            loadVideo();
+
+            // return start stories true
             return (initStoris = true);
         }
     });
 
-    //storis interval slide
-    function storisInterval(interval) {
-        storisIntervalId = setInterval(function () {
-            storis.trigger("next.owl.carousel");
-        }, interval);
-    }
-
-    //storis clear interval
-    function storisClearInterval() {
-        clearTimeout(storisIntervalId);
-    }
-
-
+    //console.log(interval);
 
 
 
@@ -88,78 +105,307 @@ $(document).ready(function () {
 
     // -- video load
     function loadVideo() {
-        video[0].load();
-        videoobj.addEventListener('loadeddata', function () {
-            if (videoobj.readyState >= 2) {
-                storisClearInterval();
-                storisInterval(interval);
 
-                // start video dots
-                storisDots();
+        playReload(0);
+
+        // выполнение после загрузки видео
+        videoobj.addEventListener('loadeddata', function () {
+
+            var progressVideoLoad = 0
+
+            var progressVideo = setInterval(function () {
+
+                var videoCurrentTime = videoobj.currentTime;
+                progressVideoLoad = Math.floor(videoCurrentTime / videoLength * 100);
+
+                $(".storis .owl-dots .owl-dot:eq(0) span").css({
+                    width: progressVideoLoad + "%"
+                });
+
+                if (progressVideoLoad == 100) {
+                    progressVideoLoad == 100;
+                }
+
+            }, 100);
+
+
+            var currentIndex = 0;
+
+            var progressDot = 0;
+            var progressDot2 = 0;
+
+
+            function intervalFn(proc, dotProgress, i) {
+
+                clearInterval(progressDot2);
+
+                progressDot = setInterval(function () {
+                    proc += dotProgress;
+
+                    present = proc;
+
+                    $(".storis .owl-dots .owl-dot:eq(" + i.item.index + ") span").css({
+                        width: proc + "%"
+                    });
+
+                    if (proc >= 100) {
+                        clearInterval(progressDot);
+                        proc = 100;
+
+                        $(".storis .owl-dots .owl-dot:eq(" + i.item.index + ") span").css({
+                            width: proc + "%"
+                        });
+                    }
+
+                }, 100);
             }
+
+            function intervalFn2(proc, dotProgress, i) {
+
+                clearInterval(progressDot2);
+
+                progressDot2 = setInterval(function () {
+                    proc += dotProgress;
+
+                    present = proc;
+
+                    $(".storis .owl-dots .owl-dot:eq(" + i.item.index + ") span").css({
+                        width: proc + "%"
+                    });
+
+                    if (proc >= 100) {
+                        clearInterval(progressDot);
+                        proc = 100;
+
+                        $(".storis .owl-dots .owl-dot:eq(" + i.item.index + ") span").css({
+                            width: proc + "%"
+                        });
+                    }
+
+                }, 100);
+            }
+
+
+
+            // -- slider change
+            storis.on("changed.owl.carousel", function (i) {
+
+
+                // video voice icon existence
+                if (i.item.index != 0) {
+                    $(".voice").removeClass("view");
+                } else {
+                    $(".voice").addClass("view");
+
+                    loadVideo();
+                }
+
+                playReload(i.item.index);
+
+
+
+
+                if (i.item.index != 0) {
+
+                    var dotProgress = Math.floor(100 / interval * 100);
+                    var proc = 0;
+
+                    if (i.item.index % 2 == 0) {
+                        clearInterval(progressDot2);
+                        intervalFn(proc, dotProgress, i);
+
+                    } else {
+                        clearInterval(progressDot);
+                        intervalFn2(proc, dotProgress, i);
+                    }
+
+
+                    if (i.item.index >= currentIndex) {
+                        proc = 100;
+                        $(".storis .owl-dots .owl-dot:eq(" + currentIndex + ") span").css({
+                            width: proc + "%"
+                        });
+                    }
+
+                    if (currentIndex > i.item.index) {
+                        proc = 0;
+                        $(".storis .owl-dots .owl-dot:eq(" + currentIndex + ") span").css({
+                            width: proc + "%"
+                        });
+                    }
+
+                } else {
+                    clearInterval(progressDot);
+                    clearInterval(progressDot2);
+
+                    proc = 0;
+
+                    $(".storis .owl-dots .owl-dot:eq(1) span").css({
+                        width: proc + "%"
+                    });
+                }
+
+
+
+                currentIndex = i.item.index;
+
+
+
+                if (currentIndex != 0) {
+
+                    clearInterval(progressVideo);
+                    // storisInterval(interval);
+
+                    var progressVideoLoad = 100;
+
+                    $(".storis .owl-dots .owl-dot:eq(0) span").css({
+                        width: progressVideoLoad + "%"
+                    });
+                }
+
+
+                playReload(currentIndex);
+            });
+
         });
+
+
     }
 
-
-    loadVideo();
-
-
-
-
-    // -- slider change
-    storis.on("changed.owl.carousel", function (i) {
-        var currentIndex = i.item.index;
-
-        storisClearInterval();
-        storisInterval(interval);
-
-        // video voice icon existence
-        if (currentIndex != 0) {
-            $(".voice").removeClass("view");
-        } else {
-            $(".voice").addClass("view");
-        }
-
-        playReload(currentIndex);
-    });
 
 
 
 
 
     //storis dots
+
+    /*
     function storisDots() {
+
         var strorisIndex = 0;
-        $(".storis .owl-dots .owl-dot:eq(" + strorisIndex + ") span").addClass(
-            "isActive inActive"
-        );
 
-        storis.on("to.owl.carousel changed.owl.carousel", function (e) {
-            var count = e.item.count - 1;
 
-            if (e.item.index >= strorisIndex) {
+
+
+        storis.on("change.owl.carousel", function (e) {
+            //clearInterval(progressDot);
+
+            // $(".storis .owl-dots .owl-dot:eq(" + e.item.index + ") span").css({
+            //     width: 100 + "%"
+            // });
+
+
+            //console.log("change");
+
+            //console.log(e.item.index);
+        });
+
+
+        storis.on("changed.owl.carousel", function (e) {
+
+            var count = e.item.count;
+            var dotProgress = Math.floor(100 / interval * 100);
+            var progressDot;
+            var proc = 0;
+
+            function intervalFn() {
+                progressDot = setInterval(function () {
+                    proc += dotProgress;
+                    $(".storis .owl-dots .owl-dot:eq(" + e.item.index + ") span").css({
+                        width: proc + "%"
+                    });
+
+                    if (proc >= 100) {
+                        clearInterval(progressDot);
+                    }
+                }, 100);
+            }
+
+            
+
+            if (e.item.index > strorisIndex) {
+
+                $(".storis .owl-dots .owl-dot:eq(" + strorisIndex + ") span").css({
+                    width: 100 + "%"
+                });
+
+
                 strorisIndex = e.item.index;
+                intervalFn();
 
-                $(".storis .owl-dots .owl-dot span").removeClass("inActive");
-                $(
-                    ".storis .owl-dots .owl-dot:eq(" + e.item.index + ") span"
-                ).addClass("isActive inActive");
-            } else if (e.item.index <= strorisIndex) {
-                $(".storis .owl-dots .owl-dot span").removeClass("inActive");
-                $(
-                    ".storis .owl-dots .owl-dot:eq(" + e.item.index + ") span"
-                ).addClass("isActive inActive");
+            } else {
 
-                for (var i = 0; i <= count; i++) {
+                proc = 100;
+
+                clearInterval(progressDot);
+
+                // $(".storis .owl-dots .owl-dot span").each(function () {
+                //     clearInterval(progressDot);
+                // });
+
+
+                for (var i = 1; i <= count; i++) {
+
                     if (i > e.item.index) {
-                        $(
-                            ".storis .owl-dots .owl-dot:eq(" + i + ") span"
-                        ).removeClass("isActive inActive");
+
+                        clearInterval(progressDot);
+
+                        $(".storis .owl-dots .owl-dot:eq(" + i + ") span").css({
+                            width: 0 + "%"
+                        });
+
                     }
                 }
             }
+
+
+
+
+
+
         });
-    }
+
+    } */
+
+
+    /*
+    function storisDots() {
+        var strorisIndex = 0;
+ 
+        storis.on("to.owl.carousel changed.owl.carousel", function (e) {
+            var count = e.item.count - 1;
+ 
+            if (e.item.index >= strorisIndex) {
+                strorisIndex = e.item.index;
+ 
+                if (e.item.index != 0) { // Проверяет если слайд не первый то выполнить
+                    $(".storis .owl-dots .owl-dot").removeClass("inActive");
+                    $(
+                        ".storis .owl-dots .owl-dot:eq(" + e.item.index + ")"
+                    ).addClass("isActive inActive");
+                }
+ 
+            } else if (e.item.index <= strorisIndex) {
+ 
+                $(".storis .owl-dots .owl-dot").removeClass("inActive");
+ 
+                if (e.item.index != 0) { // Проверяет если слайд не первый то выполнить
+                    $(
+                        ".storis .owl-dots .owl-dot:eq(" + e.item.index + ")"
+                    ).addClass("isActive inActive");
+                }
+ 
+                for (var i = 0; i <= count; i++) {
+                    if (i > e.item.index) {
+                        $(
+                            ".storis .owl-dots .owl-dot:eq(" + i + ")"
+                        ).removeClass("isActive inActive");
+                    }
+                }
+ 
+            }
+        });
+    }*/
 
 
 });
