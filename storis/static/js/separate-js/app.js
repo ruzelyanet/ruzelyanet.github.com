@@ -72,7 +72,7 @@ $(document).ready(function () {
         // animateOut: "fadeOut",
         // animateIn: "fadeIn",
         dots: true,
-        nav: true,
+        nav: false,
         navText: ["<img src='static/img/general/icon-prev.svg'>", "<img src='static/img/general/icon-next.svg'>"],
         margin: 20,
         autoplayHoverPause: true,
@@ -95,11 +95,6 @@ $(document).ready(function () {
             return (initStoris = true);
         }
     });
-
-
-
-
-
 
 
     // -- video load
@@ -282,3 +277,38 @@ $(document).ready(function () {
 
     }
 });
+
+
+
+
+
+
+var tapEl = document.getElementById('storis-form-btn');
+var tapGesture = new ZingTouch.Tap({
+    //maxDelay: 100
+    maxDelay: 200,
+    numInputs: 1,
+    tolerance: 125
+});
+
+var region = new ZingTouch.Region(document.body);
+
+var clY = 0;
+
+region.bind(tapEl, tapGesture, function (e) {
+
+    //console.log('Custom Tap gesture emitted: ' + e.detail.interval);
+
+    //console.log(e.detail.events[0].clientY);
+
+    if (!$('.storis-form').hasClass('open')) {
+        $('.storis-form').addClass('open');
+    } else {
+        $('.storis-form').removeClass('open');
+    }
+
+
+
+
+}, false);
+
