@@ -68,6 +68,7 @@ $(document).ready(function () {
 
     storis.owlCarousel({ // подключение слайдре
         loop: false,
+        fade: true,
         items: 1,
         // animateOut: "fadeOut",
         // animateIn: "fadeIn",
@@ -283,32 +284,89 @@ $(document).ready(function () {
 
 
 
-var tapEl = document.getElementById('storis-form-btn');
-var tapGesture = new ZingTouch.Tap({
-    //maxDelay: 100
-    maxDelay: 200,
-    numInputs: 1,
-    tolerance: 125
+
+var tapEl = document.getElementById('storis-form-area');
+
+// create a simple instance
+// by default, it only adds horizontal recognizers
+var mc = new Hammer(tapEl);
+
+// let the pan gesture support all directions.
+// this will block the vertical scrolling on a touch-device while on the element
+mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+
+var
+    maxDeltaUp = -390,
+    maxDeltaDown = 290,
+    percentUp = 0,
+    percentDown = 0,
+    floatDeltaUp = 0,
+    floatDeltaDown = 0;
+
+
+mc.on("panmove", function (ev) {
+    percentUp = Math.floor(ev.deltaY / maxDeltaUp * 100);
+
+    percentDown = Math.floor(ev.deltaY / maxDeltaDown * 100);
+
+
 });
 
-var region = new ZingTouch.Region(document.body);
 
-var clY = 0;
 
-region.bind(tapEl, tapGesture, function (e) {
+// listen to events...
+mc.on("panup", function (ev) {
 
-    //console.log('Custom Tap gesture emitted: ' + e.detail.interval);
+    if (ev.isFinal) {
+        if (floatDeltaUp > 70) {
+            floatDeltaUp = 100;
+            $(".storis-form-area").removeClass("open");
 
-    //console.log(e.detail.events[0].clientY);
-
-    if (!$('.storis-form').hasClass('open')) {
-        $('.storis-form').addClass('open');
+        } else if (floatDeltaUp <= 70) {
+            floatDeltaUp = 0;
+            $(".storis-form-area").addClass("open");
+        }
     } else {
-        $('.storis-form').removeClass('open');
+        floatDeltaUp = 100 - (percentUp > 100 ? 100 : percentUp);
+    }
+
+    $(".storis-form").css({
+        top: floatDeltaUp + '%'
+    });
+
+});
+
+mc.on("pandown", function (ev) {
+
+    console.log(percentDown);
+
+    if (ev.isFinal) {
+        if (floatDeltaDown > 70) {
+            floatDeltaDown = 100;
+            $(".storis-form-area").removeClass("open");
+
+        } else if (floatDeltaDown <= 70) {
+            floatDeltaDown = 0;
+            $(".storis-form-area").addClass("open");
+        }
+    } else {
+        floatDeltaDown = percentDown
     }
 
 
+    $(".storis-form").css({
+        top: floatDeltaDown + '%'
+    });
 
 
-}, false);
 
+
+
+});
+
+
+
+
+// mc.on("panleft panright panup pandown tap press", function (ev) {
+//     myElement.textContent = ev.type + " gesture detected.";
+// });
