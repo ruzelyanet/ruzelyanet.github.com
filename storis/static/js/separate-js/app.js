@@ -118,8 +118,6 @@ $(document).ready(function () {
 
                     progressVideoLoad = Math.floor(videoCurrentTime / videoLength * 100);
 
-
-
                     $(".storis .owl-dots .owl-dot:eq(0) span").css({
                         width: progressVideoLoad + "%"
                     });
@@ -209,6 +207,12 @@ $(document).ready(function () {
                     loadVideo();
                 }
 
+                if (i.item.index == i.item.count - 1) {
+                    $(".storis-form-area").addClass("last");
+                } else {
+                    $(".storis-form-area").removeClass("last");
+                }
+
                 playReload(i.item.index);
 
 
@@ -283,8 +287,6 @@ $(document).ready(function () {
 
 
 
-
-
 var tapEl = document.getElementById('storis-form-area');
 
 // create a simple instance
@@ -296,96 +298,43 @@ var mc = new Hammer(tapEl);
 mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 
 var
-    maxDeltaUp = -390,
-    maxDeltaDown = 290,
+    maxDeltaUp = $("body").height(),
     percentUp = 0,
-    percentDown = 0,
-    floatDeltaUp = 0,
-    floatDeltaDown = 0,
-    percentHeight = 0;
-
-
-mc.on("panmove", function (ev) {
-    percentUp = Math.floor(ev.deltaY / maxDeltaUp * 100);
-    percentDown = Math.floor(ev.deltaY / maxDeltaDown * 100);
-
-});
-
+    floatDeltaUp = 0;
 
 
 // listen to events...
 mc.on("panup pandown", function (ev) {
 
-    if (ev.isFinal) {
-        if (floatDeltaUp > 70) {
-            floatDeltaUp = 100;
-            percentHeight = 0;
+    percentUp = Math.floor(ev.srcEvent.clientY / maxDeltaUp * 100);
 
+    var pan = ev.type;
+
+    if (ev.isFinal) {
+        if (pan == 'pandown' && percentUp >= 20) {
+            percentUp = 100;
+            floatDeltaUp = 0;
             $(".storis-form").removeClass("open");
 
-            $(".storis-list").css({
-                filter: 'blur(' + percentHeight + 'px)'
-            });
-
-        } else if (floatDeltaUp <= 70) {
-            floatDeltaUp = 0;
-            percentHeight = 100;
+        } else if (pan == 'panup' && percentUp < 80) {
+            percentUp = 0;
+            floatDeltaUp = 100;
             $(".storis-form").addClass("open");
-
-            $(".storis-list").css({
-                filter: 'blur(' + percentHeight + 'px)'
-            });
         }
     } else {
         floatDeltaUp = 100 - (percentUp > 100 ? 100 : percentUp);
-        percentHeight = percentUp > 100 ? 100 : percentUp;
-
-        $(".storis-list").css({
-            filter: 'blur(' + percentHeight + 'px)'
-        });
     }
 
 
-    $(".storis-form").css({
-        top: floatDeltaUp + '%',
-        height: percentHeight + '%'
+    $('.storis-list').css({
+        filter: 'blur(' + floatDeltaUp + 'px)'
     });
 
-    $(".storis-list").css({
-        filter: 'blur(' + percentHeight + 'px)'
-    });
-
-});
-
-
-mc.on("pandown", function (ev) {
-
-    if (ev.isFinal) {
-        if (floatDeltaUp > 70) {
-            floatDeltaUp = 100;
-            percentHeight = 0;
-            $(".storis-form-area").removeClass("open");
-
-        } else if (floatDeltaUp <= 70) {
-            floatDeltaUp = 0;
-            percentHeight = 100;
-            $(".storis-form-area").addClass("open");
-        }
-    } else {
-        floatDeltaUp = (percentDown > 100 ? 100 : percentDown)
-        percentHeight = 100 - (percentDown > 100 ? 100 : percentDown);
-    }
-
     $(".storis-form").css({
-        top: floatDeltaUp + '%',
-        height: percentHeight + '%'
+        top: percentUp + '%'
     });
 
 });
 
 
 
-
-// mc.on("panleft panright panup pandown tap press", function (ev) {
-//     myElement.textContent = ev.type + " gesture detected.";
-// });
