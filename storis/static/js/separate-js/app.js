@@ -287,7 +287,7 @@ $(document).ready(function () {
 
 
 
-var tapEl = document.getElementById('storis-form-area');
+var tapEl = document.getElementById('storis-parent');
 
 // create a simple instance
 // by default, it only adds horizontal recognizers
