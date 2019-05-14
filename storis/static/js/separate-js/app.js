@@ -287,7 +287,7 @@ $(document).ready(function () {
 
 
 
-var tapEl = document.getElementById('storis-form-area');
+var tapEl = document.getElementById('storis-parent');
 
 // create a simple instance
 // by default, it only adds horizontal recognizers
@@ -306,7 +306,12 @@ var
 // listen to events...
 mc.on("panup pandown", function (ev) {
 
-    percentUp = Math.floor(ev.srcEvent.clientY / maxDeltaUp * 100);
+    //alert(ev);
+
+    //alert(ev.center.y);
+    // console.log("2-" + ev.srcEvent.clientY);
+
+    percentUp = Math.floor(ev.center.y / maxDeltaUp * 100);
 
     var pan = ev.type;
 
@@ -335,6 +340,4 @@ mc.on("panup pandown", function (ev) {
     });
 
 });
-
-
 
