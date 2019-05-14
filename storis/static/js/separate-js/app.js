@@ -326,9 +326,9 @@ mc.on("panup pandown", function (ev) {
     }
 
 
-    $('.storis-list').css({
+    /*$('.storis-list').css({
         filter: 'blur(' + floatDeltaUp + 'px)'
-    });
+    });*/
 
     $(".storis-form").css({
         top: percentUp + '%'
