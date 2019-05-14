@@ -207,11 +207,11 @@ $(document).ready(function () {
                     loadVideo();
                 }
 
-                // if (i.item.index == i.item.count - 1) {
-                //     $(".storis-form-area").addClass("last");
-                // } else {
-                //     $(".storis-form-area").removeClass("last");
-                // }
+                if (i.item.index == i.item.count - 1) {
+                    $(".storis-form-area").addClass("last");
+                } else {
+                    $(".storis-form-area").removeClass("last");
+                }
 
                 playReload(i.item.index);
 
@@ -287,7 +287,7 @@ $(document).ready(function () {
 
 
 
-var tapEl = document.getElementById('storis-parent');
+var tapEl = document.getElementById('storis-form-btn');
 
 // create a simple instance
 // by default, it only adds horizontal recognizers
