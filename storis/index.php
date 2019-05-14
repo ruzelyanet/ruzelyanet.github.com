@@ -9,7 +9,9 @@
         <meta content="" name="description">
         <meta content="" name="keywords">
 
-        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1"> -->
+
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
 
         <meta content=" telephone=no" name="format-detection">
 
@@ -18,7 +20,7 @@
 
 
         <!--[if (gt IE 9)|!(IE)]><!-->
-        <link href="static/css/main7xzu5que42wq52x7ds4i.min.css" rel="stylesheet" type="text/css">
+        <link href="static/css/main64xa7fw1vloagz1fko6r.min.css" rel="stylesheet" type="text/css">
         <!--<![endif]-->
 
         <meta property="og:title" content="" />
@@ -62,20 +64,28 @@
                                     Call to Action Header!
                                 </div>
 
-                                <form class="mb-3">
+                                <form id="request-form" method="post" name="request" class="mb-3">
+
+                                    <input type="hidden" name="page" value="<? echo $_SERVER['REQUEST_URI'] ?>">
+                                    <input type="hidden" name="referer" value="<? echo $_SERVER['HTTP_REFERER'] ?>">
+                                    <input type="hidden" class="formname" name="formname" value="request">
+
                                     <div class="row">
                                         <div class="col-10 offset-1">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Твое имя">
+                                                <input type="text" name="name" class="form-control" placeholder="Твое имя">
                                             </div>
                                             <div class="form-group">
-                                                <input type="tel" class="form-control" placeholder="Твой номер">
+                                                <input type="tel" name="phone" class="form-control" placeholder="Твой номер">
                                             </div>
                                             <div class="text-center">
-                                                <button class="btn btn-dark">Отправить</button>
+                                                <div class="send">
+                                                    <button class="btn btn-dark" type="buttom">Отправить</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="request"></div>
                                 </form>
 
                                 <div class="text-center mb-3">
@@ -525,15 +535,19 @@
                                                 <div class="mb-3">
                                                     Мы <u>свяжемся</u> с тобой и расскажем обо всем в деталях!
                                                 </div>
-                                                <form>
+
+                                                <form id="request-form" method="post" name="request">
                                                     <div class="form-group">
-                                                        <input type="text" class="form-control" placeholder="Ваше имя">
+                                                        <input type="text" name="name" class="form-control" placeholder="Ваше имя">
                                                     </div>
                                                     <div class="form-group">
-                                                        <input type="tel" class="form-control" placeholder="Твой номер">
+                                                        <input type="tel" name="phone" class="form-control" placeholder="Твой номер">
                                                     </div>
-                                                    <button class="btn btn-outline-light">Отправить</button>
+                                                    <div class="text-right">
+                                                        <button class="btn btn-outline-light">Отправить</button>
+                                                    </div>
                                                 </form>
+
                                             </div>
                                         </div>
                                     </div>
@@ -566,12 +580,15 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
         <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
-        <script src="static/js/main7xzu5que42wq52x7ds4i.min.js"></script>
+        <script src="static/js/main64xa7fw1vloagz1fko6r.min.js"></script>
 
 
         <script src="static/js/separate-js/hammer.min.js?v=0.0.1"></script>
 
-        <script src="static/js/separate-js/app.js?v=0.0.2"></script>
+        <script src="static/js/separate-js/app.js?v=0.0.3"></script>
+        
+        <script src="static/js/separate-js/validator.js?v=0.0.1"></script>
+        <script src="static/js/separate-js/send.js?v=0.0.1"></script>
 
 
 

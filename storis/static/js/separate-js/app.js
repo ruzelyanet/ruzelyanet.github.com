@@ -306,11 +306,6 @@ var
 // listen to events...
 mc.on("panup pandown", function (ev) {
 
-    //alert(ev);
-
-    //alert(ev.center.y);
-    // console.log("2-" + ev.srcEvent.clientY);
-
     percentUp = Math.floor(ev.center.y / maxDeltaUp * 100);
 
     var pan = ev.type;
