@@ -207,11 +207,11 @@ $(document).ready(function () {
                     loadVideo();
                 }
 
-                if (i.item.index == i.item.count - 1) {
-                    $(".storis-form-area").addClass("last");
-                } else {
-                    $(".storis-form-area").removeClass("last");
-                }
+                // if (i.item.index == i.item.count - 1) {
+                //     $(".storis-form-area").addClass("last");
+                // } else {
+                //     $(".storis-form-area").removeClass("last");
+                // }
 
                 playReload(i.item.index);
 
@@ -326,9 +326,9 @@ mc.on("panup pandown", function (ev) {
     }
 
 
-    /*$('.storis-list').css({
+    $('.storis-list').css({
         filter: 'blur(' + floatDeltaUp + 'px)'
-    });*/
+    });
 
     $(".storis-form").css({
         top: percentUp + '%'
