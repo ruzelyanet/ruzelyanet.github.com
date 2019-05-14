@@ -73,7 +73,7 @@ $(document).ready(function () {
         // animateOut: "fadeOut",
         // animateIn: "fadeIn",
         dots: true,
-        nav: false,
+        nav: true,
         navText: ["<img src='static/img/general/icon-prev.svg'>", "<img src='static/img/general/icon-next.svg'>"],
         margin: 20,
         autoplayHoverPause: true,
@@ -301,66 +301,85 @@ var
     percentUp = 0,
     percentDown = 0,
     floatDeltaUp = 0,
-    floatDeltaDown = 0;
+    floatDeltaDown = 0,
+    percentHeight = 0;
 
 
 mc.on("panmove", function (ev) {
     percentUp = Math.floor(ev.deltaY / maxDeltaUp * 100);
-
     percentDown = Math.floor(ev.deltaY / maxDeltaDown * 100);
-
 
 });
 
 
 
 // listen to events...
-mc.on("panup", function (ev) {
+mc.on("panup pandown", function (ev) {
 
     if (ev.isFinal) {
         if (floatDeltaUp > 70) {
             floatDeltaUp = 100;
-            $(".storis-form-area").removeClass("open");
+            percentHeight = 0;
+
+            $(".storis-form").removeClass("open");
+
+            $(".storis-list").css({
+                filter: 'blur(' + percentHeight + 'px)'
+            });
 
         } else if (floatDeltaUp <= 70) {
             floatDeltaUp = 0;
-            $(".storis-form-area").addClass("open");
+            percentHeight = 100;
+            $(".storis-form").addClass("open");
+
+            $(".storis-list").css({
+                filter: 'blur(' + percentHeight + 'px)'
+            });
         }
     } else {
         floatDeltaUp = 100 - (percentUp > 100 ? 100 : percentUp);
+        percentHeight = percentUp > 100 ? 100 : percentUp;
+
+        $(".storis-list").css({
+            filter: 'blur(' + percentHeight + 'px)'
+        });
     }
 
+
     $(".storis-form").css({
-        top: floatDeltaUp + '%'
+        top: floatDeltaUp + '%',
+        height: percentHeight + '%'
+    });
+
+    $(".storis-list").css({
+        filter: 'blur(' + percentHeight + 'px)'
     });
 
 });
 
+
 mc.on("pandown", function (ev) {
 
-    console.log(percentDown);
-
     if (ev.isFinal) {
-        if (floatDeltaDown > 70) {
-            floatDeltaDown = 100;
+        if (floatDeltaUp > 70) {
+            floatDeltaUp = 100;
+            percentHeight = 0;
             $(".storis-form-area").removeClass("open");
 
-        } else if (floatDeltaDown <= 70) {
-            floatDeltaDown = 0;
+        } else if (floatDeltaUp <= 70) {
+            floatDeltaUp = 0;
+            percentHeight = 100;
             $(".storis-form-area").addClass("open");
         }
     } else {
-        floatDeltaDown = percentDown
+        floatDeltaUp = (percentDown > 100 ? 100 : percentDown)
+        percentHeight = 100 - (percentDown > 100 ? 100 : percentDown);
     }
 
-
     $(".storis-form").css({
-        top: floatDeltaDown + '%'
+        top: floatDeltaUp + '%',
+        height: percentHeight + '%'
     });
-
-
-
-
 
 });
 
