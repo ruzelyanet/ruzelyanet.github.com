@@ -372,6 +372,106 @@ template {
   height: 50px;
 }
 
+.icon-fb {
+  background-image: url(../img/general/icon-fb.svg);
+  width: 50px;
+  height: 50px;
+}
+
+.icon-fb-w {
+  background-image: url(../img/general/icon-fb-w.svg);
+  width: 50px;
+  height: 50px;
+}
+
+.form-control {
+  height: 74px;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #AAAAAA;
+  opacity: 1;
+}
+
+.form-control::-moz-placeholder {
+  color: #AAAAAA;
+  opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #AAAAAA;
+  opacity: 1;
+}
+
+.form-control:-moz-placeholder {
+  color: #AAAAAA;
+  opacity: 1;
+}
+
+label {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.form-group-text {
+  font-size: 18px;
+  color: #19C9F1;
+  margin-bottom: 24px;
+}
+
+.st-radio {
+  position: relative;
+  padding: 6px 0 5px 50px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.st-radio span {
+  width: 32px;
+  height: 32px;
+  display: block;
+  border: 2px solid #F904AE;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -16px;
+}
+
+.st-radio span:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 10px;
+  border-left: 2px solid #F904AE;
+  border-bottom: 2px solid #F904AE;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-top: 6px;
+  margin-left: 4px;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+
+.st-radio input {
+  position: absolute;
+  bottom: 100%;
+  right: 100%;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.st-radio input:checked + span:before {
+  opacity: 1;
+  visibility: visible;
+}
+
 html, body {
   height: 100%;
 }
@@ -386,6 +486,30 @@ body {
 
 * html .page__wrapper {
   height: 100%;
+}
+
+.lng-ru .lng-uz-text {
+  display: none;
+}
+
+.lng-uz .lng-ru-text {
+  display: none;
+}
+
+.switch-lng {
+  font-size: 16px;
+}
+
+.switch-lng a {
+  color: #fff;
+  display: inline-block;
+  padding: 2px 5px;
+}
+
+.switch-lng a.active {
+  color: #F904AE;
+  pointer-events: none;
+  background: #fff;
 }
 
 .intro {
@@ -473,6 +597,15 @@ body {
   border-color: #18A7C7;
 }
 
+.btn-sm {
+  font-size: 24px;
+  padding: 20px;
+  font-weight: 400;
+  border-radius: 5px;
+  line-height: normal;
+  text-transform: inherit;
+}
+
 .phone-img {
   position: absolute;
   left: 0;
@@ -558,6 +691,117 @@ body {
 
 .footer .soc div {
   margin-right: 20px;
+}
+
+.number-style input {
+  display: inline-block;
+  width: 30px;
+  vertical-align: middle;
+  text-align: center;
+  border: none;
+  font-size: 15px;
+  color: #000000;
+}
+
+.number-style span {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.number-style span.number-minus {
+  border: 2px solid #F904AE;
+  width: 74px;
+  height: 74px;
+  border-radius: 10px;
+  background: #F904AE;
+}
+
+.number-style span.number-minus::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -1px 0 0 -5px;
+  width: 10px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.number-style span.number-plus {
+  border: 2px solid #F904AE;
+  width: 74px;
+  height: 74px;
+  border-radius: 10px;
+  background: #F904AE;
+}
+
+.number-style span.number-plus::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -1px 0 0 -5px;
+  width: 10px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.number-style span.number-plus::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -5px 0 0 -1px;
+  width: 2px;
+  height: 10px;
+  background-color: #fff;
+}
+
+.number-style span.disabled {
+  border: 2px solid #F904AE;
+  opacity: 0.5;
+}
+
+.number-style span.disabled::after,
+.number-style span.disabled::before {
+  background-color: #fff;
+}
+
+.number-style input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.number-style input::-webkit-outer-spin-button,
+.number-style input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.payme-logo {
+  padding: 12px 0;
+}
+
+.valid-message {
+  display: none;
+}
+
+input.form-control:invalid:not(:placeholder-shown) {
+  border-color: red;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+.modal-body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
 }
 
 @media screen and (max-width: 1800px) {
@@ -665,5 +909,17 @@ body {
   }
   .balance-title {
     font-size: 19px;
+  }
+  .form-control {
+    height: 58px;
+    border-radius: 5px;
+  }
+  .btn-sm {
+    border-radius: 5px;
+  }
+  .number-style span.number-plus, .number-style span.number-minus {
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
   }
 }
