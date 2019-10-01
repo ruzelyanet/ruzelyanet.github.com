@@ -2,6 +2,10 @@
 
 
 $(document).ready(function () {
+
+    var winWidth = $(window).width();
+
+
     $(".select-date").datepicker();
 
 
@@ -17,6 +21,13 @@ $(document).ready(function () {
     //     classes: "calendar"
     // })
 
+    $(".burger").click(function () {
+        $("body").toggleClass("nav-mob-open");
+        $(this).toggleClass("open");
+        $(".sidebar").toggleClass("open");
+        $(".mobi-contacts-link").toggleClass("active");
+    });
+
     var $owl = $(".pricing-carousel");
 
     $owl.children().each(function (index) {
@@ -24,10 +35,7 @@ $(document).ready(function () {
     });
 
     $owl.owlCarousel({
-        //loop: true,
-        margin: -72,
         nav: false,
-        center: true,
         smartSpeed: 500,
         dots: true,
         responsive: {
@@ -35,7 +43,9 @@ $(document).ready(function () {
                 items: 1
             },
             700: {
-                items: 2
+                items: 2,
+                margin: -72,
+                center: true
             }
         }
     });
@@ -88,8 +98,10 @@ $(document).ready(function () {
         });
     }
 
-    $(".js-edit-name-project").click(function () {
-        $(this).parents(".name-project").addClass("mode-edit");
+    $(".js-edit-name-project").click(function (e) {
+        e.preventDefault();
+
+        $(".name-project").addClass("mode-edit");
         projectNameEdit();
     });
 
@@ -98,16 +110,17 @@ $(document).ready(function () {
 
 
 
+    if (winWidth >= 992) {
+        $('[data-toggle="popover"]').popover()
 
-    $('[data-toggle="popover"]').popover()
+        $('[data-toggle="tooltip"]').tooltip()
 
-    $('[data-toggle="tooltip"]').tooltip()
-
-    $(".popover-hover-view").hover(function () {
-        $(this).popover("show");
-    }, function () {
-        $(this).popover("hide");
-    });
+        $(".popover-hover-view").hover(function () {
+            $(this).popover("show");
+        }, function () {
+            $(this).popover("hide");
+        });
+    }
 
 
     $(".js-call-calendar").click(function () {
