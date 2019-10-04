@@ -8,6 +8,8 @@ $(document).ready(function () {
 
     $(".select-date").datepicker();
 
+    $("#modalPasswordReset").modal("show");
+
 
     // $('.example-popove').popover({
     //     container: 'body'
