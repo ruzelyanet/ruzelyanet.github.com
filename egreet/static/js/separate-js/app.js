@@ -5,10 +5,24 @@ $(document).ready(function () {
 
     var winWidth = $(window).width();
 
-
     $(".select-date").datepicker();
 
-    $("#modalPasswordReset").modal("show");
+
+    if ($(".buying-steps").length) {
+        let stepDone = $(".step-done");
+        let stepActivePositionX = stepDone[stepDone.length - 1];
+        $('.buying-steps').scrollLeft(stepActivePositionX.offsetLeft - 10);
+    }
+
+
+    $(".js-toggle-list-projects").click(function () {
+        $(this).toggleClass("open");
+        $(".js-sidebar-list-projects").toggleClass("d-none");
+    });
+
+
+
+    //$("#modalPasswordReset").modal("show");
 
 
     // $('.example-popove').popover({
