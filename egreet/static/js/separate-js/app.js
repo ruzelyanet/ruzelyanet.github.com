@@ -7,9 +7,18 @@ $(document).ready(function () {
 
     $(".select-date").datepicker();
 
+    $('.js-user-link').click(function () {
+        $(this).parent().find('.user-link-info').toggleClass('open');
+        $('body').toggleClass('open-chat-mobi');
+    });
+
+    $('.quick-support-close').click(function () {
+        $(this).parents(".user-link-info").removeClass('open');
+    });
+
 
     if ($(".buying-steps").length) {
-        let stepDone = $(".step-done");
+        let stepDone = $(".step-active");
         let stepActivePositionX = stepDone[stepDone.length - 1];
         $('.buying-steps').scrollLeft(stepActivePositionX.offsetLeft - 10);
     }
@@ -21,21 +30,28 @@ $(document).ready(function () {
     });
 
 
+    $(".b-dashboard-list").owlCarousel({
+        nav: false,
+        smartSpeed: 500,
+        margin: 40,
+        responsive: {
+            0: {
+                items: 1,
+                dots: false,
+                center: true,
+                margin: 20
+            },
+            1200: {
+                items: 3,
+                dots: true
+            },
+            700: {
+                items: 2,
+                center: true
+            }
+        }
+    });
 
-    //$("#modalPasswordReset").modal("show");
-
-
-    // $('.example-popove').popover({
-    //     container: 'body'
-    // });
-
-
-    //$("#modalAssTime").modal("show");
-
-
-    // $(".air-date").datepicker({
-    //     classes: "calendar"
-    // })
 
     $(".burger").click(function () {
         $("body").toggleClass("nav-mob-open");
@@ -44,13 +60,14 @@ $(document).ready(function () {
         $(".mobi-contacts-link").toggleClass("active");
     });
 
-    var $owl = $(".pricing-carousel");
 
-    $owl.children().each(function (index) {
+    var $pricingCarousel = $(".pricing-carousel");
+
+    $pricingCarousel.children().each(function (index) {
         $(this).attr('data-position', index); // NB: .attr() instead of .data()
     });
 
-    $owl.owlCarousel({
+    $pricingCarousel.owlCarousel({
         nav: false,
         smartSpeed: 500,
         dots: true,
@@ -67,7 +84,7 @@ $(document).ready(function () {
     });
 
     $(document).on('click', '.owl-item>div', function () {
-        $owl.trigger('to.owl.carousel', $(this).data('position'));
+        $pricingCarousel.trigger('to.owl.carousel', $(this).data('position'));
     });
 
 
