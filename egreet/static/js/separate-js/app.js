@@ -1,199 +1,235 @@
+$(document).ready(function() {
+  var winWidth = $(window).width();
 
+  $(".msng-area textarea").autoResize({
+    animate: {
+      enabled: true,
+      duration: "fast",
+      complete: function() {
+        // Do something
+      },
+      step: function(now, fx) {
+        // Do something else
+      }
+    },
+    maxHeight: "200px"
+  });
 
+  //msng-list
+  $(".msng-scroll-to-bottom").click(function() {
+    var scrollDown =
+      $(".msng-list-wrap").height() - $(".msng-list-height").height();
 
-$(document).ready(function () {
+    $(".msng-list-height")
+      .stop()
+      .animate({ scrollTop: scrollDown }, 500, "swing");
+  });
+  //msng-list end
 
-    var winWidth = $(window).width();
+  $(".select-date").datepicker();
 
-    $(".select-date").datepicker();
+  $(".js-user-link").click(function() {
+    $(this)
+      .parent()
+      .find(".user-link-info")
+      .toggleClass("open");
+    $("body").toggleClass("open-chat-mobi");
+  });
 
-    $('.js-user-link').click(function () {
-        $(this).parent().find('.user-link-info').toggleClass('open');
-        $('body').toggleClass('open-chat-mobi');
-    });
+  $(".quick-support-close").click(function() {
+    $(this)
+      .parents(".user-link-info")
+      .removeClass("open");
+  });
 
-    $('.quick-support-close').click(function () {
-        $(this).parents(".user-link-info").removeClass('open');
-    });
+  if ($(".buying-steps").length && $(".step-active").length) {
+    let stepDone = $(".step-active");
+    let stepActivePositionX = stepDone[stepDone.length - 1];
+    $(".buying-steps").scrollLeft(stepActivePositionX.offsetLeft - 10);
+  }
 
+  $(".js-toggle-list-projects").click(function() {
+    $(this).toggleClass("open");
+    $(".js-sidebar-list-projects").toggleClass("d-none");
+  });
 
-    if ($(".buying-steps").length) {
-        let stepDone = $(".step-active");
-        let stepActivePositionX = stepDone[stepDone.length - 1];
-        $('.buying-steps').scrollLeft(stepActivePositionX.offsetLeft - 10);
+  $(".b-dashboard-list").owlCarousel({
+    nav: false,
+    smartSpeed: 500,
+    margin: 40,
+    responsive: {
+      0: {
+        items: 1,
+        dots: false,
+        center: true,
+        margin: 20
+      },
+      1200: {
+        items: 3,
+        dots: true
+      },
+      700: {
+        items: 2,
+        center: true
+      }
     }
+  });
 
+  $(".burger").click(function() {
+    $("body").toggleClass("nav-mob-open");
+    $(this).toggleClass("open");
+    $(".sidebar").toggleClass("open");
+    $(".mobi-contacts-link").toggleClass("active");
+  });
 
-    $(".js-toggle-list-projects").click(function () {
-        $(this).toggleClass("open");
-        $(".js-sidebar-list-projects").toggleClass("d-none");
-    });
+  var $pricingCarousel = $(".pricing-carousel");
 
+  $pricingCarousel.children().each(function(index) {
+    $(this).attr("data-position", index); // NB: .attr() instead of .data()
+  });
 
-    $(".b-dashboard-list").owlCarousel({
-        nav: false,
-        smartSpeed: 500,
-        margin: 40,
-        responsive: {
-            0: {
-                items: 1,
-                dots: false,
-                center: true,
-                margin: 20
-            },
-            1200: {
-                items: 3,
-                dots: true
-            },
-            700: {
-                items: 2,
-                center: true
-            }
-        }
-    });
-
-
-    $(".burger").click(function () {
-        $("body").toggleClass("nav-mob-open");
-        $(this).toggleClass("open");
-        $(".sidebar").toggleClass("open");
-        $(".mobi-contacts-link").toggleClass("active");
-    });
-
-
-    var $pricingCarousel = $(".pricing-carousel");
-
-    $pricingCarousel.children().each(function (index) {
-        $(this).attr('data-position', index); // NB: .attr() instead of .data()
-    });
-
-    $pricingCarousel.owlCarousel({
-        nav: false,
-        smartSpeed: 500,
-        dots: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            700: {
-                items: 2,
-                margin: -72,
-                center: true
-            }
-        }
-    });
-
-    $(document).on('click', '.owl-item>div', function () {
-        $pricingCarousel.trigger('to.owl.carousel', $(this).data('position'));
-    });
-
-
-    $(".js-pass-switch").click(function () {
-        $(this).find("i").toggleClass("icon-eye-open");
-
-        var input = $(this).parent().find("input"),
-            type = input[0].type;
-
-        if (type == "password") {
-            input[0].type = "text"
-        } else {
-            input[0].type = "password"
-        }
-    });
-
-
-    function editInput(input) {
-        input.attr("disabled", false);
-        input.select();
-
-        input.focusout(function () {
-            input.attr("disabled", true);
-        });
+  $pricingCarousel.owlCarousel({
+    nav: false,
+    smartSpeed: 500,
+    dots: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      700: {
+        items: 2,
+        margin: -72,
+        center: true
+      }
     }
+  });
 
-    $(".info-input-edit").click(function () {
-        var input = $(this).parent().find('.form-control');
-        editInput(input);
-    });
+  $(document).on("click", ".owl-item>div", function() {
+    $pricingCarousel.trigger("to.owl.carousel", $(this).data("position"));
+  });
 
+  $(".js-pass-switch").click(function() {
+    $(this)
+      .find("i")
+      .toggleClass("icon-eye-open");
 
+    var input = $(this)
+        .parent()
+        .find("input"),
+      type = input[0].type;
 
-    function projectNameEdit() {
-        $(".name-project-input input")[0].focus();
-        $(".name-project-input input").blur(function () {
-            $(this).parents(".name-project").removeClass("mode-edit");
-        });
-
-        $(".name-project-input input").on('keypress', function (e) {
-            if (e.which == 13) {
-                $(this).blur();
-            }
-        });
+    if (type == "password") {
+      input[0].type = "text";
+    } else {
+      input[0].type = "password";
     }
+  });
 
-    $(".js-edit-name-project").click(function (e) {
-        e.preventDefault();
+  function editInput(input) {
+    input.attr("disabled", false);
+    input.select();
 
-        $(".name-project").addClass("mode-edit");
-        projectNameEdit();
+    input.focusout(function() {
+      input.attr("disabled", true);
+    });
+  }
+
+  $(".info-input-edit").click(function() {
+    var input = $(this)
+      .parent()
+      .find(".form-control");
+    editInput(input);
+  });
+
+  function projectNameEdit() {
+    $(".name-project-input input")[0].focus();
+    $(".name-project-input input").blur(function() {
+      $(this)
+        .parents(".name-project")
+        .removeClass("mode-edit");
     });
 
-
-
-
-
-
-    if (winWidth >= 992) {
-        $('[data-toggle="popover"]').popover()
-
-        $('[data-toggle="tooltip"]').tooltip()
-
-        $(".popover-hover-view").hover(function () {
-            $(this).popover("show");
-        }, function () {
-            $(this).popover("hide");
-        });
-    }
-
-
-    $(".js-call-calendar").click(function () {
-        $(this).parent().find(".calendar").addClass("open");
+    $(".name-project-input input").on("keypress", function(e) {
+      if (e.which == 13) {
+        $(this).blur();
+      }
     });
+  }
 
+  $(".js-edit-name-project").click(function(e) {
+    e.preventDefault();
 
-    $(".calendar-close").click(function () {
-        $(this).parents(".calendar").removeClass("open");
+    $(".name-project").addClass("mode-edit");
+    projectNameEdit();
+  });
 
-        var datepicker = $(this).parents(".calendar").find(".select-date").datepicker().data('datepicker');
-        datepicker.clear();
-    });
+  if (winWidth >= 992) {
+    $('[data-toggle="popover"]').popover();
 
-    $(".word-search-input").keypress(function () {
-        $(".search-options").addClass("open");
-        $('.date-search').addClass("d-none");
-    });
+    $('[data-toggle="tooltip"]').tooltip();
 
-    $(".js-search-chat").click(function () {
-        $(".msng-chat-search").toggleClass("open");
-    });
+    $(".popover-hover-view").hover(
+      function() {
+        $(this).popover("show");
+      },
+      function() {
+        $(this).popover("hide");
+      }
+    );
+  }
 
-    $(".msng-chat-search-close").click(function () {
-        $(".msng-chat-search").removeClass("open");
-    });
+  $(".js-call-calendar").click(function() {
+    $(this)
+      .parent()
+      .find(".calendar")
+      .addClass("open");
+  });
 
-    $(".js-expand-chat").click(function () {
-        $(".msng").toggleClass("msng-expand");
-    });
+  $(".calendar-close").click(function() {
+    $(this)
+      .parents(".calendar")
+      .removeClass("open");
 
-    $(".js-toggle-chat-bar").click(function () {
-        $(".msng").removeClass("msng-expand");
-    });
+    var datepicker = $(this)
+      .parents(".calendar")
+      .find(".select-date")
+      .datepicker()
+      .data("datepicker");
+    datepicker.clear();
+  });
 
+  $(".word-search-input").on("focusin", function() {
+    $(".search-options").addClass("open");
+  });
 
-    $(".js-toggle-ibox-content").click(function () {
-        $(this).toggleClass("open");
-        $(this).parents(".ibox").find(".ibox-content").stop().slideToggle();
-    });
+  $(".word-search-input").on("focusout", function() {
+    $(".search-options").removeClass("open");
+  });
 
+  $(".js-search-chat").click(function() {
+    $(".msng-chat-search").toggleClass("open");
+  });
 
+  $(".msng-chat-search-close").click(function() {
+    $(".msng-chat-search").removeClass("open");
+  });
+
+  $(".js-expand-chat").click(function() {
+    $(".msng").addClass("msng-expand");
+    $(this).addClass("d-none");
+  });
+
+  $(".js-toggle-chat-bar").click(function() {
+    $(".msng").removeClass("msng-expand");
+    $(".js-expand-chat").removeClass("d-none");
+  });
+
+  $(".js-toggle-ibox-content").click(function() {
+    $(this).toggleClass("open");
+    $(this)
+      .parents(".ibox")
+      .find(".ibox-content")
+      .stop()
+      .slideToggle();
+  });
 });
