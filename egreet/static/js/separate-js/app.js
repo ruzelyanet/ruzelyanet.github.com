@@ -1,26 +1,46 @@
 $(document).ready(function() {
   var winWidth = $(window).width();
 
+  var msngCalcHeight = function() {
+    var msngBody = $(".msng-chat-lg");
+    var msngChatLgHeight = msngBody.height() - 50;
+    var msngChatLgFooterHeight = msngBody.find(".msng-footer-wrap").height();
+
+    msngBody
+      .find(".msng-list")
+      .height(msngChatLgHeight - msngChatLgFooterHeight);
+  };
+
+  if ($(".msng-chat-lg").length) {
+    msngCalcHeight();
+  }
+
   $(".msng-area textarea").autoResize({
     animate: {
-      enabled: true,
+      //enabled: true,
       duration: "fast",
-      complete: function() {
-        // Do something
-      },
-      step: function(now, fx) {
-        // Do something else
-      }
+      complete: function() {},
+      step: function(now, fx) {}
     },
+
+    animateCallback: function() {
+      //msngCalcHeight();
+    },
+
     maxHeight: "200px"
   });
 
   //msng-list
   $(".msng-scroll-to-bottom").click(function() {
-    var scrollDown =
-      $(".msng-list-wrap").height() - $(".msng-list-height").height();
+    var mainHeight = $(this)
+      .parents(".msng-chat")
+      .find(".msng-list-wrap");
 
-    $(".msng-list-height")
+    var scrollDown = mainHeight.height() - $(".msng-list").height();
+
+    $(this)
+      .parents(".msng-chat")
+      .find(".msng-list")
       .stop()
       .animate({ scrollTop: scrollDown }, 500, "swing");
   });
