@@ -70,7 +70,7 @@ $(document).ready(function() {
 
   $(".js-toggle-list-projects").click(function() {
     $(this).toggleClass("open");
-    $(".js-sidebar-list-projects").toggleClass("d-none");
+    $(".js-sidebar-list-projects").slideToggle();
   });
 
   $(".b-dashboard-list").owlCarousel({
