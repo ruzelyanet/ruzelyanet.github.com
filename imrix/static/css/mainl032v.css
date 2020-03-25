@@ -19897,7 +19897,7 @@ img {
 }
 
 .homepage-3 .welcome-area {
-  background: rgba(0, 0, 0, 0) url("../img/blog/blog-5.jpg") no-repeat scroll center center/cover;
+  background: rgba(0, 0, 0, 0) url("../img/general/blog-5.jpg") no-repeat scroll center center/cover;
 }
 
 .homepage-4 .welcome-area {
@@ -19925,7 +19925,7 @@ img {
 }
 
 .download-area {
-  background: rgba(0, 0, 0, 0) url("../img/bg/download-bg.jpg") no-repeat fixed center center/cover;
+  background: rgba(0, 0, 0, 0) url("../img/general/download-bg.jpg") no-repeat fixed center center/cover;
 }
 
 .subscribe-area {
@@ -23310,4 +23310,4 @@ body.compensate-for-scrollbar {
   }
 }
 
-/*# sourceMappingURL=mainlngr3x.css.map */
+/*# sourceMappingURL=mainl032v.css.map */
