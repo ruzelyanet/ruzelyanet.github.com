@@ -15,76 +15,84 @@
 // :: 13.0 APP SCREENSHOTS ACTIVE CODE
 // :: 14.0 CONTACT FORM ACTIVE CODE
 
-(function ($) {
+(function($) {
     'use strict';
 
     var $window = $(window);
     var zero = 0;
 
     // :: 1.0 PRELOADER ACTIVE CODE
-    $(window).on("load", function () {
+    $(window).on('load', function() {
         $('.preloader-wapper').addClass('loaded');
         if ($('.preloader-wapper').hasClass('loaded')) {
-            $('.preloader-main').delay(1200).queue(function () {
-                $(this).remove();
-            });
+            $('.preloader-main')
+                .delay(1200)
+                .queue(function() {
+                    $(this).remove();
+                });
         }
     });
 
     // :: 2.0 NAVIGATION MENU ACTIVE CODE
     // dropdown for mobile
-    $(document).ready(function () {
+    $(document).ready(function() {
         checkWidth(true);
-        $(window).resize(function () {
+        $(window).resize(function() {
             checkWidth(false);
         });
     });
 
     function checkWidth(init) {
-        // If browser resized, check width again 
+        // If browser resized, check width again
         if ($(window).width() <= 991) {
-            $('.dropdown-submenu a').on("click", function (e) {
-                $(this).next('ul').toggle();
+            $('.dropdown-submenu a').on('click', function(e) {
+                $(this)
+                    .next('ul')
+                    .toggle();
                 e.stopPropagation();
                 e.preventDefault();
             });
         }
     }
     function navMenu() {
-
         // MAIN MENU TOGGLER ICON (MOBILE SITE ONLY)
-        $('[data-toggle="navbarToggler"]').click(function () {
+        $('[data-toggle="navbarToggler"]').click(function() {
             $('.navbar').toggleClass('active');
             $('body').toggleClass('canvas-open');
         });
         // MAIN MENU TOGGLER ICON
-        $('.navbar-toggler').click(function () {
+        $('.navbar-toggler').click(function() {
+            $('.navbar-toggler-icon').toggleClass('active');
+        });
+
+        $('.nav-link.scroll').click(function() {
+            $('.navbar').toggleClass('active');
+            $('body').toggleClass('canvas-open');
             $('.navbar-toggler-icon').toggleClass('active');
         });
 
         // NAVBAR STICKY
-        var $stickyNav = $(".navbar-sticky");
+        var $stickyNav = $('.navbar-sticky');
 
-        $(window).on("scroll load", function () {
+        $(window).on('scroll load', function() {
             var scroll = $(window).scrollTop();
             if (scroll >= 120) {
-                $stickyNav.addClass("navbar-sticky-moved-up");
+                $stickyNav.addClass('navbar-sticky-moved-up');
             } else {
-                $stickyNav.removeClass("navbar-sticky-moved-up");
+                $stickyNav.removeClass('navbar-sticky-moved-up');
             }
             // apply transition
             if (scroll >= 250) {
-                $stickyNav.addClass("navbar-sticky-transitioned");
+                $stickyNav.addClass('navbar-sticky-transitioned');
             } else {
-                $stickyNav.removeClass("navbar-sticky-transitioned");
+                $stickyNav.removeClass('navbar-sticky-transitioned');
             }
             // sticky on
             if (scroll >= 500) {
-                $stickyNav.addClass("navbar-sticky-on");
+                $stickyNav.addClass('navbar-sticky-on');
             } else {
-                $stickyNav.removeClass("navbar-sticky-on");
+                $stickyNav.removeClass('navbar-sticky-on');
             }
-
         });
     }
     navMenu();
@@ -93,29 +101,35 @@
     var offset = 300;
     var duration = 500;
 
-    $window.on('scroll', function () {
+    $window.on('scroll', function() {
         if ($(this).scrollTop() > offset) {
-            $("#scrollUp").fadeIn(duration);
+            $('#scrollUp').fadeIn(duration);
         } else {
-            $("#scrollUp").fadeOut(duration);
+            $('#scrollUp').fadeOut(duration);
         }
     });
 
-    $("#scrollUp").on('click', function () {
-        $('html, body').animate({
-            scrollTop: 0
-        }, duration);
+    $('#scrollUp').on('click', function() {
+        $('html, body').animate(
+            {
+                scrollTop: 0,
+            },
+            duration,
+        );
     });
 
     // :: 4.0 SCROLL LINK ACTIVE CODE
     var scrollLink = $('.scroll');
 
     // :: 5.0 SMOOTH SCROLLING ACTIVE CODE
-    scrollLink.on('click', function (e) {
+    scrollLink.on('click', function(e) {
         e.preventDefault();
-        $('body,html').animate({
-            scrollTop: $(this.hash).offset().top
-        }, 1000);
+        $('body,html').animate(
+            {
+                scrollTop: $(this.hash).offset().top,
+            },
+            1000,
+        );
     });
 
     // :: 6.0 AOS ACTIVE CODE
@@ -125,22 +139,22 @@
     new WOW().init();
 
     // :: 8.0 PREVENT DEFAULT ACTIVE CODE
-    $("a[href='#']").on('click', function ($) {
+    $("a[href='#']").on('click', function($) {
         $.preventDefault();
     });
 
     // :: 9.0 COUNTERUP ACTIVE CODE
     $('.counter').counterUp({
         delay: 10,
-        time: 1000
+        time: 1000,
     });
 
     // :: 10.0 FANCYBOX VIDEO POPUP ACTIVE CODE
-    $(".fancyVideo").fancybox({
-        animationEffect : "zoom-in-out",
-        transitionEffect : "circular",
-        maxWidth    : 800,
-        maxHeight   : 600
+    $('.fancyVideo').fancybox({
+        animationEffect: 'zoom-in-out',
+        transitionEffect: 'circular',
+        maxWidth: 800,
+        maxHeight: 600,
     });
 
     // :: 11.0 FEATURES SLIDER ACTIVE CODE
@@ -152,7 +166,7 @@
         smartSpeed: 1500,
         autoplay: true,
         autoplayTimeout: 6000,
-        dotsContainer: '.features-content'
+        dotsContainer: '.features-content',
     });
 
     // :: 12.0 TESTIMONIALS ACTIVE CODE
@@ -169,22 +183,26 @@
         responsiveClass: true,
         responsive: {
             0: {
-                items: 1
+                items: 1,
             },
             600: {
-                items: 1
+                items: 1,
             },
             768: {
-                items: 1
-            }
-        }
+                items: 1,
+            },
+        },
     });
 
-    testimonialSlider.on("translate.owl.carousel", function () {
-        $(".single-testimonial img, .single-testimonial-thumb img, .client-rating").removeClass("animated zoomIn").css("opacity", "0");
+    testimonialSlider.on('translate.owl.carousel', function() {
+        $('.single-testimonial img, .single-testimonial-thumb img, .client-rating')
+            .removeClass('animated zoomIn')
+            .css('opacity', '0');
     });
-    testimonialSlider.on("translated.owl.carousel", function () {
-        $(".single-testimonial img, .single-testimonial-thumb img, .client-rating").addClass("animated zoomIn").css("opacity", "1");
+    testimonialSlider.on('translated.owl.carousel', function() {
+        $('.single-testimonial img, .single-testimonial-thumb img, .client-rating')
+            .addClass('animated zoomIn')
+            .css('opacity', '1');
     });
 
     // :: 13.0 BRANDING SLIDER ACTIVE CODE
@@ -198,18 +216,18 @@
         autoplayTimeout: 4000,
         responsive: {
             0: {
-                items: 2
+                items: 2,
             },
             576: {
-                items: 3
+                items: 3,
             },
             768: {
-                items: 4
+                items: 4,
             },
             992: {
-                items: 5
-            }
-        }
+                items: 5,
+            },
+        },
     });
 
     // :: 14.0 APP SCREENSHOTS ACTIVE CODE
@@ -228,26 +246,26 @@
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 1
-                }
+                    slidesToScroll: 1,
+                },
             },
             {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                    dots: false
-                }
+                    dots: false,
+                },
             },
             {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    dots: false
-                }
-            }
-          ]
+                    dots: false,
+                },
+            },
+        ],
     });
 
     // :: 15.0 CONTACT FORM ACTIVE CODE
@@ -256,18 +274,18 @@
     // Get the messages div.
     var formMessages = $('.form-message');
     // Set up an event listener for the contact form.
-    $(form).submit(function (e) {
+    $(form).submit(function(e) {
         // Stop the browser from submitting the form.
         e.preventDefault();
         // Serialize the form data.
         var formData = $(form).serialize();
         // Submit the form using AJAX.
         $.ajax({
-                type: 'POST',
-                url: $(form).attr('action'),
-                data: formData
-            })
-            .done(function (response) {
+            type: 'POST',
+            url: $(form).attr('action'),
+            data: formData,
+        })
+            .done(function(response) {
                 // Make sure that the formMessages div has the 'success' class.
                 $(formMessages).removeClass('error');
                 $(formMessages).addClass('success');
@@ -278,7 +296,7 @@
                 // Clear the form.
                 $('#contact-form input,#contact-form textarea').val('');
             })
-            .fail(function (data) {
+            .fail(function(data) {
                 // Make sure that the formMessages div has the 'error' class.
                 $(formMessages).removeClass('success');
                 $(formMessages).addClass('error');
@@ -291,5 +309,4 @@
                 }
             });
     });
-
-}(jQuery));
+})(jQuery);

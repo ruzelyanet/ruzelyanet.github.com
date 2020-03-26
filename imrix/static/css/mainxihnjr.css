@@ -19924,7 +19924,7 @@ img {
 }
 
 .subscribe-area {
-  background: rgba(0, 0, 0, 0) url("../img/bg/map.png") no-repeat scroll center center/cover;
+  background: rgba(0, 0, 0, 0) url("../img/general/map.png") no-repeat scroll center center/cover;
 }
 
 .breadcrumb-area {
@@ -21537,6 +21537,20 @@ img {
   }
   .countdown-container .countdown-value {
     font-size: 40px;
+  }
+}
+
+.bg-purple {
+  background: #7c4fe0;
+}
+
+.color-box {
+  height: 300px;
+}
+
+@media screen and (max-width: 767px) {
+  .color-box {
+    height: 223px;
   }
 }
 
@@ -23305,4 +23319,4 @@ body.compensate-for-scrollbar {
   }
 }
 
-/*# sourceMappingURL=main6l81r.css.map */
+/*# sourceMappingURL=mainxihnjr.css.map */
