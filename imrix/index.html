@@ -12,13 +12,13 @@
     <!-- This make sence for mobile browsers. It means, that content has been optimized for mobile browsers -->
     <meta name="HandheldFriendly" content="true" />
 
-    <!--[if (gt IE 9)|!(IE)]><!-->
     <link
       href="static/css/mainxihnjr.min.css"
       rel="stylesheet"
       type="text/css"
     />
-    <!--<![endif]-->
+
+    <link href="static/css/add.css" rel="stylesheet" type="text/css" />
 
     <meta property="og:title" content="" />
     <meta property="og:url" content="" />
@@ -117,6 +117,11 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
+
+            <div class="px-3 mb-4 d-lg-none">
+              <a class="btn btn-sm" href="/index-en.html">EN</a>
+            </div>
+
             <nav>
               <ul class="navbar-nav" id="navbar-nav">
                 <li class="nav-item">
@@ -145,6 +150,12 @@
 
                 <li class="nav-item">
                   <a class="nav-link scroll" href="#contact">Контакты</a>
+                </li>
+
+                <li class="nav-item d-none d-lg-block">
+                  <span class="nav-link">
+                    <a class="btn btn-sm btn-white" href="/index-en.html">EN</a>
+                  </span>
                 </li>
               </ul>
             </nav>
