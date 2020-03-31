@@ -7,6 +7,10 @@ h2,
   font-family: "Lobster", "Poppins", sans-serif;
 }
 
+h6 {
+  font-weight: 700;
+}
+
 body {
   font-size: 16px;
 }
