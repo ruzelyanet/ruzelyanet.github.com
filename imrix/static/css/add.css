@@ -41,11 +41,11 @@ p {
 }
 
 .bg-pink {
-  background: #ff64b3;
+  background: #fa399c !important;
 }
 
 .bg-blue {
-  background: #3a72e4;
+  background: #2a56b0 !important;
 }
 
 .features-boxes-list .row {
@@ -58,6 +58,13 @@ p {
 
 .color-box {
   color: #fff;
+  background: #fff;
+  border: 1px solid transparent;
+}
+
+.color-box-outline-purple {
+  border-color: #714eb8;
+  color: #565656;
 }
 
 .color-box-title {
@@ -65,4 +72,13 @@ p {
   font-weight: 700;
   margin-bottom: 20px;
   margin-top: 55px;
+}
+
+.section-heading-left h2:after {
+  left: 0;
+  transform: translateX(0);
+}
+
+.bg-purple {
+  background: #714eb8 !important;
 }
