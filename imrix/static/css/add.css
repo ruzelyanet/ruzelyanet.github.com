@@ -1,4 +1,17 @@
-﻿.btn-sm {
+﻿@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+h1,
+.h1,
+h2,
+.h2 {
+  font-family: "Lobster", "Poppins", sans-serif;
+}
+
+body {
+  font-size: 16px;
+}
+
+.btn-sm {
   padding: 5px 10px;
   border-radius: 10px;
   font-size: 10px;
@@ -16,4 +29,40 @@
 
 .features-area-bottom .image-box {
   min-height: 236px;
+}
+
+h6,
+p {
+  font-size: 16px;
+}
+
+#features h3 {
+  font-family: "Poppins", sans-serif;
+}
+
+.bg-pink {
+  background: #ff64b3;
+}
+
+.bg-blue {
+  background: #3a72e4;
+}
+
+.features-boxes-list .row {
+  margin: 0 -5px;
+}
+
+.features-boxes-list .row [class*="col-"] {
+  padding: 0 5px;
+}
+
+.color-box {
+  color: #fff;
+}
+
+.color-box-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top: 55px;
 }
