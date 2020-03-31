@@ -31,6 +31,14 @@ body {
   box-shadow: 0 0 5px rgb(255, 255, 255, 0.5);
 }
 
+.btn-success {
+  background: #48d2a0;
+}
+
+.subscribe-form button.btn-success {
+  background: #48d2a0 !important;
+}
+
 .features-area-bottom .image-box {
   min-height: 236px;
 }
