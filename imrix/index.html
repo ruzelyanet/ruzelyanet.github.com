@@ -184,16 +184,43 @@
                   Оставьте свой e-mail чтобы оценить демо-версию
                 </p>
 
-                <div class="subscribe-form d-flex align-items-center">
-                  <input
-                    type="email"
-                    name="subscribe"
-                    class="form-control"
-                    placeholder="info@yourmail.com"
-                  />
-                  <button type="submit" class="btn btn-bordered btn-success">
-                    Отправить
-                  </button>
+                <div class="subscribe-form">
+                  <form
+                    id="subscribe-validate-form"
+                    action="https://formspree.io/mzbapbeq"
+                    method="POST"
+                  >
+                    <div class="form-error text-danger d-none"></div>
+
+                    <div class="form">
+                      <input
+                        type="email"
+                        name="subscribe"
+                        class="form-control"
+                        placeholder="info@yourmail.com"
+                        data-rule-required="true"
+                        data-rule-email="true"
+                        data-msg-required="Пожалуйста, введите Ваш адрес электронной почты"
+                        data-msg-email="Пожалуйста, введите действительный адрес электронной почты"
+                      />
+                      <button
+                        type="submit"
+                        class="btn btn-bordered btn-success"
+                      >
+                        <div
+                          class="spinner-border spinner-border-sm"
+                          role="status"
+                        >
+                          <span class="sr-only">Loading...</span>
+                        </div>
+                        <span class="submit-btn-text">Отправить</span>
+                      </button>
+                    </div>
+
+                    <div class="form-status d-none">
+                      <h3 class="text-white">Спасибо!</h3>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -919,22 +946,52 @@
                 <h3 class="mb-3">
                   Оставьте свой e-mail для подключения сообщества
                 </h3>
-                <!-- Subscribe Form -->
-                <form class="subscribe-form">
-                  <div class="form-group">
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="subscribe"
-                      id="exampleInputEmail1"
-                      aria-describedby="emailHelp"
-                      placeholder="Введите адрес электронной почты"
-                    />
-                  </div>
-                  <button type="submit" class="btn btn-lg btn-block">
-                    Покдлючиться
-                  </button>
-                </form>
+
+                <!-- Subscribe Form -->                
+                  <form
+                    class="subscribe-form"
+                    id="subscribe-validate-form-2"
+                    action="https://formspree.io/mzbapbeq"
+                    method="POST"
+                  >
+                    <div class="form-error text-danger d-none"></div>
+
+                    <div class="form">
+                      <div class="form-group">
+                        <input
+                          type="email"
+                          class="form-control"
+                          name="subscribe"
+                          id="exampleInputEmail1"
+                          aria-describedby="emailHelp"
+                          placeholder="Введите адрес электронной почты"
+                          data-rule-required="true"
+                          data-rule-email="true"
+                          data-msg-required="Пожалуйста, введите Ваш адрес электронной почты"
+                          data-msg-email="Пожалуйста, введите действительный адрес электронной почты"
+                        />
+                      </div>
+
+                      <button
+                        type="submit"
+                        id="subscribe-form-submit"
+                        class="btn btn-lg btn-block"
+                      >
+                        <div
+                          class="spinner-border spinner-border-sm"
+                          role="status"
+                        >
+                          <span class="sr-only">Loading...</span>
+                        </div>
+                        <span class="submit-btn-text">Покдлючиться</span>
+                      </button>
+                    </div>
+
+                    <div class="form-status d-none">
+                      <h3>Спасибо!</h3>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
@@ -963,56 +1020,73 @@
               <!-- Contact Box -->
               <div class="contact-box text-center">
                 <!-- Contact Form -->
-                <form id="contact-form" method="POST" action="">
-                  <div class="row">
-                    <div class="col-12">
-                      <div class="form-group">
-                        <input
-                          type="text"
-                          class="form-control"
-                          name="name"
-                          placeholder="Имя"
-                          required="required"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <input
-                          type="email"
-                          class="form-control"
-                          name="email"
-                          placeholder="Email"
-                          required="required"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <input
-                          type="text"
-                          class="form-control"
-                          name="subject"
-                          placeholder="Тема письма"
-                          required="required"
-                        />
-                      </div>
+                <form action="https://formspree.io/mqkdzkpw" method="POST" id="contact-form-validate">
+                  <div class="form-error text-danger d-none mb-4"></div>
+
+                  <div class="form">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="name"
+                        placeholder="Имя"                        
+                        data-rule-required="true"                        
+                        data-msg-required="Пожалуйста, введите Ваше Имя"
+                      />
                     </div>
-                    <div class="col-12">
-                      <div class="form-group">
-                        <textarea
-                          class="form-control"
-                          name="message"
-                          placeholder="Напишите что вас интересует"
-                          required="required"
-                        ></textarea>
-                      </div>
+                    <div class="form-group">
+                      <input
+                        type="email"
+                        class="form-control"
+                        name="email"
+                        placeholder="Email"                        
+                        data-rule-required="true"
+                        data-rule-email="true"
+                        data-msg-required="Пожалуйста, введите Ваш адрес электронной почты"
+                        data-msg-email="Пожалуйста, введите действительный адрес электронной почты"
+                      />
                     </div>
-                    <div class="col-12">
-                      <button type="submit" class="btn btn-lg btn-block mt-3">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="subject"
+                        placeholder="Тема письма"                        
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <textarea
+                        class="form-control"
+                        name="message"
+                        placeholder="Напишите что вас интересует"                        
+                      ></textarea>
+                    </div>
+
+                    <button
+                      type="submit"
+                      class="btn btn-lg btn-block mt-3 submit-btn"
+                    >
+                      <div
+                        class="spinner-border spinner-border-sm"
+                        role="status"
+                      >
+                        <span class="sr-only">Loading...</span>
+                      </div>
+
+                      <span class="submit-btn-text">
                         <span class="text-white pr-3"
                           ><i class="fas fa-paper-plane"></i></span
                         >Отправить
-                      </button>
-                    </div>
+                      </span>
+                    </button>
+                  </div>
+
+                  <div class="form-status d-none">
+                    <h3>Спасибо!</h3>
                   </div>
                 </form>
+
                 <p class="form-message"></p>
               </div>
             </div>
@@ -1069,5 +1143,9 @@
 
     <!-- Active js -->
     <script src="static/js/separate-js/active.js"></script>
+
+    <script src="static/js/separate-js/jquery.validate.min.js"></script>
+
+    <script src="static/js/form.js"></script>
   </body>
 </html>

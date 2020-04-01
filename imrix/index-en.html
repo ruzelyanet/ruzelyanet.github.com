@@ -184,15 +184,44 @@
                   Enter your email to request a demo
                 </p>
 
-                <div class="subscribe-form d-flex align-items-center">
-                  <input
-                    type="email"
-                    class="form-control"
-                    placeholder="info@yourmail.com"
-                  />
-                  <button type="submit" class="btn btn-bordered btn-success">
-                    Send
-                  </button>
+                <div class="subscribe-form ">
+                  <form
+                    id="subscribe-validate-form"
+                    action="https://formspree.io/mzbapbeq"
+                    method="POST"
+                  >
+                    <div class="form-error text-danger d-none"></div>
+
+                    <div class="form">
+                      <input
+                        type="email"
+                        name="subscribe"
+                        class="form-control"
+                        placeholder="info@yourmail.com"
+                        data-rule-required="true"
+                        data-rule-email="true"
+                        data-msg-required="Please enter your email address"
+                        data-msg-email="Please enter a valid email address"
+                      />
+                      <button
+                        type="submit"
+                        id="subscribe-form-submit"
+                        class="btn btn-bordered btn-success"
+                      >
+                        <div
+                          class="spinner-border spinner-border-sm"
+                          role="status"
+                        >
+                          <span class="sr-only">Loading...</span>
+                        </div>
+                        <span class="submit-btn-text">Send</span>
+                      </button>
+                    </div>
+
+                    <div class="form-status d-none">
+                      <h3 class="text-white">Thanks!</h3>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -917,19 +946,48 @@
                   Enter your email to request a demo for your community
                 </h3>
                 <!-- Subscribe Form -->
-                <form class="subscribe-form">
-                  <div class="form-group">
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="exampleInputEmail1"
-                      aria-describedby="emailHelp"
-                      placeholder="Enter Email"
-                    />
+
+                <form
+                  class="subscribe-form"
+                  id="subscribe-validate-form-2"
+                  action="https://formspree.io/mzbapbeq"
+                  method="POST"
+                >
+                  <div class="form-error text-danger d-none"></div>
+
+                  <div class="form">
+                    <div class="form-group">
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                        placeholder="Enter Email"
+                        data-rule-required="true"
+                        data-rule-email="true"
+                        data-msg-required="Please enter your email address"
+                        data-msg-email="Please enter a valid email address"
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      id="subscribe-form-submit"
+                      class="btn btn-lg btn-block"
+                    >
+                      <div
+                        class="spinner-border spinner-border-sm"
+                        role="status"
+                      >
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <span class="submit-btn-text">connect</span>
+                    </button>
                   </div>
-                  <button type="submit" class="btn btn-lg btn-block">
-                    connect
-                  </button>
+
+                  <div class="form-status d-none">
+                    <h3>Спасибо!</h3>
+                  </div>
                 </form>
               </div>
             </div>
@@ -959,59 +1017,76 @@
               <div class="contact-box text-center">
                 <!-- Contact Form -->
                 <form
-                  id="contact-form"
+                  action="https://formspree.io/mqkdzkpw"
                   method="POST"
-                  action="assets/php/mail.php"
+                  id="contact-form-validate"
                 >
-                  <div class="row">
-                    <div class="col-12">
-                      <div class="form-group">
-                        <input
-                          type="text"
-                          class="form-control"
-                          name="name"
-                          placeholder="Name"
-                          required="required"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <input
-                          type="email"
-                          class="form-control"
-                          name="email"
-                          placeholder="Email"
-                          required="required"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <input
-                          type="text"
-                          class="form-control"
-                          name="subject"
-                          placeholder="Subject"
-                          required="required"
-                        />
-                      </div>
+                  <div class="form-error text-danger d-none mb-4"></div>
+
+                  <div class="form">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="name"
+                        placeholder="Name"
+                        data-rule-required="true"
+                        data-msg-required="Please enter your Name"
+                      />
                     </div>
-                    <div class="col-12">
-                      <div class="form-group">
-                        <textarea
-                          class="form-control"
-                          name="message"
-                          placeholder="Message"
-                          required="required"
-                        ></textarea>
-                      </div>
+                    <div class="form-group">
+                      <input
+                        type="email"
+                        class="form-control"
+                        name="email"
+                        placeholder="Email"
+                        data-rule-required="true"
+                        data-rule-email="true"
+                        data-msg-required="Please enter your email address"
+                        data-msg-email="Please enter a valid email address"
+                      />
                     </div>
-                    <div class="col-12">
-                      <button type="submit" class="btn btn-lg btn-block mt-3">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="subject"
+                        placeholder="Subject"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <textarea
+                        class="form-control"
+                        name="message"
+                        placeholder="Message"
+                      ></textarea>
+                    </div>
+
+                    <button
+                      type="submit"
+                      class="btn btn-lg btn-block mt-3 submit-btn"
+                    >
+                      <div
+                        class="spinner-border spinner-border-sm"
+                        role="status"
+                      >
+                        <span class="sr-only">Loading...</span>
+                      </div>
+
+                      <span class="submit-btn-text">
                         <span class="text-white pr-3"
                           ><i class="fas fa-paper-plane"></i></span
                         >Send
-                      </button>
-                    </div>
+                      </span>
+                    </button>
+                  </div>
+
+                  <div class="form-status d-none">
+                    <h3>Thanks!</h3>
                   </div>
                 </form>
+
                 <p class="form-message"></p>
               </div>
             </div>
@@ -1068,5 +1143,9 @@
 
     <!-- Active js -->
     <script src="static/js/separate-js/active.js"></script>
+
+    <script src="static/js/separate-js/jquery.validate.min.js"></script>
+
+    <script src="static/js/form.js"></script>
   </body>
 </html>

@@ -94,3 +94,41 @@ p {
 .bg-purple {
   background: #714eb8 !important;
 }
+
+.subscribe-form .btn,
+.submit-btn {
+  position: relative;
+}
+
+.process-btn {
+  pointer-events: none;
+}
+
+.subscribe-form .btn .spinner-border,
+.submit-btn .spinner-border {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -0.5rem 0 0 -0.5rem;
+  display: none;
+}
+
+.process-btn .spinner-border {
+  display: block !important;
+}
+
+.process-btn .submit-btn-text {
+  opacity: 0;
+}
+
+.form-status {
+  padding: 20px 0 20px 30px;
+  font-family: "Lobster", "Poppins", sans-serif;
+}
+
+form label.error {
+  margin-bottom: 0;
+  color: #d88888;
+  padding: 2px 4px;
+  font: 600 12px "Poppins", sans-serif;
+}
