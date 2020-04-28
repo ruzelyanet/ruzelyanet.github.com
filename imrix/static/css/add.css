@@ -151,3 +151,22 @@ form label.error {
   padding: 2px 4px;
   font: 600 12px "Poppins", sans-serif;
 }
+
+.single-price-plan {
+  min-height: 567px;
+}
+
+.plan-button {
+  bottom: 0;
+  margin-bottom: 25px;
+}
+
+.plan-title {
+  min-height: 57px;
+}
+
+@media screen and (max-width: 991.98px) {
+  .single-price-plan {
+    min-height: auto;
+  }
+}
