@@ -91,6 +91,25 @@ p {
   transform: translateX(0);
 }
 
+.section-heading-h4 h2:after {
+  display: none;
+}
+
+.section-heading-h4 h4 {
+  position: relative;
+}
+
+.section-heading-h4 h4:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 70px;
+  background-color: #7c4fe0;
+  bottom: -15px;
+  left: 50%;
+  margin-left: -35px;
+}
+
 .bg-purple {
   background: #714eb8 !important;
 }
