@@ -170,3 +170,15 @@ form label.error {
     min-height: auto;
   }
 }
+
+.footer-bottom-purple {
+  color: #fff;
+  background: #7c4fe0;
+}
+
+.footer-bottom-purple a {
+  color: #fff;
+}
+.footer-bottom-purple a:hover {
+  text-decoration: underline;
+}
