@@ -14489,7 +14489,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .icon-im-student {
-  background-image: url(../img/png-sprite/96dpi/spritegjh1pp.png);
+  background-image: url(../img/png-sprite/96dpi/spriteb000qf.png);
   background-position: -56px -60px;
   width: 52px;
   height: 52px;
@@ -14499,7 +14499,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .icon-im-popcorn {
-  background-image: url(../img/png-sprite/96dpi/spritegjh1pp.png);
+  background-image: url(../img/png-sprite/96dpi/spriteb000qf.png);
   background-position: 0px 0px;
   width: 56px;
   height: 56px;
@@ -14509,7 +14509,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .icon-im-cool {
-  background-image: url(../img/png-sprite/96dpi/spritegjh1pp.png);
+  background-image: url(../img/png-sprite/96dpi/spriteb000qf.png);
   background-position: -60px 0px;
   width: 52px;
   height: 52px;
@@ -14519,7 +14519,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .icon-im-plane {
-  background-image: url(../img/png-sprite/96dpi/spritegjh1pp.png);
+  background-image: url(../img/png-sprite/96dpi/spriteb000qf.png);
   background-position: 0px -60px;
   width: 52px;
   height: 52px;
@@ -14561,7 +14561,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .icon-user {
-  background-image: url(../img/png-sprite/96dpi/spritegjh1pp.png);
+  background-image: url(../img/png-sprite/96dpi/spriteb000qf.png);
   background-position: -116px -22px;
   width: 18px;
   height: 18px;
@@ -14570,7 +14570,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .icon-lock {
-  background-image: url(../img/png-sprite/96dpi/spritegjh1pp.png);
+  background-image: url(../img/png-sprite/96dpi/spriteb000qf.png);
   background-position: -116px 0px;
   width: 18px;
   height: 18px;
@@ -15604,65 +15604,6 @@ button.swiper-pagination-bullet {
           transform: translateY(-50%);
 }
 
-.pricing-list {
-  margin-bottom: 50px;
-  padding: 10px;
-}
-
-.pricing-box {
-  width: 194px;
-  margin: 0 auto;
-  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 6px;
-  background: #ffffff;
-  padding: 27px;
-}
-
-.pricing-title {
-  text-align: center;
-  font-weight: 300;
-  font-size: 25px;
-  margin-bottom: 40px;
-}
-
-.pricing-info {
-  font-weight: 300;
-  font-size: 12px;
-  text-align: center;
-  margin-bottom: 46px;
-}
-
-.pricing-info div {
-  margin-bottom: 6px;
-}
-
-.pricing-numb {
-  width: 132px;
-  height: 132px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fede00), to(#fecc2e));
-  background: -webkit-linear-gradient(top, #fede00 0%, #fecc2e 100%);
-  background: linear-gradient(180deg, #fede00 0%, #fecc2e 100%);
-  border-radius: 50%;
-  text-align: center;
-  padding: 30px 0;
-}
-
-.pricing-numb-text {
-  font-size: 10px;
-  font-weight: 300;
-}
-
-.pricing-numb-value {
-  font-size: 38px;
-  font-weight: 700;
-}
-
-.pricing-numb-value span {
-  font-size: 27px;
-  font-weight: 300;
-}
-
 .teachers-slider {
   margin-bottom: 50px;
 }
@@ -15801,6 +15742,65 @@ button.swiper-pagination-bullet {
   }
 }
 
+.pricing-list {
+  margin-bottom: 50px;
+  padding: 10px;
+}
+
+.pricing-box {
+  width: 194px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  background: #ffffff;
+  padding: 27px;
+}
+
+.pricing-title {
+  text-align: center;
+  font-weight: 300;
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+
+.pricing-info {
+  font-weight: 300;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 46px;
+}
+
+.pricing-info div {
+  margin-bottom: 6px;
+}
+
+.pricing-numb {
+  width: 132px;
+  height: 132px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fede00), to(#fecc2e));
+  background: -webkit-linear-gradient(top, #fede00 0%, #fecc2e 100%);
+  background: linear-gradient(180deg, #fede00 0%, #fecc2e 100%);
+  border-radius: 50%;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.pricing-numb-text {
+  font-size: 10px;
+  font-weight: 300;
+}
+
+.pricing-numb-value {
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.pricing-numb-value span {
+  font-size: 27px;
+  font-weight: 300;
+}
+
 @media screen and (max-width: 991.98px) {
   .login {
     margin: 0;
@@ -15889,4 +15889,4 @@ button.swiper-pagination-bullet {
   }
 }
 
-/*# sourceMappingURL=maingjh1pp.css.map */
+/*# sourceMappingURL=mainb000qf.css.map */
